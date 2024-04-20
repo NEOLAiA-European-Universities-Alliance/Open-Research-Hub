@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -23,6 +23,15 @@
       "relation": "oneToOne",
       "target": "api::research-info-survey.research-info-survey",
       "inversedBy": "neolaia_user"
+    },
+    "otp_active": {
+      "type": "boolean"
+    },
+    "otp_generation_timestamp": {
+      "type": "text"
+    },
+    "first_access": {
+      "type": "boolean"
     }
   }
 }

@@ -820,7 +820,7 @@ export interface ApiNeolaiaUserNeolaiaUser extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     OTP: Attribute.Text;
@@ -830,9 +830,11 @@ export interface ApiNeolaiaUserNeolaiaUser extends Schema.CollectionType {
       'oneToOne',
       'api::research-info-survey.research-info-survey'
     >;
+    otp_active: Attribute.Boolean;
+    otp_generation_timestamp: Attribute.Text;
+    first_access: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::neolaia-user.neolaia-user',
       'oneToOne',
