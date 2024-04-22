@@ -13,6 +13,9 @@ module.exports = createCoreRouter('api::research-info-survey.research-info-surve
         },
         update: {
             middlewares: ["global::otp-auth"]
+        },
+        delete: {
+            middlewares: ["global::otp-auth"]
         }
     }
 });
