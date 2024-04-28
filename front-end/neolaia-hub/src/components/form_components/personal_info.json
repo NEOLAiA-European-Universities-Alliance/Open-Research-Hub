@@ -1,0 +1,27 @@
+{
+    "pages": [
+     {
+      "name": "personal_info",
+      "elements": [
+       {
+        "type": "text",
+        "name": "Name",
+        "title": "Name",
+        "isRequired": true
+       },
+       {
+        "type": "text",
+        "name": "Surname",
+        "title": "Surname",
+        "isRequired": true
+       },
+       {
+        "type": "text",
+        "name": "ORCID profile link"
+       }
+      ],
+      "title": "Personal Information"
+     }
+    ],
+    "clearInvisibleValues": "onHidden"
+   }
