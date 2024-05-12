@@ -17,7 +17,25 @@
        },
        {
         "type": "text",
-        "name": "ORCID profile link"
+        "name": "personal_page_link",
+        "title": "Insert your personal page link (from your University)",
+        "validators": [
+         {
+          "type": "regex",
+          "text": "The page address must come from one of neolaia's partner university domains",
+          "regex": "\\b(?:[A-Za-z0-9.-]+\\.)?(osu\\.cz|usm\\.ro|unic\\.ac\\.cy|oru\\.se|svako\\.lt|ujaen\\.es|univ-tours\\.fr|uni-bielefeld\\.de|unisa\\.it)\\b"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "ORCID_link",
+        "title": "ORCID profile link"
+       },
+       {
+        "type": "text",
+        "name": "research_group_link",
+        "title": "Link to the research group"
        }
       ],
       "title": "Personal Information"
