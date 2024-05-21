@@ -6,7 +6,7 @@ const EmailForm = ( {onNext} ) => {
 
     const handle_submit = (e) => {
         e.preventDefault();
-        const regex = /\b[A-Za-z0-9._%+-]+@.*?(osu\.cz|usv\.ro|unic\.ac\.cy|oru\.se|svako\.lt|ujaen\.es|univ-tours\.fr|uni-bielefeld\.de|unisa\.it)\b/;
+        const regex = /\b[A-Za-z0-9._%+-]+@.*?(osu\.cz|usv\.ro|usm\.ro|unic\.ac\.cy|oru\.se|svako\.lt|ujaen\.es|univ-tours\.fr|uni-bielefeld\.de|unisa\.it)\b/;
         if(regex.test(email)){
             setIsValid(true)
             onNext(email);
