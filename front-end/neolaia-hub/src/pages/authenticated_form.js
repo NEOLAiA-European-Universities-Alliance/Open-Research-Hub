@@ -20,7 +20,7 @@ function AuthenticatedForm(){
         if(token && token_validity){
             //insert here the form component to render after login
             const form_component = (
-                <MappingResearchers />
+                <MappingResearchers token={token}/>
             )
             setForm(form_component)
         }
