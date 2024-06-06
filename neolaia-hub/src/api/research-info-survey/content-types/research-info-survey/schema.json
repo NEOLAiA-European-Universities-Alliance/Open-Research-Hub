@@ -21,9 +21,6 @@
     "free_keyword_1": {
       "type": "string"
     },
-    "form_schema": {
-      "type": "biginteger"
-    },
     "user_id": {
       "type": "biginteger",
       "unique": true
@@ -32,6 +29,65 @@
       "type": "string"
     },
     "free_keyword_3": {
+      "type": "string"
+    },
+    "university_name": {
+      "type": "string",
+      "required": true
+    },
+    "department": {
+      "type": "string",
+      "required": true
+    },
+    "faculty": {
+      "type": "string",
+      "required": false
+    },
+    "ERC_Panel_1": {
+      "type": "string",
+      "required": true
+    },
+    "ERC_Panel_2": {
+      "type": "string"
+    },
+    "ERC_Panel_3": {
+      "type": "string"
+    },
+    "ERC_Keyword_1": {
+      "type": "string",
+      "required": true
+    },
+    "ERC_Keyword_2": {
+      "type": "string"
+    },
+    "ERC_Keyword_3": {
+      "type": "string"
+    },
+    "ERC_Panel_interested_1": {
+      "type": "string"
+    },
+    "ERC_Panel_interested_2": {
+      "type": "string"
+    },
+    "ERC_Panel_interested_3": {
+      "type": "string"
+    },
+    "ERC_Keyword_interested_1": {
+      "type": "string"
+    },
+    "ERC_Keyword_interested_2": {
+      "type": "string"
+    },
+    "ERC_Keyword_interested_3": {
+      "type": "string"
+    },
+    "orcid_link": {
+      "type": "string"
+    },
+    "research_group_link": {
+      "type": "string"
+    },
+    "personal_page_link": {
       "type": "string"
     }
   }

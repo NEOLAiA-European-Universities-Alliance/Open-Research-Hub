@@ -15,12 +15,14 @@ require("easy-autocomplete/dist/jquery.easy-autocomplete.js");
 autocomplete(SurveyCore);
 
 const erc_panel_interest = JSON.parse(JSON.stringify(erc_panel));
-erc_panel_interest.pages[0].elements[0].title = 'Select 3 areas of research in which you are interested'
+erc_panel_interest.pages[0].elements[0].title = 'Indicate at most 3 ERC Panel and keyword which you are also interested in'
 
 //To solve question already answered from the research are panel, rename all key 
 erc_panel_interest.name = 'erc_panel_research_area_interested'
 erc_panel_interest.pages[0].name= 'interested_research_area'
 erc_panel_interest.pages[0].elements[0].name = 'ERC_panel_interested'
+erc_panel_interest.pages[0].elements[0].isRequired = false
+erc_panel_interest.pages[0].elements[0].templateElements[0].isRequired = false
 
 personal_info.pages.push(university_info.pages[0])
 personal_info.pages.push(erc_panel.pages[0])
@@ -28,16 +30,14 @@ personal_info.pages.push(erc_panel_interest.pages[0])
 personal_info.pages.push(free_keywords.pages[0])
 
 
-function MappingResearchers(){
+function MappingResearchers({token}){
     const research_survey = new Model(personal_info)
 
-    /*
     //Function executed when the survey is submitted
     research_survey.onComplete.add( function (sender, options){
-        console.log(sender.data)
         options.showSaveInProgress();
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", `${base_url}/http://localhost:1337/api/research-info-surveys/create`)
+        xhr.open("POST", `${base_url}research-info-surveys/`)
         xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8")
         xhr.onload = xhr.onerror = function () {
             if (xhr.status === 200){
@@ -46,9 +46,14 @@ function MappingResearchers(){
                 options.showSaveError("Error during survey submission, try again.")
             }
         };
-        xhr.send(JSON.stringify(sender.data));
+        const survey_data = JSON.stringify(sender.data)
+        const data = {
+            survey_data : survey_data,
+            token : token
+        }
+        console.log(data)
+        xhr.send(JSON.stringify(data));
     })
-    */
     return <Survey model={research_survey} />
 }
 
