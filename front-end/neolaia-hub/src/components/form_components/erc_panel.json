@@ -8,13 +8,13 @@
        {
         "type": "paneldynamic",
         "name": "ERC_Panel",
-        "title": "Select your Research Area (3 keyword are required)",
+        "title": "Indicate at least 1 (and at most 3) ERC panel and keyword where your research is conducted",
         "isRequired": true,
         "templateElements": [
          {
           "type": "dropdown",
           "name": "Research-General-Area",
-          "title": "Select a research category",
+          "title": "Select a research area",
           "isRequired": true,
           "choices": [
            {
@@ -36,7 +36,7 @@
           "type": "dropdown",
           "name": "PE-Research area",
           "visibleIf": "{panel.Research-General-Area} = 'PE-Research area'",
-          "title": "PE Research area",
+          "title": "PE Research area - Panel",
           "isRequired": true,
           "choices": [
            {
@@ -382,7 +382,7 @@
           "type": "dropdown",
           "name": "LS-Research area",
           "visibleIf": "{panel.Research-General-Area} = 'LS-Research area'",
-          "title": "LS Research area",
+          "title": "LS Research area - Panel",
           "isRequired": true,
           "choices": [
            {
@@ -497,7 +497,7 @@
          },
          {
           "type": "radiogroup",
-          "name": "LS5-Neuroscience-and-Disorders-of-the-Nervous-System",
+          "name": "LS5-Neuroscience-and-Disorders-of-the-Nervous-System ",
           "visibleIf": "{panel.LS-Research area} = 'LS5-Neuroscience-and-Disorders-of-the-Nervous-System'",
           "description": "Nervous system development, homeostasis and ageing, nervous system function and dysfunction,\nsystems neuroscience and modelling, biological basis of cognitive processes and of behaviour,\nneurological and mental disorders\n– In humans and all other organisms",
           "isRequired": true,
@@ -646,7 +646,7 @@
           "type": "dropdown",
           "name": "SH-Research-area",
           "visibleIf": "{panel.Research-General-Area} = 'SH-Research-area'",
-          "title": "SH Research area",
+          "title": "SH Research area - Panel",
           "isRequired": true,
           "choices": [
            {
@@ -857,7 +857,7 @@
          }
         ],
         "panelCount": 1,
-        "minPanelCount": 3,
+        "minPanelCount": 1,
         "maxPanelCount": 3
        }
       ],

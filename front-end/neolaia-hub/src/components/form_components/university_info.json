@@ -1,187 +1,921 @@
 {
-    "pages": [
-     {
-      "name": "university_info",
-      "elements": [
-       {
-        "type": "dropdown",
-        "name": "university_name",
-        "title": "Select your University",
-        "choices": [
-         "University of Salerno",
-         "University of Örebro",
-         "Šiauliai State University of Applied Sciences",
-         "University of Nicosia",
-         "Ştefan cel Mare University of Suceava",
-         "University of Tours",
-         "University of Bielefeld",
-         "University of Jaén",
-         "University of Ostrava"
-        ]
-       },
-       {
-        "type": "dropdown",
-        "name": "University of Salerno",
-        "visibleIf": "{university_name} = 'University of Salerno'",
-        "title": "Select you Department",
-        "choices": [
-         "Department of Chemistry and Biology \"Adolfo Zambelli\"/DCB",
-         {
-          "value": "Department of Pharmacy/DIFARMA",
-          "text": "Department of Physics \"E.R.Caianiello\"/DF"
-         },
-         "Department of Computer Science/DI",
-         "Department of Civil Engineering/DICIV",
-         "Department of Information and Electrical Engineering and Applied Mathematics/DIEM",
-         "Department of Industrial Engineering/DIIN",
-         "Department of Mathematics/DIPMAT",
-         "Department of Medicine, Surgery and Dentistry \"Scuola Medica Salernitana\"/DIPMED",
-         "Department of Business Sciences - Management & Innovation Systems/DISA-MIS",
-         "Department of Cultural Heritage Sciences/DISPAC",
-         "Department of Economics and Statistics/DISES",
-         "Department of Legal Sciences (School of Law)",
-         "Department of Political and Communication Sciences/DISPC",
-         "Department of Humanities, Philosophy and Education/DISUFF",
-         "Department of Political and Social Studies/DISPS",
-         "Department of Humanities/DISPSUM"
-        ]
-       },
-       {
-        "type": "dropdown",
-        "name": "University of Örebro",
-        "visibleIf": "{university_name} = 'University of Örebro'",
-        "title": "Select your Faculty",
-        "choices": [
-         {
-          "value": "Faculty of Business, Science and Engineering_Orebro",
-          "text": "Faculty of Business, Science and Engineering"
-         },
-         {
-          "value": "Faculty of Humanities and Social Sciences_Orebro",
-          "text": "Faculty of Humanities and Social Sciences"
-         },
-         {
-          "value": "Faculty of Medicine and Health_Orebro",
-          "text": "Faculty of Medicine and Health"
-         }
-        ]
-       },
-       {
-        "type": "dropdown",
-        "name": "Faculty of Business, Science and Engineering_Orebro",
-        "visibleIf": "{University of Örebro} = 'Faculty of Business, Science and Engineering_Orebro'",
-        "title": "Select your Schools",
-        "choices": [
-         {
-          "value": "Örebro University School of Business_Orebro",
-          "text": "Örebro University School of Business"
-         },
-         {
-          "value": "Science and Technology_Orebro",
-          "text": "Science and Technology"
-         },
-         {
-          "value": "Hospitality, Culinary Arts and Meal Science_Orebro",
-          "text": "Hospitality, Culinary Arts and Meal Science"
-         }
-        ]
-       },
-       {
-        "type": "dropdown",
-        "name": "Faculty of Humanities and Social Sciences_Orebro",
-        "visibleIf": "{University of Örebro} = 'Faculty of Humanities and Social Sciences_Orebro'",
-        "title": "Select your Schools",
-        "choices": [
-         {
-          "value": "Humanities, Education and Social Sciences",
-          "text": "Humanities, Education and Social Sciences_Orebro"
-         },
-         {
-          "value": "School of Behavioural, Social and Legal Sciences",
-          "text": "School of Behavioural, Social and Legal Sciences_Orebro"
-         },
-         {
-          "value": "Music, Theatre and Art",
-          "text": "Music, Theatre and Art_Orebro"
-         }
-        ]
-       },
-       {
-        "type": "dropdown",
-        "name": "Faculty of Medicine and Health_Orebro",
-        "visibleIf": "{University of Örebro} = 'Faculty of Medicine and Health_Orebro'",
-        "title": "Select your Schools",
-        "choices": [
-         "Health Sciences_Orebro",
-         "Medical Sciences_Orebro"
-        ]
-       },
-       {
-        "type": "dropdown",
-        "name": "Šiauliai State University of Applied Sciences",
-        "visibleIf": "{university_name} = 'Šiauliai State University of Applied Sciences'",
-        "title": "Select your Faculty",
-        "choices": [
-         {
-          "value": "Faculty of Health care_Siauliai",
-          "text": "Faculty of Health care"
-         },
-         {
-          "value": "Faculty of Business and Technologies_Siauliai",
-          "text": "Faculty of Business and Technologies"
-         }
-        ]
-       },
-       {
-        "type": "dropdown",
-        "name": "Faculty of Health care_Siauliai",
-        "visibleIf": "{Šiauliai State University of Applied Sciences} = 'Faculty of Health care_Siauliai'",
-        "title": "Select your Department",
-        "choices": [
-         {
-          "value": "Biomedical Sciences Department",
-          "text": "Biomedical Sciences Department_Siauliai"
-         },
-         {
-          "value": "Rehabilitation Department",
-          "text": "Rehabilitation Department_Siauliai"
-         },
-         {
-          "value": "Social Work Department",
-          "text": "Social Work Department_Siauliai"
-         }
-        ]
-       },
-       {
-        "type": "dropdown",
-        "name": "Faculty of Business and Technologies_Siauliai",
-        "visibleIf": "{Šiauliai State University of Applied Sciences} = 'Faculty of Business and Technologies_Siauliai'",
-        "title": "Select your Department",
-        "choices": [
-         {
-          "value": "Engineering Sciences Department_Siauliai",
-          "text": "Engineering Sciences Department"
-         },
-         {
-          "value": "Informatics Sciences Department_Siauliai",
-          "text": "Informatics Sciences Department"
-         },
-         {
-          "value": "Transport Engineering Department_Siauliai",
-          "text": "Transport Engineering Department"
-         },
-         {
-          "value": "Management and Communication Department_Siauliai",
-          "text": "Management and Communication Department"
-         },
-         {
-          "value": "Business and Accounting Department_Siauliai",
-          "text": "Business and Accounting Department"
-         }
-        ]
-       }
-      ],
-      "title": "\nSelect your University"
-     }
-    ]
-   }
+ "pages": [
+  {
+   "name": "university_info",
+   "elements": [
+    {
+     "type": "dropdown",
+     "name": "university_name",
+     "title": "Select your University",
+     "isRequired": true,
+     "choices": [
+      "University of Salerno",
+      "University of Örebro",
+      "Šiauliai State University of Applied Sciences",
+      "University of Nicosia",
+      "Ştefan cel Mare University of Suceava",
+      "University of Tours",
+      "University of Bielefeld",
+      "University of Jaén",
+      "University of Ostrava"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "University of Salerno",
+     "visibleIf": "{university_name} = 'University of Salerno'",
+     "title": "Select you Department",
+     "isRequired": true,
+     "choices": [
+      "Department of Chemistry and Biology \"Adolfo Zambelli\"/DCB",
+      {
+       "value": "Department of Pharmacy/DIFARMA",
+       "text": "Department of Physics \"E.R.Caianiello\"/DF"
+      },
+      "Department of Computer Science/DI",
+      "Department of Civil Engineering/DICIV",
+      "Department of Information and Electrical Engineering and Applied Mathematics/DIEM",
+      "Department of Industrial Engineering/DIIN",
+      "Department of Mathematics/DIPMAT",
+      "Department of Medicine, Surgery and Dentistry \"Scuola Medica Salernitana\"/DIPMED",
+      "Department of Business Sciences - Management & Innovation Systems/DISA-MIS",
+      "Department of Cultural Heritage Sciences/DISPAC",
+      "Department of Economics and Statistics/DISES",
+      "Department of Legal Sciences (School of Law)",
+      "Department of Political and Communication Sciences/DISPC",
+      "Department of Humanities, Philosophy and Education/DISUFF",
+      "Department of Political and Social Studies/DISPS",
+      "Department of Humanities/DISPSUM"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "University of Örebro",
+     "visibleIf": "{university_name} = 'University of Örebro'",
+     "title": "Select your Faculty",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "Faculty of Business, Science and Engineering_Orebro",
+       "text": "Faculty of Business, Science and Engineering"
+      },
+      {
+       "value": "Faculty of Humanities and Social Sciences_Orebro",
+       "text": "Faculty of Humanities and Social Sciences"
+      },
+      {
+       "value": "Faculty of Medicine and Health_Orebro",
+       "text": "Faculty of Medicine and Health"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Business, Science and Engineering_Orebro",
+     "visibleIf": "{University of Örebro} = 'Faculty of Business, Science and Engineering_Orebro'",
+     "title": "Select your Schools",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "Örebro University School of Business_Orebro",
+       "text": "Örebro University School of Business"
+      },
+      {
+       "value": "Science and Technology_Orebro",
+       "text": "Science and Technology"
+      },
+      {
+       "value": "Hospitality, Culinary Arts and Meal Science_Orebro",
+       "text": "Hospitality, Culinary Arts and Meal Science"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Humanities and Social Sciences_Orebro",
+     "visibleIf": "{University of Örebro} = 'Faculty of Humanities and Social Sciences_Orebro'",
+     "title": "Select your Schools",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "Humanities, Education and Social Sciences",
+       "text": "Humanities, Education and Social Sciences_Orebro"
+      },
+      {
+       "value": "School of Behavioural, Social and Legal Sciences",
+       "text": "School of Behavioural, Social and Legal Sciences_Orebro"
+      },
+      {
+       "value": "Music, Theatre and Art",
+       "text": "Music, Theatre and Art_Orebro"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Medicine and Health_Orebro",
+     "visibleIf": "{University of Örebro} = 'Faculty of Medicine and Health_Orebro'",
+     "title": "Select your Schools",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "Health Sciences_Orebro",
+       "text": "Health Sciences"
+      },
+      {
+       "value": "Medical Sciences_Orebro",
+       "text": "Medical Sciences"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Šiauliai State University of Applied Sciences",
+     "visibleIf": "{university_name} = 'Šiauliai State University of Applied Sciences'",
+     "title": "Select your Faculty",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "Faculty of Health care_Siauliai",
+       "text": "Faculty of Health care"
+      },
+      {
+       "value": "Faculty of Business and Technologies_Siauliai",
+       "text": "Faculty of Business and Technologies"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Health care_Siauliai",
+     "visibleIf": "{Šiauliai State University of Applied Sciences} = 'Faculty of Health care_Siauliai'",
+     "title": "Select your Department",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "Biomedical Sciences Department_Siauliai",
+       "text": "Biomedical Sciences Department"
+      },
+      {
+       "value": "Rehabilitation Department_Siauliai",
+       "text": "Rehabilitation Department"
+      },
+      {
+       "value": "Social Work Department_Siauliai",
+       "text": "Social Work Department"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Business and Technologies_Siauliai",
+     "visibleIf": "{Šiauliai State University of Applied Sciences} = 'Faculty of Business and Technologies_Siauliai'",
+     "title": "Select your Department",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "Engineering Sciences Department_Siauliai",
+       "text": "Engineering Sciences Department"
+      },
+      {
+       "value": "Informatics Sciences Department_Siauliai",
+       "text": "Informatics Sciences Department"
+      },
+      {
+       "value": "Transport Engineering Department_Siauliai",
+       "text": "Transport Engineering Department"
+      },
+      {
+       "value": "Management and Communication Department_Siauliai",
+       "text": "Management and Communication Department"
+      },
+      {
+       "value": "Business and Accounting Department_Siauliai",
+       "text": "Business and Accounting Department"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "University of Ostrava",
+     "visibleIf": "{university_name} = 'University of Ostrava'",
+     "title": "Select your Faculty/Centre",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "Faculty of Social Studies_Ostrava",
+       "text": "Faculty of Social Studies"
+      },
+      {
+       "value": "Faculty of Education_Ostrava",
+       "text": "Faculty of Education"
+      },
+      {
+       "value": "Faculty of Fine Arts & Music_Ostrava",
+       "text": "Faculty of Fine Arts & Music"
+      },
+      {
+       "value": "Faculty of Arts_Ostrava",
+       "text": "Faculty of Arts"
+      },
+      {
+       "value": "Faculty of Medicine_Ostrava",
+       "text": "Faculty of Medicine"
+      },
+      {
+       "value": "Faculty of Science_Ostrava",
+       "text": "Faculty of Science"
+      },
+      {
+       "value": "Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling_Ostrava",
+       "text": "Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Social Studies_Ostrava",
+     "visibleIf": "{University of Ostrava} = 'Faculty of Social Studies_Ostrava'",
+     "title": "Select your Department/Working group",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "Dept. of Health and S",
+       "text": "Dept. of Health and Social Studies"
+      },
+      "Dept. of Social Work"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Education_Ostrava",
+     "visibleIf": "{University of Ostrava} = 'Faculty of Education_Ostrava'",
+     "title": "Select your Department/Working group",
+     "isRequired": true,
+     "choices": [
+      "Dept. of Civic Education",
+      "Dept. of Czech Language and Literature with Didactics",
+      "Dept. of Education and Adult Education",
+      "Dept. of English Language Teaching",
+      "Dept. of Human Movement Studies",
+      "Dept. of Information and Communication Technologies",
+      "Dept. of Mathematics with Didactics",
+      "Dept. of Music Education",
+      "Dept. of Educational and School Psychology",
+      "Dept. of Primary and Preprimary Education",
+      "Dept. of School Education",
+      "Dept. of Technical and Vocational Education",
+      "Dept. of Visual Arts Education",
+      "Centre of Educational Research",
+      "Centre for Research into Culture and Identity of the Region",
+      "Centre for Visual Studies",
+      "Human Motion Diagnostic Centre",
+      "Institute for Adult"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Fine Arts & Music_Ostrava",
+     "visibleIf": "{University of Ostrava} = 'Faculty of Fine Arts & Music_Ostrava'",
+     "title": "Select your Department/Working group",
+     "isRequired": true,
+     "choices": [
+      "Dept. of Graphics and Drawing",
+      "Dept. of Intermedia Studies",
+      "Dept. of Painting",
+      "Dept. of Sculpture",
+      "Dept. of the Theory and History of Fine Arts",
+      "Dept. of Keyboard Instruments",
+      "Dept. of String Instruments",
+      "Dept. of Vocal Studies",
+      "Dept. of Wind Instruments"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Arts_Ostrava",
+     "visibleIf": "{University of Ostrava} = 'Faculty of Arts_Ostrava'",
+     "title": "Select your Department/Working group",
+     "isRequired": true,
+     "choices": [
+      "Dept. of Art History and Cultural Heritage",
+      "Dept. of Czech Language",
+      "Dept. of Czech Literature and Literary Criticism",
+      "Dept. of English and American Studies",
+      "Dept. of German Studies",
+      "Dept. of History",
+      "Dept. of Latin Language and Culture",
+      "Dept. of Psychology",
+      "Centre for Economical and Social History",
+      "Centre for the Research of Professional Language",
+      "Centre for Regional Studies",
+      "VIVARIUM - Centre for Research in Medieval Society and Culture"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Medicine_Ostrava",
+     "visibleIf": "{University of Ostrava} = 'Faculty of Medicine_Ostrava'",
+     "title": "Select your Department/Working group",
+     "isRequired": true,
+     "choices": [
+      "Dept. of Anaesthesiology, Resuscitation and Intensive Care Medicine",
+      "Dept. of Anatomy",
+      "Dept. of Clinic Subjects",
+      "Dept. of Clinical Neurosciences",
+      "Dept. of Craniofacial Surgery",
+      "Dept. of Dentistry",
+      "Dept. of Epidemiology and Public Health",
+      "Dept. of Forensic Medicine",
+      "Dept. of Gynaecology and Obstetrics",
+      "Dept. of Hematooncology",
+      "Dept. of Histology and Embryology",
+      "Dept. of Imaging Methods",
+      "Dept. of Nursing and Midwifery",
+      "Dept. of Oncology",
+      "Dept. of Pediatrics",
+      "Dept. of Rehabilitation and Sports Medicine",
+      "Dept. of Surgical Studies",
+      "Dept. of Clinical Pharmacology",
+      "Institute of Emergency Medicine",
+      "Institute of Molecular and Clinical Pathology and Medical Genetics",
+      "Institute of Laboratory Medicine",
+      "Institute of Physiology and Pathophysiology",
+      "Centre for Health Research",
+      "Centre for Hyperbaric Medicine of Faculty of Medicine University of Ostrava and Ostrava City Hospital",
+      "Simulation Centre / Training Hospital (SIMLEK)"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Science_Ostrava",
+     "visibleIf": "{University of Ostrava} = 'Faculty of Science_Ostrava'",
+     "title": "Select your Department/Working group",
+     "isRequired": true,
+     "choices": [
+      "Dept. of Biology and Ecology",
+      "Dept. of Chemistry",
+      "Dept. of Human Geography and Regional Development",
+      "Dept. of Informatics and Computers",
+      "Dept. of Mathematics",
+      "Dept. of Physical Geography and Geoecology",
+      "Dept. of Physics",
+      "Environmental Center"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling_Ostrava",
+     "visibleIf": "{University of Ostrava} = 'Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling_Ostrava'",
+     "title": "Select your Department/Working group",
+     "isRequired": true,
+     "choices": [
+      "Logic",
+      "Dynamical Systems",
+      "Neural Networks and Computer Vision",
+      "Fuzzy modeling"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "University of Nicosia",
+     "visibleIf": "{university_name} = 'University of Nicosia'",
+     "title": "Select your school",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "School of Business_Nicosia",
+       "text": "School of Business"
+      },
+      {
+       "value": "School of Education_Nicosia",
+       "text": "School of Education"
+      },
+      {
+       "value": "School of Humanities and Social Sciences_Nicosia",
+       "text": "School of Humanities and Social Sciences"
+      },
+      {
+       "value": "School of Law_Nicosia",
+       "text": "School of Law"
+      },
+      {
+       "value": "School of Life and Health Sciences_Nicosia",
+       "text": "School of Life and Health Sciences"
+      },
+      {
+       "value": "Medical School_Nicosia",
+       "text": "Medical School"
+      },
+      {
+       "value": "School of Sciences and Engineering_Nicosia",
+       "text": "School of Sciences and Engineering"
+      },
+      {
+       "value": "School of Veterinary Medicine_Nicosia",
+       "text": "School of Veterinary Medicine"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "School of Business_Nicosia",
+     "visibleIf": "{University of Nicosia} = 'School of Business_Nicosia'",
+     "title": "Select your department",
+     "isRequired": true,
+     "choices": [
+      "Department of Accounting, Economics and Finance ",
+      "Department of Digital Innovation",
+      "Department of Management"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "School of Education_Nicosia",
+     "visibleIf": "{University of Nicosia} = 'School of Education_Nicosia'",
+     "title": "Select your department",
+     "isRequired": true,
+     "choices": [
+      "Department of Education",
+      "Department of Music and Dance"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "School of Humanities and Social Sciences_Nicosia",
+     "visibleIf": "{University of Nicosia} = 'School of Humanities and Social Sciences_Nicosia'",
+     "title": "Select your department",
+     "isRequired": true,
+     "choices": [
+      "Department of Architecture ",
+      "Department of Communications",
+      "Department of Design and Multimedia",
+      "Department of Languages and Literature",
+      "Department of Social Sciences",
+      "Department of Theology"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "School of Law_Nicosia",
+     "visibleIf": "{University of Nicosia} = 'School of Law_Nicosia'",
+     "title": "Select your department",
+     "isRequired": true,
+     "choices": [
+      "Department of Law",
+      "Department of Politics and Governance"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "School of Life and Health Sciences_Nicosia",
+     "visibleIf": "{University of Nicosia} = 'School of Life and Health Sciences_Nicosia'",
+     "title": "Select your department",
+     "isRequired": true,
+     "choices": [
+      "Department of Health Sciences",
+      "Department of Life Sciences"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Medical School_Nicosia",
+     "visibleIf": "{University of Nicosia} = 'Medical School_Nicosia'",
+     "title": "Select your department",
+     "isRequired": true,
+     "choices": [
+      "Department of Basic and Clinical Sciences",
+      "Department of Primary Care and Population Health"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "School of Sciences and Engineering_Nicosia",
+     "visibleIf": "{University of Nicosia} = 'School of Sciences and Engineering_Nicosia'",
+     "title": "Select your department",
+     "isRequired": true,
+     "choices": [
+      "Department of Computer Science",
+      "Department of Engineering"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "School of Veterinary Medicine_Nicosia",
+     "visibleIf": "{University of Nicosia} = 'School of Veterinary Medicine_Nicosia'",
+     "title": "School of Veterinary Medicine",
+     "isRequired": true,
+     "choices": [
+      "Department of Veterinary Medicine"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Ştefan cel Mare University of Suceava",
+     "visibleIf": "{university_name} = 'Ştefan cel Mare University of Suceava'",
+     "title": "Select your faculty",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "Faculty of Law and Administrative Sciences_Suceava",
+       "text": "Faculty of Law and Administrative Sciences"
+      },
+      {
+       "value": "Faculty of Physical Education and Sports_Suceava",
+       "text": "Faculty of Physical Education and Sports"
+      },
+      {
+       "value": "Faculty of Food Engineering_Suceava",
+       "text": "Faculty of Food Engineering"
+      },
+      {
+       "value": "Faculty of Electrical Engineering and Computer Science_Suceava",
+       "text": "Faculty of Electrical Engineering and Computer Science"
+      },
+      {
+       "value": "Faculty of Mechanical Engineering, Automotive, and Robotics_Suceava",
+       "text": "Faculty of Mechanical Engineering, Automotive, and Robotics"
+      },
+      {
+       "value": "Faculty of History and Geography_Suceava",
+       "text": "Faculty of History and Geography"
+      },
+      {
+       "value": "Faculty of Letters and Communication Sciences_Suceava",
+       "text": "Faculty of Letters and Communication Sciences"
+      },
+      {
+       "value": "Faculty of Forestry_Suceava",
+       "text": "Faculty of Forestry"
+      },
+      {
+       "value": "Faculty of Economics, Administration, and Business_Suceava",
+       "text": "Faculty of Faculty of Economics, Administration, and Business Education and Sports8"
+      },
+      {
+       "value": "Faculty of Educational Sciences_Suceava",
+       "text": "Faculty of Educational Sciences"
+      },
+      {
+       "value": "Faculty of Medicine and Biological Sciences_Suceava",
+       "text": "Faculty of Medicine and Biological Sciences"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Law and Administrative Sciences_Suceava",
+     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Law and Administrative Sciences_Suceava'",
+     "title": "Select your department/research center",
+     "isRequired": true,
+     "choices": [
+      "Department of Law and Administrative Sciences",
+      "Center for Training and Research in Public Administration",
+      "Research Center for Legal Research"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Physical Education and Sports_Suceava",
+     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Physical Education and Sports_Suceava'",
+     "title": "Select your department/research center",
+     "isRequired": true,
+     "choices": [
+      "Department of Physical Education and Sport",
+      "Interdisciplinary Research Center in Human Motricity and Health Sciences"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Food Engineering_Suceava",
+     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Food Engineering_Suceava'",
+     "title": "Select your department/research center",
+     "isRequired": true,
+     "choices": [
+      "Department of Food Technologies, Food Production and Environmental Safety",
+      "Research and Training Center for Food Science and Safety"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Electrical Engineering and Computer Science_Suceava",
+     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Electrical Engineering and Computer Science_Suceava'",
+     "title": "Select your department/research center",
+     "isRequired": true,
+     "choices": [
+      "Department of Computer Science, Electronics, and Automation",
+      "Department of Electrical Engineering",
+      "Department of Computer Science",
+      "Research Center for Electrical Machines, Devices, and Drives",
+      "Research Center for Process Control Systems",
+      "Computer Science Research Center"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Mechanical Engineering, Automotive, and Robotics_Suceava",
+     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Mechanical Engineering, Automotive, and Robotics_Suceava'",
+     "title": "Select your department/research center",
+     "isRequired": true,
+     "choices": [
+      "Department of Mechanics and Technologies",
+      "Research Center for Mechanical, Industrial, Mechatronic Engineering, Environment, and Management",
+      "Training Center in Mechanical Engineering and Road Vehicles"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of History and Geography_Suceava",
+     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of History and Geography_Suceava'",
+     "title": "Select your department/research center",
+     "isRequired": true,
+     "choices": [
+      "Department of Human and Social-Political Sciences",
+      "Department of Geography",
+      "Research Center for Applied Geography ",
+      "The Carpathica University Centre of Interdisciplinary Studies",
+      "Research Center in Ethics, Philosophy, Engineering, and Society",
+      "Cross-Border Cooperation Center"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Letters and Communication Sciences_Suceava",
+     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Letters and Communication Sciences_Suceava'",
+     "title": "Select your department/research center",
+     "isRequired": true,
+     "choices": [
+      "Department of Romanian Language and Literature and Communication Sciences",
+      "Department of Foreign Languages and Literatures",
+      "Inter Litteras Research Center",
+      "Research Center for Discourse Analysis ",
+      "Research Center for Communication and Advertising Creation",
+      "Center for Foreign Languages and Cultures Synergia ",
+      "Center for Academic and Creative Writing",
+      "University Success Center"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Forestry_Suceava",
+     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Forestry_Suceava'",
+     "title": "Select your department/research center",
+     "isRequired": true,
+     "choices": [
+      "Department of Forestry and Environmental ",
+      "Research Center for Environmental Policies",
+      "Technology Transfer Center",
+      "Hunting Center"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Economics, Administration, and Business_Suceava",
+     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Economics, Administration, and Business_Suceava'",
+     "title": "Select your department/research center",
+     "isRequired": true,
+     "choices": [
+      "Department of Accounting, Audit, and Finance",
+      "Department of Economics, Economic Informatics, and Business Management",
+      "Department of Management, Business Administration, and Tourism",
+      "Research Center in Management and Business Administration",
+      "Research Center in Accounting and Management Informatics",
+      "Tourism Resource Center"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Educational Sciences_Suceava",
+     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Educational Sciences_Suceava'",
+     "title": "Select your department/research center",
+     "isRequired": true,
+     "choices": [
+      "Department of Education Sciences",
+      "Psychopedagogical Department ",
+      "Research Center in Psychology and Educational Sciences",
+      "Early Education Resource Center (EERC)",
+      "Resilience and Mental Health Center in School and Community (CRESMIN)"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Medicine and Biological Sciences_Suceava",
+     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Medicine and Biological Sciences_Suceava'",
+     "title": "Select your department/research center",
+     "isRequired": true,
+     "choices": [
+      "Department of Biomedical Sciences",
+      "Interdisciplinary Research Center in Biomedical Sciences"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "University of Jaén",
+     "visibleIf": "{university_name} = 'University of Jaén'",
+     "title": "Select your research resources/activity",
+     "isRequired": true,
+     "choices": [
+      "Agrifood",
+      "Biology and biotechnology",
+      "Health sciences and technologies",
+      "Physics, chemistry and mathematics",
+      "Humanities",
+      "Natural resources and environment",
+      "Social, economic and legal sciences",
+      "Production technologies",
+      "Information and communication technologies"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "University of Bielefeld",
+     "visibleIf": "{university_name} = 'University of Bielefeld'",
+     "title": "Select your faculty",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "Biology_Bielefeld",
+       "text": "Biology"
+      },
+      {
+       "value": "Business Administration and Economics_Bielefeld",
+       "text": "Business Administration and Economics"
+      },
+      {
+       "value": "Chemistry_Bielefeld",
+       "text": "Chemistry"
+      },
+      {
+       "value": "Educational Science_Bielefeld",
+       "text": "Educational Science"
+      },
+      {
+       "value": "History and Philosophy and Theology_Bielefeld",
+       "text": "History and Philosophy and Theology"
+      },
+      {
+       "value": "Law_Bielefeld",
+       "text": "Law"
+      },
+      {
+       "value": "Linguistics and Literary Studies_Bielefeld",
+       "text": "Linguistics and Literary Studies"
+      },
+      {
+       "value": "Mathematics_Bielefeld",
+       "text": "Mathematics"
+      },
+      {
+       "value": "Medical School OWL_Bielefeld",
+       "text": "Medical School OWL"
+      },
+      {
+       "value": "Physics_Bielefeld",
+       "text": "Physics"
+      },
+      {
+       "value": "Psychology and Sports Science_Bielefeld",
+       "text": "Psychology and Sports Science"
+      },
+      {
+       "value": "Public Health_Bielefeld",
+       "text": "Public Health"
+      },
+      {
+       "value": "Sociology_Bielefeld",
+       "text": "Sociology"
+      },
+      {
+       "value": "Technology_Bielefeld",
+       "text": "Technology"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Biology_Bielefeld",
+     "visibleIf": "{University of Bielefeld} = 'Biology_Bielefeld'",
+     "title": "Select your research unit",
+     "isRequired": true,
+     "choices": [
+      "Molecular Biology ",
+      "Neurobiology",
+      "Ecology and Behavioural Biology",
+      "Didactics"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Business Administration and Economics_Bielefeld",
+     "visibleIf": "{University of Bielefeld} = 'Business Administration and Economics_Bielefeld'",
+     "title": "Select your research unit",
+     "isRequired": true,
+     "choices": [
+      "Business Administration",
+      "Economics",
+      "Empirical Methods",
+      "Center for Mathematical Economics - Economics"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Chemistry_Bielefeld",
+     "visibleIf": "{University of Bielefeld} = 'Chemistry_Bielefeld'",
+     "title": "Select your research unit",
+     "isRequired": true,
+     "choices": [
+      "Chemistry",
+      "Biochemistry"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "History and Philosophy and Theology_Bielefeld",
+     "visibleIf": "{University of Bielefeld} = 'Law_Bielefeld'",
+     "title": "Select your research unit",
+     "isRequired": true,
+     "choices": [
+      "History",
+      "Philosophy",
+      "Theology"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Law_Bielefeld",
+     "visibleIf": "{University of Bielefeld} = 'Law_Bielefeld'",
+     "title": "Select your research unit",
+     "isRequired": true,
+     "choices": [
+      "Civil Law",
+      "Public Law",
+      "Criminal Law",
+      "Subject-specific Foreign Languages Unit"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Linguistics and Literary Studies_Bielefeld",
+     "visibleIf": "{University of Bielefeld} = 'Linguistics and Literary Studies_Bielefeld'",
+     "title": "Select your research unit",
+     "isRequired": true,
+     "choices": [
+      "English/American Studies",
+      "German as Foreign Language",
+      "German Studies",
+      "Linguistics, Clinical Linguistics, Text Technology, Computer Linguistics",
+      "Literary Studies, Romance Studies, Latin",
+      "Art and Music Education"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Mathematics_Bielefeld",
+     "visibleIf": "{University of Bielefeld} = 'Mathematics_Bielefeld'",
+     "title": "Select your research unit",
+     "isRequired": true,
+     "choices": [
+      "Mathematics",
+      "Didactics of Mathematics"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Medical School OWL_Bielefeld",
+     "visibleIf": "{University of Bielefeld} = 'Medical School OWL_Bielefeld'",
+     "title": "Select your research unit",
+     "isRequired": true,
+     "choices": [
+      "Campus ",
+      "Clinical"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Physics_Bielefeld",
+     "visibleIf": "{University of Bielefeld} = 'Technology_Bielefeld'",
+     "title": "Select your research unit",
+     "isRequired": true,
+     "choices": [
+      "Experimental Physics",
+      "Theoretical Physics",
+      "Astrophysics ",
+      "Physics and its Didactics"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Technology_Bielefeld",
+     "visibleIf": "{University of Bielefeld} = 'Technology_Bielefeld'",
+     "title": "Select your research unit",
+     "isRequired": true,
+     "choices": [
+      "Biotechnology",
+      "Informatics"
+     ]
+    }
+   ],
+   "title": "\nSelect your University"
+  }
+ ]
+}
