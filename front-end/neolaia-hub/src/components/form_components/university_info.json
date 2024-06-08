@@ -913,6 +913,680 @@
       "Biotechnology",
       "Informatics"
      ]
+    },
+    {
+     "type": "dropdown",
+     "name": "University of Tours",
+     "visibleIf": "{university_name} = 'University of Tours'",
+     "title": "Select your faculties",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "Faculty of Literature and Languages_Tours",
+       "text": "Faculty of Literature and Languages"
+      },
+      {
+       "value": "Faculty of Arts and Humanities_Tours",
+       "text": "Faculty of Arts and Humanities"
+      },
+      {
+       "value": "Faculty of Law, Economics and Social Sciences_Tours",
+       "text": "Faculty of Law, Economics and Social Sciences"
+      },
+      {
+       "value": "Faculty of Sciences and Technology_Tours",
+       "text": "Faculty of Sciences and Technology"
+      },
+      {
+       "value": "Faculty of Pharmaceutical Sciences_Tours",
+       "text": "Faculty of Pharmaceutical Sciences"
+      },
+      {
+       "value": "Faculty of Medecine_Tours",
+       "text": "Faculty of Medecine"
+      },
+      {
+       "value": "Faculty of Odontology_Tours",
+       "text": "Faculty of Odontology"
+      },
+      {
+       "value": "University School of management (IAE Tours)_Tours",
+       "text": "University School of management (IAE Tours)"
+      },
+      {
+       "value": "Tours Institute of Technology_Tours",
+       "text": "Tours Institute of Technology"
+      },
+      {
+       "value": "Blois Institute of Technology_Tours",
+       "text": "Blois Institute of Technology"
+      },
+      {
+       "value": "Polytechnic School of Tours_Tours",
+       "text": "Polytechnic School of Tours"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Literature and Languages_Tours",
+     "visibleIf": "{University of Tours} = 'Faculty of Literature and Languages_Tours'",
+     "title": "Select your institutes/French schools",
+     "isRequired": true,
+     "choices": [
+      "German Studies",
+      "Italian Studies",
+      "Spanish and Portuguese Studies",
+      "English Studies",
+      "Language Sciences",
+      "Sociolinguistics and Language Didactics",
+      "Law and Languages",
+      "Applied Foreign Languages / Modern Languages for International Business",
+      "French studies",
+      "Classical Literature - Latin studies",
+      "Classical Literature - Greek studies",
+      "Comparative Literature Studies",
+      "Performing Arts",
+      "Tours Public School of Journalism - EPJT",
+      "other affiliation"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Arts and Humanities_Tours",
+     "visibleIf": "{University of Tours} = 'Faculty of Arts and Humanities_Tours'",
+     "title": "Select your institutes/French schools",
+     "isRequired": true,
+     "choices": [
+      "CFMI - Training centre for musicians",
+      "History and archeology",
+      "Art history",
+      "Music and musicology",
+      "Philosophy",
+      "Psychology",
+      "Educational Studies",
+      "Sociology",
+      "Other affiliation"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Law, Economics and Social Sciences_Tours",
+     "visibleIf": "{University of Tours} = 'Faculty of Law, Economics and Social Sciences_Tours'",
+     "title": "Select your institutes/French schools",
+     "isRequired": true,
+     "choices": [
+      "Law",
+      "Economics",
+      "Geography",
+      "Other affiliation"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Sciences and Technology_Tours",
+     "visibleIf": "{University of Tours} = 'Faculty of Sciences and Technology_Tours'",
+     "title": "Select your institutes/French schools",
+     "isRequired": true,
+     "choices": [
+      "Computer sciences - Tours",
+      "Computer sciences - Blois",
+      "Mathematics",
+      "Physics",
+      "Chemistry",
+      "Geosciences",
+      "Animal biology and genetics",
+      "Animal physiology",
+      "Biology and plan physiology",
+      "Biochemistry",
+      "Microbiology",
+      "Neurosciences",
+      "Agrosciences - animal production",
+      "Agrosciences - sensory analysis and innovation",
+      "Other affiliation"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Pharmaceutical Sciences_Tours",
+     "visibleIf": "{University of Tours} = 'Faculty of Pharmaceutical Sciences_Tours'",
+     "title": "Select your institutes/French schools",
+     "isRequired": true,
+     "choices": [
+      "Biochemistry",
+      "Cell biology and plant biochemistry",
+      "Biophysics and bioinformatics",
+      "Analytical chemistry and hydrology",
+      "Organic chemistry",
+      "Physical chemistry",
+      "Therapeutic chemistry",
+      "Hematology",
+      "Immunology",
+      "Parasite immunology",
+      "microbiology - virology",
+      "Clinical pharmacy",
+      "Pharmaceutical formulation",
+      "Pharmacognosis",
+      "Pharmacology and toxicology",
+      "Physiology",
+      "Public Health, Biostatistics, Epidemiology",
+      "Other affiliation"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Medecine_Tours",
+     "visibleIf": "{University of Tours} = 'Faculty of Medecine_Tours'",
+     "title": "Select your institutes/French schools",
+     "isRequired": true,
+     "choices": [
+      "Medical Studies (including pedagogical/research/continuing training departments)",
+      "Humanities",
+      "Public Health",
+      "School of surgery",
+      "School of orthoptics",
+      "School of Speech-Language pathology",
+      "Regional centre for health simulation - MEDISIM",
+      "Other affiliation"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Faculty of Odontology_Tours",
+     "visibleIf": "{University of Tours} = 'Faculty of Odontology_Tours'",
+     "title": "Select your institutes/French schools",
+     "isRequired": true,
+     "choices": [
+      "Development, growth and prevention",
+      "Oral surgery, periodontology, oral biology",
+      "Oral rehabilitation"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "University School of management (IAE Tours)_Tours",
+     "visibleIf": "{University of Tours} = 'University School of management (IAE Tours)_Tours'",
+     "title": "Select your institutes/French schools",
+     "isRequired": true,
+     "choices": [
+      "Strategy, entrepreneurship, project management, information systems",
+      "Accounting, management control, audit, finance",
+      "Marketing",
+      "Human Resources Management",
+      "Other affiliation"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Tours Institute of Technology_Tours",
+     "visibleIf": "{University of Tours} = 'Tours Institute of Technology_Tours'",
+     "title": "Select your institutes/French schools",
+     "isRequired": true,
+     "choices": [
+      "Social Careers",
+      "Biological engineering",
+      "Electrical Engineering and Industrial Computer Sciences",
+      "Business and Administrations Management",
+      "Information and Communication",
+      "Marketing techniques",
+      "Other affiliation"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Blois Institute of Technology_Tours",
+     "visibleIf": "{University of Tours} = 'Blois Institute of Technology_Tours'",
+     "title": "Select your institutes/French schools",
+     "isRequired": true,
+     "choices": [
+      "Multimedia, networks and telecommunication",
+      "Engineering and material sciences",
+      "Other affiliation"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "Polytechnic School of Tours_Tours",
+     "visibleIf": "{University of Tours} = 'Polytechnic School of Tours_Tours'",
+     "title": "Select your institutes/French schools",
+     "isRequired": true,
+     "choices": [
+      "Planning and environmental engineering",
+      "Electronics and electrical engineering",
+      "Computer sciences",
+      "Mecanics and system design",
+      "Other affiliation (preparatory cycle/apprenticeship/…)"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "research_units_tours",
+     "visibleIf": "{university_name} = 'University of Tours'",
+     "title": "Select you research units",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "BBV - Plant Biocompounds and Biotechnology - RU 2106_Tours",
+       "text": "BBV - Plant Biocompounds and Biotechnology - RU 2106"
+      },
+      {
+       "value": "IRBI - Institute of Research on Insect Biology - UMR 7261_Tours",
+       "text": "IRBI - Institute of Research on Insect Biology - UMR 7261"
+      },
+      {
+       "value": "BOA - Bird Biology and Poultry - UMR INRAE 0083_Tours",
+       "text": "BOA - Bird Biology and Poultry - UMR INRAE 0083"
+      },
+      {
+       "value": "PRC - Physiology of Reproduction and Behaviour - UMR CNRS 7247 - INRAE 0085_Tours",
+       "text": "PRC - Physiology of Reproduction and Behaviour - UMR CNRS 7247 - INRAE 0085"
+      },
+      {
+       "value": "CBM-NMNS - Nanomedecines and Nanoprobes - UPR 6295_Tours",
+       "text": "CBM-NMNS - Nanomedecines and Nanoprobes - UPR 6295"
+      },
+      {
+       "value": "CEPR - Research Centre for Respiratory Diseases - Inserm U 1100_Tours",
+       "text": "CEPR - Research Centre for Respiratory Diseases - Inserm U 1100"
+      },
+      {
+       "value": "CeRCA - Research Centre on Cognition and Learning - UMR CNRS 7295_Tours",
+       "text": "CeRCA - Research Centre on Cognition and Learning - UMR CNRS 7295"
+      },
+      {
+       "value": "IBraiN - Imaging, Brain and Neurphychiatry - Inserm U 1253_Tours",
+       "text": "IBraiN - Imaging, Brain and Neurphychiatry - Inserm U 1253"
+      },
+      {
+       "value": "ISCHEMIA - Membrane Signalling and Inflamation in reperfusion injuries - Inserm UMR 1327_Tours",
+       "text": "ISCHEMIA - Membrane Signalling and Inflamation in reperfusion injuries - Inserm UMR 1327"
+      },
+      {
+       "value": "ISP - Infectious Diseases and Public Health - UMR INRAE 1282_Tours",
+       "text": "ISP - Infectious Diseases and Public Health - UMR INRAE 1282"
+      },
+      {
+       "value": "N2Cox - Niche, Nutrition, Cancer and Oxidative metabolism - Inserm U 1069_Tours",
+       "text": "N2Cox - Niche, Nutrition, Cancer and Oxidative metabolism - Inserm U 1069"
+      },
+      {
+       "value": "MAVIVHe - Morphogenesis and Antigenicity of HIV, Hepatitis and Emerging Viruses - Inserm U 1259_Tours",
+       "text": "MAVIVHe - Morphogenesis and Antigenicity of HIV, Hepatitis and Emerging Viruses - Inserm U 1259"
+      },
+      {
+       "value": "SIMBA - Synthesis and Isolation of Bio-Active Molecules - RU 7502_Tours",
+       "text": "SIMBA - Synthesis and Isolation of Bio-Active Molecules - RU 7502"
+      },
+      {
+       "value": "EES - Education Ethics Health - RU 7505_Tours",
+       "text": "EES - Education Ethics Health - RU 7505"
+      },
+      {
+       "value": "SPHERE - methodS in Patient-centeres outcomes and Health ResEarch - Inserm U 1246_Tours",
+       "text": "SPHERE - methodS in Patient-centeres outcomes and Health ResEarch - Inserm U 1246"
+      },
+      {
+       "value": "PAVeA - Psychology of the Various Stages of Life and Adaptation - RU 2114_Tours",
+       "text": "PAVeA - Psychology of the Various Stages of Life and Adaptation - RU 2114"
+      },
+      {
+       "value": "QualiPsy - Quality of life and psychological health - RU 1901_Tours",
+       "text": "QualiPsy - Quality of life and psychological health - RU 1901"
+      },
+      {
+       "value": "GREMAN - Materials Microelectronics Acoustics Nanotechnology - UMR 7347_Tours",
+       "text": "GREMAN - Materials Microelectronics Acoustics Nanotechnology - UMR 7347"
+      },
+      {
+       "value": "LaMé - Laboratory of Mechanics Gabriel Lamé - RU 7494_Tours",
+       "text": "LaMé - Laboratory of Mechanics Gabriel Lamé - RU 7494"
+      },
+      {
+       "value": "PCM2E - Laboratory of Physical Chemistry of Materials and Electrolytes for Energy - RU 6299_Tours",
+       "text": "PCM2E - Laboratory of Physical Chemistry of Materials and Electrolytes for Energy - RU 6299"
+      },
+      {
+       "value": "GeHCO - Continental Geo-Hydrosystems - RU 6293_Tours",
+       "text": "GeHCO - Continental Geo-Hydrosystems - RU 6293"
+      },
+      {
+       "value": "IDP - Denis Poisson Institute - UMR 7013_Tours",
+       "text": "IDP - Denis Poisson Institute - UMR 7013"
+      },
+      {
+       "value": "LIFAT - Tours Research Laboratory in Fundamental and Applied Computer Science - RU 6300_Tours",
+       "text": "LIFAT - Tours Research Laboratory in Fundamental and Applied Computer Science - RU 6300"
+      },
+      {
+       "value": "IRJI - Institute for Interdisciplinary Legal Research - RU 7496_Tours",
+       "text": "IRJI - Institute for Interdisciplinary Legal Research - RU 7496"
+      },
+      {
+       "value": "CITERES - Centre for Cities, Territories, Environment and Societies - UMR CNRS 7324_Tours",
+       "text": "CITERES - Centre for Cities, Territories, Environment and Societies - UMR CNRS 7324"
+      },
+      {
+       "value": "PRIM - Information and mediation practices and resources - RU 7503_Tours",
+       "text": "PRIM - Information and mediation practices and resources - RU 7503"
+      },
+      {
+       "value": "LEO - Laboratory of Economics Orelan-Tours Team - RU 2014_Tours",
+       "text": "LEO - Laboratory of Economics Orelan-Tours Team - RU 2014"
+      },
+      {
+       "value": "VALLOREM - Val de Loire Management Research - RU 6296_Tours",
+       "text": "VALLOREM - Val de Loire Management Research - RU 6296"
+      },
+      {
+       "value": "LLL - Loire Linguistics Laboratory Tours Team - UMR CNRS 7270_Tours",
+       "text": "LLL - Loire Linguistics Laboratory Tours Team - UMR CNRS 7270"
+      },
+      {
+       "value": "InTRu - Artistic and Cultural Interactions, Transfers and Breaks - RU 6301_Tours",
+       "text": "InTRu - Artistic and Cultural Interactions, Transfers and Breaks - RU 6301"
+      },
+      {
+       "value": "Dynadiv - Linguistic and Cultural Diversity in Sociolinguistics and Language Didactics - RU 4428_Tours",
+       "text": "Dynadiv - Linguistic and Cultural Diversity in Sociolinguistics and Language Didactics - RU 4428"
+      },
+      {
+       "value": "CeTHIS - Tourangeau Centre for the History and Study of Sources - UR 6298_Tours",
+       "text": "CeTHIS - Tourangeau Centre for the History and Study of Sources - UR 6298"
+      },
+      {
+       "value": "ICD - Cultural and Discursive Interactions - RU 6297_Tours",
+       "text": "ICD - Cultural and Discursive Interactions - RU 6297"
+      },
+      {
+       "value": "CESR - Center for Advanced Renaissance Studies - UMR CNRS 7323_Tours",
+       "text": "CESR - Center for Advanced Renaissance Studies - UMR CNRS 7323"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "IRBI - Institute of Research on Insect Biology - UMR 7261_Tours",
+     "visibleIf": "{research_units_tours} = 'IRBI - Institute of Research on Insect Biology - UMR 7261_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "IMIP - Biodiversity and interactions between Micro-organisms/Insects/Plants",
+      "ESORE - Social evolution and responses to the environment",
+      "INOV - Interactions organisms-environment: mechanisms and responses to global changes",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "BOA - Bird Biology and Poultry - UMR INRAE 0083_Tours",
+     "visibleIf": "{research_units_tours} = 'BOA - Bird Biology and Poultry - UMR INRAE 0083_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "BOPP - Biology of the egg and physiology of the hen",
+      "GENUTS - Genetics, Nutrition, Systems",
+      "MOQA - Bird Metabolism, Quality and Adaptation",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "PRC - Physiology of Reproduction and Behaviour - UMR CNRS 7247 - INRAE 0085_Tours",
+     "visibleIf": "{research_units_tours} = 'PRC - Physiology of Reproduction and Behaviour - UMR CNRS 7247 - INRAE 0085_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "Cognition, Ethology and Animal Welfare - CEB",
+      "Neuroethology and Social cognition - NECOS",
+      "Neuroendocrine Integration of Reproduction and Behavior - INERC",
+      "Molecular Neuroendocrinology of Reproduction - NMR",
+      "Biology of GPCR signaling systems",
+      "Energy sensors and reproductive signalisation - SENSOR",
+      "Integrative Gonad Biology - BINGO",
+      "Cellular interactions and fertility -ICF",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "CEPR - Research Centre for Respiratory Diseases - Inserm U 1100_Tours",
+     "visibleIf": "{research_units_tours} = 'CEPR - Research Centre for Respiratory Diseases - Inserm U 1100_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "Pathophysiology of lung infections",
+      "Proteolytic enzymes and their pharmacological targeting in lung diseases",
+      "Pharmacology of inhaled pharmaceuticals",
+      "Biology of innate T cells & Lung immunity (Infection and autoimmunity)",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "CeRCA - Research Centre on Cognition and Learning - UMR CNRS 7295_Tours",
+     "visibleIf": "{research_units_tours} = 'CeRCA - Research Centre on Cognition and Learning - UMR CNRS 7295_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "Item 1",
+       "text": "Aging and Psychopathology of Memory - VIPsyM"
+      },
+      {
+       "value": "Item 2",
+       "text": "Other or several"
+      },
+      "Item 3"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "ISP - Infectious Diseases and Public Health - UMR INRAE 1282_Tours",
+     "visibleIf": "{research_units_tours} = 'ISP - Infectious Diseases and Public Health - UMR INRAE 1282_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "Bacteria and maternal/fœtal risk",
+      "Bacterial Infections and Immunity in Ruminants",
+      "Genomic Plasticity, Biodiversity, and Antimicrobial Resistance",
+      "Microbiota, Monogastric and Salmonella",
+      "Apicomplexa and Mucosal Immunity",
+      "BioPharmaceuticals and Microorganisms Against Pathologies",
+      "Control and Resistance of Macro-parasites",
+      "Biology of Polyomavirus Infections",
+      "Biology of Avian Viruses",
+      "Infection and Innate Immunity in Monogastric livestock",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "IBraiN - Imaging, Brain and Neurphychiatry - Inserm U 1253_Tours",
+     "visibleIf": "{research_units_tours} = 'IBraiN - Imaging, Brain and Neurphychiatry - Inserm U 1253_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "Neruo-functional Psychiatry",
+      "Neurogenomics and Neuronal Physiopathology",
+      "Morphofunctional Imaging and Therapeutic Ultrasound",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "N2Cox - Niche, Nutrition, Cancer and Oxidative metabolism - Inserm U 1069_Tours",
+     "visibleIf": "{research_units_tours} = 'N2Cox - Niche, Nutrition, Cancer and Oxidative metabolism - Inserm U 1069_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "Cluster Randomized Trials and Complex Interventions",
+      "Definition, selection, validation, and assessment of outcomes",
+      "Methods for the measurement and interpretation of Self-Reported Outcomes",
+      "Prediction and Causality",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "SPHERE - methodS in Patient-centeres outcomes and Health ResEarch - Inserm U 1246_Tours",
+     "visibleIf": "{research_units_tours} = 'SPHERE - methodS in Patient-centeres outcomes and Health ResEarch - Inserm U 1246_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "Cluster Randomized Trials and Complex Interventions",
+      "Definition, selection, validation, and assessment of outcomes",
+      "Methods for the measurement and interpretation of Self-Reported Outcomes",
+      "Prediction and Causality",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "GREMAN - Materials Microelectronics Acoustics Nanotechnology - UMR 7347_Tours",
+     "visibleIf": "{research_units_tours} = 'GREMAN - Materials Microelectronics Acoustics Nanotechnology - UMR 7347_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "OXYDES - Functional oxides for energy efficiency : nanostructuration and combinatorial synthesis",
+      "DISCUS - Ultrasonic devices and characterizationOXYDES - Functional oxides for energy efficiency : nanostructuration and combinatorial synthesis",
+      "ECOSYM - Energy, COmponents, SYstems, Microelectronic",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "LaMé - Laboratory of Mechanics Gabriel Lamé - RU 7494_Tours",
+     "visibleIf": "{research_units_tours} = 'LaMé - Laboratory of Mechanics Gabriel Lamé - RU 7494_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "C2MP - Mechanical Beha-viour of Materials and Processes",
+      "DVS - Dynamics and Vibrations of Structures",
+      "C3M - Multi-scale, Multi-physics Characterisation and Modelling",
+      "DFV - Degradation, Fa-tigue and Vulnerability",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "PCM2E - Laboratory of Physical Chemistry of Materials and Electrolytes for Energy - RU 6299_Tours",
+     "visibleIf": "{research_units_tours} = 'PCM2E - Laboratory of Physical Chemistry of Materials and Electrolytes for Energy - RU 6299_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "Electrochemistry, interfaces and devices for energy storage",
+      "Innovative electrolytes and advanced ionic media",
+      "Pi-conjugated materials and polymers",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "IDP - Denis Poisson Institute - UMR 7013_Tours",
+     "visibleIf": "{research_units_tours} = 'IDP - Denis Poisson Institute - UMR 7013_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "Theoretical Physics",
+      "PDE, Modeling, Simulation",
+      "Probability, Algebra, Combinatorics, Ergodic Theory, Statistics",
+      "Analysis and Geometry",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "LIFAT - Tours Research Laboratory in Fundamental and Applied Computer Science - RU 6300_Tours",
+     "visibleIf": "{research_units_tours} = 'LIFAT - Tours Research Laboratory in Fundamental and Applied Computer Science - RU 6300_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "BdTin - Databases and Natural Language Processing",
+      "RFAI - Pattern Recognition and Image Analysis",
+      "ROOT - Operations research, scheduling, and transportation",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "CITERES - Centre for Cities, Territories, Environment and Societies - UMR CNRS 7324_Tours",
+     "visibleIf": "{research_units_tours} = 'CITERES - Centre for Cities, Territories, Environment and Societies - UMR CNRS 7324_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "COST - The social and political construction of spaces, norms and trajectories",
+      "EMAM - The Arab world and the Mediterranean region",
+      "DATE - Territorial and Environmental Dynamics and Action",
+      "LAT - Archeology and Territory",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "VALLOREM - Val de Loire Management Research - RU 6296_Tours",
+     "visibleIf": "{research_units_tours} = 'VALLOREM - Val de Loire Management Research - RU 6296_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "Strategic management of people and projects",
+      "understanding consumer behavior",
+      "organizational and management control systems / Organisational creativity,management and performance of innovation",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "LLL - Loire Linguistics Laboratory Tours Team - UMR CNRS 7270",
+     "visibleIf": "{research_units_tours} = 'LLL - Loire Linguistics Laboratory Tours Team - UMR CNRS 7270_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "CADO - Language practices, construction of knowledge and literacy, oral data",
+      "MP - Morphophonology",
+      "VETD-DO - Construction of meaning and formal grammars, oral data",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "CeTHIS - Tourangeau Centre for the History and Study of Sources - UR 6298_Tours",
+     "visibleIf": "{research_units_tours} = 'CeTHIS - Tourangeau Centre for the History and Study of Sources - UR 6298_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "Urban dynamics and spaces",
+      "Historical practices and the construction of historical objets",
+      "Sources and corpus - tools and data",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "ICD - Cultural and Discursive Interactions - RU 6297_Tours",
+     "visibleIf": "{research_units_tours} = 'ICD - Cultural and Discursive Interactions - RU 6297_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "The individual in the political/public arena",
+      "Individual practices and literary, artistic and scientific traditions",
+      "Minorities and the Collective; Man and Nature",
+      "Other or several"
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "CESR - Center for Advanced Renaissance Studies - UMR CNRS 7323_Tours",
+     "visibleIf": "{research_units_tours} = 'CESR - Center for Advanced Renaissance Studies - UMR CNRS 7323_Tours'",
+     "title": "Select your specific research units",
+     "isRequired": true,
+     "choices": [
+      "Humanism",
+      "Making and knowing in the Renaissance",
+      "European scene: performance arts, performance of the arts",
+      "Cultures of religious and political pluralism: conflicts and concords",
+      "Arts in the Renaissance: corpora, methods and influences",
+      "Other or several"
+     ]
     }
    ],
    "title": "\nSelect your University"

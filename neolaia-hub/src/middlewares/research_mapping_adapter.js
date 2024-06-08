@@ -18,6 +18,7 @@ module.exports = (config, { strapi }) => {
         const data = {
             user_id : user_id,
             name: survey_data.name,
+            surname: survey_data.surname,
             university_name : survey_data.university_name,
             department : department,
             faculty : faculty ?? '',
@@ -26,7 +27,7 @@ module.exports = (config, { strapi }) => {
             ERC_Panel_2 : (erc_panel[1] && erc_panel[1][area_erc_2]) ?? '',
             ERC_Keyword_2 : (erc_panel[1] && erc_panel[1][erc_panel[1][area_erc_2]]) ?? '',
             ERC_Panel_3 : (erc_panel[2] && erc_panel[2][area_erc_3] )?? '',
-            ERC_Keyword_3 : (erc_panel[2] && erc_panel[2][erc_panel[0][area_erc_3]]) ?? '',
+            ERC_Keyword_3 : (erc_panel[2] && erc_panel[2][erc_panel[2][area_erc_3]]) ?? '',
             ERC_Panel_interested_1 : (erc_panel_int[0] && erc_panel_int[0][area_erc_int_1]) ?? '', 
             ERC_Keyword_interested_1 : (erc_panel_int[0] && erc_panel_int[0][erc_panel_int[0][area_erc_int_1]]) ?? '',
             ERC_Panel_interested_2 : (erc_panel_int[1] && erc_panel_int[1][area_erc_int_2]) ?? '', 
@@ -38,7 +39,9 @@ module.exports = (config, { strapi }) => {
             personal_page_link : survey_data.personal_page_link ?? '',
             free_keyword_1 : free_keyword_1 ?? '',
             free_keyword_2 : free_keyword_2 ?? '',
-            free_keyword_3 : free_keyword_3 ?? ''
+            free_keyword_3 : free_keyword_3 ?? '',
+            research_units_tours : survey_data.research_units_tours ?? '',
+            specific_research_units_tours: survey_data[survey_data.research_units_tours] ?? '',
         }
         ctx.request.body.data = data
 
