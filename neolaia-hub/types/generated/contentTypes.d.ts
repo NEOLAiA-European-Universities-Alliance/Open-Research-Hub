@@ -882,6 +882,8 @@ export interface ApiResearchInfoSurveyResearchInfoSurvey
     orcid_link: Attribute.String;
     research_group_link: Attribute.String;
     personal_page_link: Attribute.String;
+    research_units_tours: Attribute.String;
+    specific_research_units_tours: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
