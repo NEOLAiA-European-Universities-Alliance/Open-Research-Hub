@@ -3,6 +3,7 @@ import erc_panel from '../components/form_components/erc_panel.json';
 import personal_info from '../components/form_components/personal_info.json';
 import free_keywords from '../components/form_components/free_keywords.json';
 import university_info from '../components/form_components/university_info.json';
+import survey_theme from '../components/form_components/survey_theme.json'
 import { Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
 import $ from "jquery";
@@ -32,6 +33,7 @@ personal_info.pages.push(free_keywords.pages[0])
 
 function MappingResearchers({token}){
     const research_survey = new Model(personal_info)
+    research_survey.applyTheme(survey_theme)
     //Function executed when the survey is submitted
     research_survey.onComplete.add( function (sender, options){
         options.showSaveInProgress();
