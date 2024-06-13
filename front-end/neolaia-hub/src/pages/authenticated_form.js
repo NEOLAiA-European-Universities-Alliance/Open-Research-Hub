@@ -3,7 +3,8 @@ import { AuthContext } from "../components/AuthContext";
 import Auth from "../components/auth";
 import token_is_valid from "../utils";
 import MappingResearchers from "../forms/mapping_researchers";
-
+import PrivacyMessageResearchersMapping from "../components/privacy_policy_researchers_mapping"; 
+import AcceptPolicyMessage from "../components/accept_policy_message_researchers_mapping";
 
 function AuthenticatedForm(){
     const { token, loading} = useContext(AuthContext);  
@@ -30,7 +31,7 @@ function AuthenticatedForm(){
     return(
         <div>
             {loading && <p>Caricamento...</p>}
-            {(!token || !token_validity) && <Auth />}
+            {(!token || !token_validity) && <Auth privacy_message={<PrivacyMessageResearchersMapping />} accept_policy_message={<AcceptPolicyMessage />} />}
             {token && form}
         </div>
     )

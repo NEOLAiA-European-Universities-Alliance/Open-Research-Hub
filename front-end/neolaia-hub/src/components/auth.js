@@ -6,7 +6,7 @@ import EmailForm from "./email_form";
 import OTPForm from "./OTP_form";
 
 
-const Auth = () => {
+const Auth = ({privacy_message,accept_policy_message}) => {
     const [email, setEmail] = useState("");
     const [otp, setOTP] = useState("");
     const [error_message, setErrorMessage] = useState(null)
@@ -54,7 +54,7 @@ const Auth = () => {
 
     return(
         <div>
-            {!email && <EmailForm onNext={handle_email_submit} />}
+            {!email && <EmailForm onNext={handle_email_submit} privacy_policy={privacy_message} accept_policy_message={accept_policy_message}/>}
             {email && <OTPForm onAuthenticate={handle_authentication} />}
         </div>
     )
