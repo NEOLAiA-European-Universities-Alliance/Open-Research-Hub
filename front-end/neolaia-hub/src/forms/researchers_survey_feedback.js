@@ -1,5 +1,6 @@
 import 'survey-core/defaultV2.min.css';
 import feedback_form from '../components/form_components/feedback_mapping_researchers.json';
+import survey_theme from '../components/form_components/survey_theme.json'
 import { Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
 import { base_url } from '../api';
@@ -7,6 +8,7 @@ import { base_url } from '../api';
 
 function ResearchersFeedback(){
     const researchers_feedback = new Model(feedback_form)
+    researchers_feedback.applyTheme(survey_theme)
 
     researchers_feedback.onComplete.add( function (sender, options){
         const xhr = new XMLHttpRequest();
