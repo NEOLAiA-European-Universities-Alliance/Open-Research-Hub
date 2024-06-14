@@ -1,5 +1,7 @@
 'use strict';
 
+const { default: strapiFactory } = require('@strapi/strapi');
+
 /**
  * research-info-survey controller
  */
@@ -39,5 +41,27 @@ module.exports = createCoreController('api::research-info-survey.research-info-s
         }
             
         return rows
-    }
+    },
+
+    async count_submission(ctx, next){
+        let {rows}  = await strapi.db.connection.raw(`
+            SELECT COUNT(*) as num_submission
+            FROM research_info_surveys;
+        `
+        )
+
+        return rows[0].num_submission
+    },
+    
+    async count_submission_by_uni(ctx, next){
+        let {rows} = await strapi.db.connection.raw( `
+            SELECT university_name, COUNT(*) as num_submission
+            FROM research_info_surveys
+            GROUP BY university_name;
+        `
+        )
+        
+        return rows
+    },
+
 }))

@@ -10,6 +10,16 @@ module.exports = {
             method: "GET",
             path: "/research-info-surveys/search_keywords/",
             handler: "research-info-survey.search_keywords"   
+        },
+        {
+            method: "GET",
+            path : "/research-info-surveys/count_submission/",
+            handler: "research-info-survey.count_submission"
+        },
+        {
+            method: "GET",
+            path : "/research-info-surveys/count_submission_by_uni/",
+            handler: "research-info-survey.count_submission_by_uni"
         }
     ]
 }
