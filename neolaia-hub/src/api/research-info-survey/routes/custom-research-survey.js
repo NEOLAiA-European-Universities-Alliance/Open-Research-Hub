@@ -26,6 +26,26 @@ module.exports = {
             handler: "research-info-survey.count_submission_by_uni"
         },
         {
+            method: "GET",
+            path : "/research-info-surveys/count_submission_by_erc_panel/",
+            handler: "research-info-survey.count_submission_by_erc_panel"
+        },
+        {
+            method: "GET",
+            path : "/research-info-surveys/get_free_keywords/",
+            handler: "research-info-survey.get_free_keywords"
+        },
+        {
+            method: "GET",
+            path : "/research-info-surveys/count_by_departmens/",
+            handler: "research-info-survey.count_by_departmens"
+        },
+        {
+            method: "GET",
+            path : "/research-info-surveys/count_by_faculties/",
+            handler: "research-info-survey.count_by_faculties"
+        },
+        {
             method: "POST",
             path : "/research-info-surveys/check_if_compiled/",
             handler: "research-info-survey.check_if_compiled",
