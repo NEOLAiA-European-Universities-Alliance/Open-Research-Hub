@@ -19,7 +19,6 @@
           "title": "Free keyword",
           "choicesByUrl": {
             "url": "https://data.neolaiacampus.eu/strapi/api/research-info-surveys/search_keywords/",
-            "url": "http://localhost:1337/api/research-info-surveys/search_keywords/",
             "valueName": "display_value"
             }   
          }
