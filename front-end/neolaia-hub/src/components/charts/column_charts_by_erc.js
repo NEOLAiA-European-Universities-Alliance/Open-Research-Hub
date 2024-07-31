@@ -89,7 +89,13 @@ function ColumnChart({chart_title, series}){
                 name: key,
                 data: [aggregatedData[key]]
             }));
-
+            
+            seriesData.sort((a, b) => {
+                if (a.name < b.name) return -1;
+                if (a.name > b.name) return 1;
+                return 0;
+            });            
+            
             setData(seriesData)
             setLoading(false)
         } catch (error){

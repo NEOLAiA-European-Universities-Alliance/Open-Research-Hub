@@ -76,7 +76,7 @@ function TreeMap({chart_title, series}){
 
     const fetchData = async () => {
         try {
-            const colors = ["#FF5733", "#FFA500", "#FFFF33", "#33FF57", "#33CFFF", "#3357FF", "#8A33FF", "#FF33B5", "#B3B3B3"];
+            const colors = ["#00B3E4", "#E83181", "#F39207", "#B94B96", "#BC9AC8", "#FDC200", "#4BB276", "#99C44A","#F5E723","#C3BA20"];
             const response = await axios.get(`${base_url}research-info-surveys/count_submission_by_uni/`)
             const response2 = await axios.get(`${base_url}research-info-surveys/count_by_departmens/`)
             const response3 = await axios.get(`${base_url}research-info-surveys/count_by_faculties/`)
@@ -114,6 +114,12 @@ function TreeMap({chart_title, series}){
                     by_uni.push(element)
                 }
             }
+            by_uni.sort((a, b) => {
+                if (a.name < b.name) return -1;
+                if (a.name > b.name) return 1;
+                return 0;
+            });          
+            
             setData(by_uni)
             setLoading(false)
         } catch (error){
