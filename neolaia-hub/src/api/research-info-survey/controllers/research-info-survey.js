@@ -1,6 +1,7 @@
 'use strict';
 
 const { default: strapiFactory } = require('@strapi/strapi');
+const { push } = require('../../../../config/middlewares');
 
 /**
  * research-info-survey controller
@@ -176,5 +177,174 @@ module.exports = createCoreController('api::research-info-survey.research-info-s
             ctx.body = {error: 'Data not found'}
             return
         }
-    }
+    },
+
+    async find_researchers(ctx,next){
+        const university = ctx.request.body.searchParams.university
+        const first_level_str = ctx.request.body.searchParams.department
+        const second_level_str = ctx.request.body.searchParams.faculty
+        const erc_area = ctx.request.body.searchParams.erc_area
+        const erc_panel = ctx.request.body.searchParams.erc_panel
+        const erc_keyword = ctx.request.body.searchParams.erc_keyword
+        const erc_area_int = ctx.request.body.searchParams.erc_area_int
+        const erc_panel_int = ctx.request.body.searchParams.erc_panel_int
+        const erc_keyword_int = ctx.request.body.searchParams.erc_keyword_int
+        const researcher_name = ctx.request.body.searchParams.researcher_name ? ctx.request.body.searchParams.researcher_name.trim() : '';
+        const researcher_surname = ctx.request.body.searchParams.researcher_surname ? ctx.request.body.searchParams.researcher_surname.trim() : '';
+        const free_keywords = ctx.request.body.keywords
+        console.log(ctx.request.body.searchParams)
+        const filters = { $and: [] };
+
+            // Filter for researcher name and surname
+        if (researcher_name) {
+            filters.$and.push({ name: { $containsi: researcher_name } });
+        }
+        if (researcher_surname) {
+            filters.$and.push({ surname: { $containsi: researcher_surname } });
+        }
+
+        // Filter for free keywords
+        if (free_keywords.length > 0) {
+            filters.$and.push({
+                $or: free_keywords.map(keyword => ({
+                    $or: [
+                        { free_keyword_1: { $containsi: keyword } },
+                        { free_keyword_2: { $containsi: keyword } },
+                        { free_keyword_3: { $containsi: keyword } }
+                    ]
+                }))
+            });
+        }
+
+        // Other filters
+        if (university) filters.$and.push({ university_name: university });
+        if (first_level_str) filters.$and.push({ department: first_level_str });
+        if (second_level_str) filters.$and.push({ faculty: second_level_str });
+
+        // ERC Area
+        if (erc_area) {
+            const abbr = erc_area.split('(')[1].replace(')', '');
+            filters.$and.push({
+                $or: [
+                    { ERC_Panel_1: { $startsWith: abbr } },
+                    { ERC_Panel_2: { $startsWith: abbr } },
+                    { ERC_Panel_3: { $startsWith: abbr } }
+                ]
+            });
+        }
+
+        // ERC Panel
+        if (erc_panel) {
+            filters.$and.push({
+                $or: [
+                    { ERC_Panel_1: erc_panel },
+                    { ERC_Panel_2: erc_panel },
+                    { ERC_Panel_3: erc_panel }
+                ]
+            });
+        }
+
+        // ERC Keyword
+        if (erc_keyword) {
+            filters.$and.push({
+                $or: [
+                    { ERC_Keyword_1: erc_keyword },
+                    { ERC_Keyword_2: erc_keyword },
+                    { ERC_Keyword_3: erc_keyword }
+                ]
+            });
+        }
+
+        // ERC Area Interested
+        if (erc_area_int) {
+            const abbr = erc_area_int.split('(')[1].replace(')', '');
+            filters.$and.push({
+                $or: [
+                    { ERC_Panel_interested_1: { $startsWith: abbr } },
+                    { ERC_Panel_interested_2: { $startsWith: abbr } },
+                    { ERC_Panel_interested_3: { $startsWith: abbr } }
+                ]
+            });
+        }
+
+        // ERC Panel Interested
+        if (erc_panel_int) {
+            filters.$and.push({
+                $or: [
+                    { ERC_Panel_interested_1: erc_panel_int },
+                    { ERC_Panel_interested_2: erc_panel_int },
+                    { ERC_Panel_interested_3: erc_panel_int }
+                ]
+            });
+        }
+
+        // ERC Keyword Interested
+        if (erc_keyword_int) {
+            filters.$and.push({
+                $or: [
+                    { ERC_Keyword_interested_1: erc_keyword_int },
+                    { ERC_Keyword_interested_2: erc_keyword_int },
+                    { ERC_Keyword_interested_3: erc_keyword_int }
+                ]
+            });
+        }
+
+        console.log(filters);
+
+        const result = await strapi.db.query('api::research-info-survey.research-info-survey').findMany({
+            where: filters
+        });
+
+        return result
+
+        /*
+        let query = 'SELECT * FROM research_info_surveys WHERE 1=1'
+        const params = []
+
+        if(researcher_name){
+            query += ' AND name ILIKE $' + (params.length + 1)
+            params.push(`%${researcher_name}%`);
+        }
+
+        if(free_keywords.length > 0){
+            free_keywords.map((keyword) => {
+                query+= ` AND (free_keyword_1 ILIKE $${params.length + 1} OR free_keyword_2 ILIKE $${params.length + 1} OR free_keyword_3 ILIKE $${params.length + 1})`
+                params.push(`%${keyword}%`)
+            })
+        }
+
+        if(university){
+            query += ' AND university_name = $' + (params.length + 1)
+            params.push(university)
+        }
+
+        if(first_level_str){
+            query += ' AND department = $' + (params.length + 1)
+            params.push(first_level_str)
+        }
+
+        if(second_level_str){
+            query += ' AND faculty = $' + (params.length + 1)
+            params.push(second_level_str)
+        }
+
+        if(erc_area){
+            let abbr = erc_area.split(' ')[0]
+            abbr = abbr.replace('(','')
+            abbr = abbr.replace(')','')
+            query += ` AND (ERC_Panel_1 LIKE $${params.length + 1}% OR ERC_Panel_2 LIKE $${params.length + 1} OR ERC_Panel_2 LIKE $${params.length + 1}%)`
+            params.push(abbr)
+        }
+
+        if(erc_panel){
+            query += ` AND (ERC_Panel_1 = $${params.length + 1} OR ERC_Panel_2 = $${params.length + 1} OR ERC_Panel_3 = $${params.length + 1})`
+            params.push(erc_panel)
+        }
+
+        if(erc_keyword){
+            query += ` AND (ERC_Keyword_1 = $${params.length + 1} OR ERC_Keyword_2 = $${params.length + 1} OR ERC_Keyword_3 = $${params.length + 1})`
+            params.push(erc_keyword)
+        }
+    */
+}
 }))

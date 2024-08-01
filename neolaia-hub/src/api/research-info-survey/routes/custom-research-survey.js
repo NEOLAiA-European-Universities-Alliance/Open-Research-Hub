@@ -61,5 +61,10 @@ module.exports = {
                 middlewares: ["global::otp-auth"]
             }
         },
+        {
+            method: "POST",
+            path : "/research-info-surveys/search_researchers/",
+            handler: "research-info-survey.find_researchers",
+        },
     ]
 }
