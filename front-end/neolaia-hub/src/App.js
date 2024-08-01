@@ -7,6 +7,7 @@ import EditResearcherPage from './pages/edit_researchers_form';
 import ResearcherDash from './pages/researchers_dashboard';
 import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import SearchResearchers from './pages/search_researchers';
+import ResearcherPage from './pages/researcher_page';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route basename={'/surveys'} path="/editresearcherdata" element={<EditResearcherPage />} />
           <Route basename={'/surveys'} path='/researchers-dashboard' element={<ResearcherDash />} /> 
           <Route basename={'/surveys'} path='/search-researchers' element={<SearchResearchers />} /> 
+          <Route basename={'/surveys'} path='/researcher-page' element={<ResearcherPage />} /> 
         </Routes>
       </Router>
   );

@@ -132,16 +132,93 @@ margin-top: 50px;
 
 #start-btn{
   margin-top: 15px;
-  background-color: #00d084;
+  background-color: #4bb276;
   margin-bottom: 10px;
 }
 
 #start-btn:hover{
-  background-color: #00965f;
+  background-color: #327a50;
 }
 
 #search-btn{
+  background-color: #ed6b1d;
   margin-top: 15px;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+#search-btn:hover{
+  background-color: #a24b15;
+}
+
+.free-keywords-check{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#personal-btn{
+  background-color: #00b3e4;
+}
+
+#research-btn{
+  background-color: #8773b3
+  ;
+}
+
+#orcid-btn{
+  background-color: #4bb276;
+}
+
+#personal-btn:hover{
+  background-color: #0487ab;
+}
+
+#research-btn:hover{
+  background-color: #635382;
+}
+
+#orcid-btn:hover{
+  background-color: #2a6543;
+}
+
+#dash-btn{
+background-color:#e83181;
+}
+
+#search-card-btn{
+  background-color: #ed6b1d;
+}
+
+#pill1{
+  color: white !important;
+  background-color: #00b3e4 !important;
+}
+
+#pill2{
+  background-color: #4bb276 !important;
+}
+
+#pill3{
+  background-color: #e4736e !important;
+}
+
+#search-sub{
+  background-color: #ed6b1d;
+  border-color: white;
+}
+
+#search-sub:hover{
+  background-color: #a24b15;
+}
+
+#reset-btn{
+  background-color: #da1a15 ;
+}
+
+#reset-btn:hover{
+  background-color: #890f0b ;
+}
+
+#dropdown-tags{
+  background-color: #00b3e4;
 }

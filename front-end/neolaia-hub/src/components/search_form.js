@@ -6,6 +6,7 @@ import faculties_data from './search_components/faculties.json'
 import axios from 'axios';
 import { base_url } from '../api';
 
+
 const SearchForm = ({onSearch}) => {
 
     const [formData, setFormData] = useState({
@@ -15,11 +16,17 @@ const SearchForm = ({onSearch}) => {
         erc_area: '',
         erc_panel: '',
         erc_keyword: '',
+        erc_area_int: '',
+        erc_panel_int: '',
+        erc_keyword_int: '',
         researcher_name: '',
+        researcher_surname: '',
     })
 
     const [ercPanelData,setErcPanelData] = useState([])
     const [ercKeyword, setErcKeyword] = useState([])
+    const [ercPanelDataInt,setErcPanelDataInt] = useState([])
+    const [ercKeywordInt, setErcKeywordInt] = useState([])
     const [departmentData, setDepartmentData] = useState([])
     const [facultyData, setFacultyData] = useState([])
     const [showFaculty, setShowFaculty] = useState(false)
@@ -28,6 +35,11 @@ const SearchForm = ({onSearch}) => {
 
     const handleChange = (e) => {
         const {name , value} = e.target;
+        if(name == 'erc_panel' && value == '')
+            formData.erc_keyword = ''
+        if(name == 'erc_panel_int' && value == '')
+            formData.erc_keyword_int = ''
+        
         setFormData({
             ...formData,
             [name]: value
@@ -36,9 +48,20 @@ const SearchForm = ({onSearch}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData,selectedKeywords)
-        onSearch(formData)
+        onSearch(formData,selectedKeywords)
     }
+
+    useEffect(() => {
+        if(formData.erc_area_int){
+            setErcPanelDataInt(panel_data[formData.erc_area_int])
+        }
+    },[formData.erc_area_int])
+
+    useEffect(() => {
+        if(formData.erc_panel_int){
+            setErcKeywordInt(panel_data[formData.erc_panel_int])
+        }
+    },[formData.erc_panel_int])
 
     useEffect(() => {
         if(formData.erc_area){
@@ -87,8 +110,26 @@ const SearchForm = ({onSearch}) => {
         }
     }
 
+    const handleReset = () => {
+        setFormData({
+            university: '',
+            department: '',
+            faculty: '',
+            erc_area: '',
+            erc_panel: '',
+            erc_keyword: '',
+            erc_area_int: '',
+            erc_panel_int: '',
+            erc_keyword_int: '',
+            researcher_name: '',
+            researcher_surname: '',
+        })
+        setSelectedKeywords([])
+    }
+
     return (
-        <Container>
+        <Container >
+            <p><h2>Find Researchers</h2></p>
             <Form onSubmit={handleSubmit}>
                 <Row className='mb-3'>
                     <Col>
@@ -155,7 +196,42 @@ const SearchForm = ({onSearch}) => {
                             <Form.Label>ERC Keyword </Form.Label>
                             <Form.Control as="select" name="erc_keyword" value={formData.erc_keyword} onChange={handleChange} disabled={!formData.erc_panel}>
                                 <option value=''>Select the ERC keyword</option>
-                                {ercPanelData.map((keyword, index) => (
+                                {ercKeyword.map((keyword, index) => (
+                                    <option key={index} value={keyword}>{keyword}</option>
+                                ))}
+                            </Form.Control>
+                        </Form.Group>
+                    </Col>
+                </Row>
+                <Row className='mb-3'>
+                    <Col>
+                        <Form.Group controlId='formArea'>
+                            <Form.Label>ERC Area (interested) </Form.Label>
+                            <Form.Control as="select" name="erc_area_int" value={formData.erc_area_int} onChange={handleChange}>
+                                <option value=''>Select the ERC area (interested) </option>
+                                <option key={0} value={'Physical Sciences and Engineering (PE)'}>Physical Sciences and Engineering (PE)</option>
+                                <option key={1} value={'Life Sciences (LS)'}>Life Sciences (LS)</option>
+                                <option key={2} value={'Social Sciences and Humanities (SH)'}>Social Sciences and Humanities (SH)</option>
+                            </Form.Control>
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId='formArea'>
+                            <Form.Label>ERC Panel (interested) </Form.Label>
+                            <Form.Control as="select" name="erc_panel_int" value={formData.erc_panel_int} onChange={handleChange} disabled={!formData.erc_area_int}>
+                                <option value=''>Select the ERC panel</option>
+                                {ercPanelDataInt.map((panel, index) => (
+                                    <option key={index} value={panel}>{panel}</option>
+                                ))}
+                            </Form.Control>
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId='formArea'>
+                            <Form.Label>ERC Keyword (interested)</Form.Label>
+                            <Form.Control as="select" name="erc_keyword_int" value={formData.erc_keyword_int} onChange={handleChange} disabled={!formData.erc_panel_int}>
+                                <option value=''>Select the ERC keyword</option>
+                                {ercKeywordInt.map((keyword, index) => (
                                     <option key={index} value={keyword}>{keyword}</option>
                                 ))}
                             </Form.Control>
@@ -193,8 +269,16 @@ const SearchForm = ({onSearch}) => {
                             </Form.Control>
                         </Form.Group>
                     </Col>
+                    <Col>
+                        <Form.Group controlId='formArea'>
+                            <Form.Label>Researcher surname </Form.Label>
+                            <Form.Control as="textarea" rows={1} name="researcher_surname" value={formData.researcher_surname} onChange={handleChange}>
+                            </Form.Control>
+                        </Form.Group>
+                    </Col>
                 </Row>
-                <Button variant='primary' type='submit'>Search</Button>
+                <Button  type='submit' id='search-sub'>Search</Button>
+                <Button variant='danger' type='reset' id='reset-btn' style={{marginLeft: '10px'}} onClick={handleReset}>Resets all fields</Button>
             </Form>
         </Container>
     )
