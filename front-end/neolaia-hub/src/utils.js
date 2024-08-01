@@ -40,7 +40,31 @@ async function check_if_alredy_compiled(token){
     }
 }
 
+function formatHumanReadableDate(isoDate) {
+    const dateObject = new Date(isoDate);
+
+    const humanReadableDate = dateObject.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    });
+
+    return humanReadableDate;
+}
+
+function return_erc_area(erc_panel){
+    if(erc_panel.includes('PE'))
+        return 'Physical Sciences and Engineering (PE)'
+    else if (erc_panel.includes('LS'))
+        return 'Life Sciences (LS)'
+    else if (erc_panel.includes('SH'))
+        return 'Social Sciences and Humanities (SH)'
+}
+
+
 export {
     token_is_valid, 
     check_if_alredy_compiled,
+    formatHumanReadableDate,
+    return_erc_area
 };
