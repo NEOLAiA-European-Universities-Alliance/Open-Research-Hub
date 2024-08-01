@@ -33,10 +33,8 @@
      "isRequired": true,
      "choices": [
       "Department of Chemistry and Biology \"Adolfo Zambelli\"/DCB",
-      {
-       "value": "Department of Pharmacy/DIFARMA",
-       "text": "Department of Physics \"E.R.Caianiello\"/DF"
-      },
+      "Department of Pharmacy/DIFARMA",
+      "Department of Physics \"E.R.Caianiello\"/DF",
       "Department of Computer Science/DI",
       "Department of Civil Engineering/DICIV",
       "Department of Information and Electrical Engineering and Applied Mathematics/DIEM",
@@ -104,15 +102,15 @@
      "choices": [
       {
        "value": "Humanities, Education and Social Sciences",
-       "text": "Humanities, Education and Social Sciences_Orebro"
+       "text": "Humanities, Education and Social Sciences"
       },
       {
        "value": "School of Behavioural, Social and Legal Sciences",
-       "text": "School of Behavioural, Social and Legal Sciences_Orebro"
+       "text": "School of Behavioural, Social and Legal Sciences"
       },
       {
        "value": "Music, Theatre and Art",
-       "text": "Music, Theatre and Art_Orebro"
+       "text": "Music, Theatre and Art"
       }
      ]
     },
@@ -245,7 +243,7 @@
      "isRequired": true,
      "choices": [
       {
-       "value": "Dept. of Health and S",
+       "value": "Dept. of Health and Social Studies",
        "text": "Dept. of Health and Social Studies"
       },
       "Dept. of Social Work"
@@ -555,7 +553,7 @@
       },
       {
        "value": "Faculty of Economics, Administration, and Business_Suceava",
-       "text": "Faculty of Faculty of Economics, Administration, and Business Education and Sports8"
+       "text": "Faculty of Faculty of Economics, Administration, and Business Education and Sports"
       },
       {
        "value": "Faculty of Educational Sciences_Suceava",
@@ -836,7 +834,7 @@
     {
      "type": "dropdown",
      "name": "History and Philosophy and Theology_Bielefeld",
-     "visibleIf": "{University of Bielefeld} = 'Law_Bielefeld'",
+     "visibleIf": "{University of Bielefeld} = 'History and Philosophy and Theology_Bielefeld'",
      "title": "Select your research unit",
      "isRequired": true,
      "choices": [
@@ -898,7 +896,7 @@
     {
      "type": "dropdown",
      "name": "Physics_Bielefeld",
-     "visibleIf": "{University of Bielefeld} = 'Technology_Bielefeld'",
+     "visibleIf": "{University of Bielefeld} = 'Physics_Bielefeld'",
      "title": "Select your research unit",
      "isRequired": true,
      "choices": [

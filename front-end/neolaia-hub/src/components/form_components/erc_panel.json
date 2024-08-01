@@ -862,10 +862,12 @@
         ],
         "panelCount": 1,
         "minPanelCount": 1,
-        "maxPanelCount": 3
+        "maxPanelCount": 3,
+        "panelAddText": "Add another ERC Keyword",
+        "panelRemoveText": "Remove the ERC Keyword"
        }
       ],
-      "title": "ERC Panel"
+      "title": "ERC Panel (Research area in which the research is conducted)"
      }
     ],
     "clearInvisibleValues": "onHidden"

@@ -1,0 +1,113 @@
+{
+    "Universities": [
+      "University of Salerno",
+      "University of Örebro",
+      "Šiauliai State University of Applied Sciences",
+      "University of Nicosia",
+      "Ştefan cel Mare University of Suceava",
+      "University of Tours",
+      "University of Bielefeld",
+      "University of Jaén",
+      "University of Ostrava"
+    ],
+    "University of Salerno" : [
+      "Department of Chemistry and Biology \"Adolfo Zambelli\"/DCB",
+      "Department of Pharmacy/DIFARMA",
+      "Department of Physics \"E.R.Caianiello\"/DF",
+      "Department of Computer Science/DI",
+      "Department of Civil Engineering/DICIV",
+      "Department of Information and Electrical Engineering and Applied Mathematics/DIEM",
+      "Department of Industrial Engineering/DIIN",
+      "Department of Mathematics/DIPMAT",
+      "Department of Medicine, Surgery and Dentistry \"Scuola Medica Salernitana\"/DIPMED",
+      "Department of Business Sciences   Management & Innovation Systems/DISA MIS",
+      "Department of Cultural Heritage Sciences/DISPAC",
+      "Department of Economics and Statistics/DISES",
+      "Department of Legal Sciences (School of Law)",
+      "Department of Political and Communication Sciences/DISPC",
+      "Department of Humanities, Philosophy and Education/DISUFF",
+      "Department of Political and Social Studies/DISPS",
+      "Department of Humanities/DISPSUM"
+    ],
+    "University of Örebro" : [
+      "Faculty of Business, Science and Engineering",
+      "Faculty of Humanities and Social Sciences",
+      "Faculty of Medicine and Health"
+    ],
+    "Šiauliai State University of Applied Sciences" : [
+      "Faculty of Health care",
+      "Faculty of Business and Technologies"
+    ],
+    "University of Nicosia" : [
+      "School of Business",
+      "School of Education",
+      "School of Humanities and Social Sciences",
+      "School of Law",
+      "School of Life and Health Sciences",
+      "Medical School",
+      "School of Sciences and Engineering",
+      "School of Veterinary Medicine"
+    ],
+    "Ştefan cel Mare University of Suceava" : [
+      "Faculty of Law and Administrative Sciences",
+      "Faculty of Physical Education and Sports",
+      "Faculty of Food Engineering",
+      "Faculty of Electrical Engineering and Computer Science",
+      "Faculty of Mechanical Engineering, Automotive, and Robotics",
+      "Faculty of History and Geography",
+      "Faculty of Letters and Communication Sciences",
+      "Faculty of Forestry",
+      "Faculty of Economics, Administration, and Business",
+      "Faculty of Educational Sciences",
+      "Faculty of Medicine and Biological Sciences"
+    ],
+    "University of Tours" : [
+      "Faculty of Literature and Languages",
+      "Faculty of Arts and Humanities",
+      "Faculty of Law, Economics and Social Sciences",
+      "Faculty of Sciences and Technology",
+      "Faculty of Pharmaceutical Sciences",
+      "Faculty of Medecine",
+      "Faculty of Odontology",
+      "University School of management (IAE Tours)",
+      "Tours Institute of Technology",
+      "Blois Institute of Technology",
+      "Polytechnic School of Tours"
+    ],
+    "University of Bielefeld" : [
+      "Biology",
+      "Business Administration and Economics",
+      "Chemistry",
+      "Educational Science",
+      "History and Philosophy and Theology",
+      "Law",
+      "Linguistics and Literary Studies",
+      "Mathematics",
+      "Medical School OWL",
+      "Physics",
+      "Psychology and Sports Science",
+      "Public Health",
+      "Sociology",
+      "Technology"
+    ],
+    "University of Jaén" : [
+      "Agrifood",
+      "Biology and biotechnology",
+      "Health sciences and technologies",
+      "Physics, chemistry and mathematics",
+      "Humanities",
+      "Natural resources and environment",
+      "Social, economic and legal sciences",
+      "Production technologies",
+      "Information and communication technologies"
+    ],
+    "University of Ostrava" : [
+      "Faculty of Social Studies",
+      "Faculty of Education",
+      "Faculty of Fine Arts & Music",
+      "Faculty of Arts",
+      "Faculty of Medicine",
+      "Faculty of Science",
+      "Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling"
+    ]
+  }

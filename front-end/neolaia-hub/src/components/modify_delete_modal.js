@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import axios from 'axios';
 import { base_url } from '../api';
-import EditResearcher from '../pages/edit_researchers_form';
 
 function ModifyDeleteForm({token}) {
     const navigate = useNavigate();

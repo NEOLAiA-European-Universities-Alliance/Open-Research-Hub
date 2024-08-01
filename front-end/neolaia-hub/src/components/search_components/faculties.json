@@ -1,0 +1,416 @@
+{
+    "Faculty of Business, Science and Engineering": [
+        "Örebro University School of Business_Orebro",
+        "Science and Technology_Orebro",
+        "Hospitality, Culinary Arts and Meal Science_Orebro"
+    ],
+    "Faculty of Humanities and Social Sciences" : [
+        "Humanities, Education and Social Sciences",
+        "School of Behavioural, Social and Legal Sciences",
+        "Music, Theatre and Art"
+    ],
+    "Faculty of Medicine and Health" : [
+        "Medical Sciences_Orebro",
+        "Health Sciences_Orebro"
+    ],
+    "Faculty of Health care" : [
+        "Biomedical Sciences Department_Siauliai",
+        "Rehabilitation Department_Siauliai",
+        "Social Work Department_Siauliai"
+    ],
+    "Faculty of Business and Technologies": [
+        "Engineering Sciences Department_Siauliai",
+        "Informatics Sciences Department_Siauliai",
+        "Transport Engineering Department_Siauliai",
+        "Management and Communication Department_Siauliai",
+        "Business and Accounting Department_Siauliai"
+    ],
+    "School of Business": [
+        "Department of Accounting, Economics and Finance ",
+        "Department of Digital Innovation",
+        "Department of Management"
+    ],
+    "School of Education": [
+      "Department of Education",
+      "Department of Music and Dance"
+    ],
+    "School of Humanities and Social Sciences": [
+        "Department of Architecture ",
+        "Department of Communications",
+        "Department of Design and Multimedia",
+        "Department of Languages and Literature",
+        "Department of Social Sciences",
+        "Department of Theology"
+    ],
+    "School of Law": [
+        "Department of Law",
+        "Department of Politics and Governance"
+    ],
+    "School of Life and Health Sciences":[
+        "Department of Health Sciences",
+        "Department of Life Sciences"
+    ],
+    "Medical School": [
+        "Department of Basic and Clinical Sciences",
+        "Department of Primary Care and Population Health"
+    ],
+    "School of Sciences and Engineering": [
+        "Department of Computer Science",
+        "Department of Engineering"
+    ],
+    "School of Veterinary Medicine": [
+        "Department of Veterinary Medicine"
+    ],
+    "Faculty of Law and Administrative Sciences": [
+        "Department of Law and Administrative Sciences",
+        "Center for Training and Research in Public Administration",
+        "Research Center for Legal Research"
+    ],
+    "Faculty of Physical Education and Sports" : [
+      "Department of Physical Education and Sport",
+      "Interdisciplinary Research Center in Human Motricity and Health Sciences"
+    ],
+    "Faculty of Food Engineering" : [
+      "Department of Food Technologies, Food Production and Environmental Safety",
+      "Research and Training Center for Food Science and Safety"
+    ],
+    "Faculty of Electrical Engineering and Computer Science": [
+        "Department of Computer Science, Electronics, and Automation",
+        "Department of Electrical Engineering",
+        "Department of Computer Science",
+        "Research Center for Electrical Machines, Devices, and Drives",
+        "Research Center for Process Control Systems",
+        "Computer Science Research Center"
+    ],
+    "Faculty of Mechanical Engineering, Automotive, and Robotics": [
+        "Department of Mechanics and Technologies",
+        "Research Center for Mechanical, Industrial, Mechatronic Engineering, Environment, and Management",
+        "Training Center in Mechanical Engineering and Road Vehicles"
+    ],
+
+    "Faculty of History and Geography": [
+        "Department of Human and Social-Political Sciences",
+        "Department of Geography",
+        "Research Center for Applied Geography ",
+        "The Carpathica University Centre of Interdisciplinary Studies",
+        "Research Center in Ethics, Philosophy, Engineering, and Society",
+        "Cross-Border Cooperation Center"
+    ],
+    "Faculty of Letters and Communication Sciences": [
+        "Department of Romanian Language and Literature and Communication Sciences",
+        "Department of Foreign Languages and Literatures",
+        "Inter Litteras Research Center",
+        "Research Center for Discourse Analysis ",
+        "Research Center for Communication and Advertising Creation",
+        "Center for Foreign Languages and Cultures Synergia ",
+        "Center for Academic and Creative Writing",
+        "University Success Center"
+    ],
+    "Faculty of Forestry": [
+        "Department of Forestry and Environmental ",
+        "Research Center for Environmental Policies",
+        "Technology Transfer Center",
+        "Hunting Center"
+    ],
+    "Faculty of Economics, Administration, and Business": [
+        "Department of Accounting, Audit, and Finance",
+        "Department of Economics, Economic Informatics, and Business Management",
+        "Department of Management, Business Administration, and Tourism",
+        "Research Center in Management and Business Administration",
+        "Research Center in Accounting and Management Informatics",
+        "Tourism Resource Center"
+    ],
+    "Faculty of Educational Sciences": [
+        "Department of Education Sciences",
+        "Psychopedagogical Department ",
+        "Research Center in Psychology and Educational Sciences",
+        "Early Education Resource Center (EERC)",
+        "Resilience and Mental Health Center in School and Community (CRESMIN)"
+    ],
+
+    "Faculty of Medicine and Biological Sciences": [
+      "Department of Biomedical Sciences",
+      "Interdisciplinary Research Center in Biomedical Sciences"
+    ],
+
+    "Faculty of Literature and Languages" : [
+        "German Studies",
+        "Italian Studies",
+        "Spanish and Portuguese Studies",
+        "English Studies",
+        "Language Sciences",
+        "Sociolinguistics and Language Didactics",
+        "Law and Languages",
+        "Applied Foreign Languages / Modern Languages for International Business",
+        "French studies",
+        "Classical Literature - Latin studies",
+        "Classical Literature - Greek studies",
+        "Comparative Literature Studies",
+        "Performing Arts",
+        "Tours Public School of Journalism - EPJT",
+        "other affiliation"
+    ],
+
+    "Faculty of Arts and Humanities": [
+        "CFMI - Training centre for musicians",
+        "History and archeology",
+        "Art history",
+        "Music and musicology",
+        "Philosophy",
+        "Psychology",
+        "Educational Studies",
+        "Sociology",
+        "Other affiliation"
+    ],
+
+    "Faculty of Law, Economics and Social Sciences": [
+        "Law",
+        "Economics",
+        "Geography",
+        "Other affiliation"
+    ],
+
+    "Faculty of Sciences and Technology": [
+        "Computer sciences - Tours",
+        "Computer sciences - Blois",
+        "Mathematics",
+        "Physics",
+        "Chemistry",
+        "Geosciences",
+        "Animal biology and genetics",
+        "Animal physiology",
+        "Biology and plan physiology",
+        "Biochemistry",
+        "Microbiology",
+        "Neurosciences",
+        "Agrosciences - animal production",
+        "Agrosciences - sensory analysis and innovation",
+        "Other affiliation"
+    ],
+
+    "Faculty of Pharmaceutical Sciences": [
+        "Biochemistry",
+        "Cell biology and plant biochemistry",
+        "Biophysics and bioinformatics",
+        "Analytical chemistry and hydrology",
+        "Organic chemistry",
+        "Physical chemistry",
+        "Therapeutic chemistry",
+        "Hematology",
+        "Immunology",
+        "Parasite immunology",
+        "microbiology - virology",
+        "Clinical pharmacy",
+        "Pharmaceutical formulation",
+        "Pharmacognosis",
+        "Pharmacology and toxicology",
+        "Physiology",
+        "Public Health, Biostatistics, Epidemiology",
+        "Other affiliation"
+    ],
+
+    "Faculty of Medecine": [
+        "Medical Studies (including pedagogical/research/continuing training departments)",
+        "Humanities",
+        "Public Health",
+        "School of surgery",
+        "School of orthoptics",
+        "School of Speech-Language pathology",
+        "Regional centre for health simulation - MEDISIM",
+        "Other affiliation"
+    ],
+
+    "Faculty of Odontology": [
+        "Development, growth and prevention",
+        "Oral surgery, periodontology, oral biology",
+        "Oral rehabilitation"
+    ],
+
+    "University School of management (IAE Tours)": [
+        "Strategy, entrepreneurship, project management, information systems",
+        "Accounting, management control, audit, finance",
+        "Marketing",
+        "Human Resources Management",
+        "Other affiliation"
+    ],
+
+    "Tours Institute of Technology": [
+        "Social Careers",
+        "Biological engineering",
+        "Electrical Engineering and Industrial Computer Sciences",
+        "Business and Administrations Management",
+        "Information and Communication",
+        "Marketing techniques",
+        "Other affiliation"
+    ],
+
+    "Blois Institute of Technology": [
+        "Multimedia, networks and telecommunication",
+        "Engineering and material sciences",
+        "Other affiliation"
+    ],
+
+    "Polytechnic School of Tours": [
+        "Planning and environmental engineering",
+        "Electronics and electrical engineering",
+        "Computer sciences",
+        "Mecanics and system design",
+        "Other affiliation (preparatory cycle/apprenticeship/…)"
+    ],
+
+    "Biology": [
+        "Molecular Biology ",
+        "Neurobiology",
+        "Ecology and Behavioural Biology",
+        "Didactics"
+    ],
+    "Business Administration and Economics": [
+        "Business Administration",
+        "Economics",
+        "Empirical Methods",
+        "Center for Mathematical Economics - Economics"
+    ],
+    "Chemistry" : [
+      "Chemistry",
+      "Biochemistry"
+    ],
+
+    "History and Philosophy and Theology": [
+        "History",
+        "Philosophy",
+        "Theology"
+    ],
+
+    "Law": [
+        "Civil Law",
+        "Public Law",
+        "Criminal Law",
+        "Subject-specific Foreign Languages Unit"
+    ],
+
+    "Linguistics and Literary Studies": [
+        "English/American Studies",
+        "German as Foreign Language",
+        "German Studies",
+        "Linguistics, Clinical Linguistics, Text Technology, Computer Linguistics",
+        "Literary Studies, Romance Studies, Latin",
+        "Art and Music Education"
+    ],
+
+    "Mathematics": [
+      "Mathematics",
+      "Didactics of Mathematics"
+    ],
+    "Medical School OWL": [
+      "Campus ",
+      "Clinical"
+    ],
+
+    "Physics": [
+        "Experimental Physics",
+        "Theoretical Physics",
+        "Astrophysics ",
+        "Physics and its Didactics"
+    ],
+
+    "Technology":[
+      "Biotechnology",
+      "Informatics"
+    ],
+
+    "Faculty of Social Studies": [
+        "Dept. of Health and Social Studies"
+    ],
+    "Faculty of Education": [
+        "Dept. of Civic Education",
+        "Dept. of Czech Language and Literature with Didactics",
+        "Dept. of Education and Adult Education",
+        "Dept. of English Language Teaching",
+        "Dept. of Human Movement Studies",
+        "Dept. of Information and Communication Technologies",
+        "Dept. of Mathematics with Didactics",
+        "Dept. of Music Education",
+        "Dept. of Educational and School Psychology",
+        "Dept. of Primary and Preprimary Education",
+        "Dept. of School Education",
+        "Dept. of Technical and Vocational Education",
+        "Dept. of Visual Arts Education",
+        "Centre of Educational Research",
+        "Centre for Research into Culture and Identity of the Region",
+        "Centre for Visual Studies",
+        "Human Motion Diagnostic Centre",
+        "Institute for Adult"
+    ],
+    "Faculty of Fine Arts & Music": [
+        "Dept. of Graphics and Drawing",
+        "Dept. of Intermedia Studies",
+        "Dept. of Painting",
+        "Dept. of Sculpture",
+        "Dept. of the Theory and History of Fine Arts",
+        "Dept. of Keyboard Instruments",
+        "Dept. of String Instruments",
+        "Dept. of Vocal Studies",
+        "Dept. of Wind Instruments"
+    ],
+
+    "Faculty of Arts": [
+        "Dept. of Art History and Cultural Heritage",
+        "Dept. of Czech Language",
+        "Dept. of Czech Literature and Literary Criticism",
+        "Dept. of English and American Studies",
+        "Dept. of German Studies",
+        "Dept. of History",
+        "Dept. of Latin Language and Culture",
+        "Dept. of Psychology",
+        "Centre for Economical and Social History",
+        "Centre for the Research of Professional Language",
+        "Centre for Regional Studies",
+        "VIVARIUM - Centre for Research in Medieval Society and Culture"
+    ],
+
+    "Faculty of Medicine": [
+        "Dept. of Anaesthesiology, Resuscitation and Intensive Care Medicine",
+        "Dept. of Anatomy",
+        "Dept. of Clinic Subjects",
+        "Dept. of Clinical Neurosciences",
+        "Dept. of Craniofacial Surgery",
+        "Dept. of Dentistry",
+        "Dept. of Epidemiology and Public Health",
+        "Dept. of Forensic Medicine",
+        "Dept. of Gynaecology and Obstetrics",
+        "Dept. of Hematooncology",
+        "Dept. of Histology and Embryology",
+        "Dept. of Imaging Methods",
+        "Dept. of Nursing and Midwifery",
+        "Dept. of Oncology",
+        "Dept. of Pediatrics",
+        "Dept. of Rehabilitation and Sports Medicine",
+        "Dept. of Surgical Studies",
+        "Dept. of Clinical Pharmacology",
+        "Institute of Emergency Medicine",
+        "Institute of Molecular and Clinical Pathology and Medical Genetics",
+        "Institute of Laboratory Medicine",
+        "Institute of Physiology and Pathophysiology",
+        "Centre for Health Research",
+        "Centre for Hyperbaric Medicine of Faculty of Medicine University of Ostrava and Ostrava City Hospital",
+        "Simulation Centre / Training Hospital (SIMLEK)"
+    ],
+
+    "Faculty of Science":[
+        "Dept. of Biology and Ecology",
+        "Dept. of Chemistry",
+        "Dept. of Human Geography and Regional Development",
+        "Dept. of Informatics and Computers",
+        "Dept. of Mathematics",
+        "Dept. of Physical Geography and Geoecology",
+        "Dept. of Physics",
+        "Environmental Center"
+    ],
+
+    "Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling": [
+        "Logic",
+        "Dynamical Systems",
+        "Neural Networks and Computer Vision",
+        "Fuzzy modeling"
+    ]
+}

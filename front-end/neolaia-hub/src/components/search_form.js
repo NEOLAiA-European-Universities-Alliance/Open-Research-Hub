@@ -1,0 +1,204 @@
+import React, { useEffect, useState } from 'react';
+import { Form, Button, Container, Row, Col, Dropdown } from 'react-bootstrap';
+import universities_data from './search_components/universities.json'
+import panel_data from './search_components/erc_panel.json'
+import faculties_data from './search_components/faculties.json'
+import axios from 'axios';
+import { base_url } from '../api';
+
+const SearchForm = ({onSearch}) => {
+
+    const [formData, setFormData] = useState({
+        university: '',
+        department: '',
+        faculty: '',
+        erc_area: '',
+        erc_panel: '',
+        erc_keyword: '',
+        researcher_name: '',
+    })
+
+    const [ercPanelData,setErcPanelData] = useState([])
+    const [ercKeyword, setErcKeyword] = useState([])
+    const [departmentData, setDepartmentData] = useState([])
+    const [facultyData, setFacultyData] = useState([])
+    const [showFaculty, setShowFaculty] = useState(false)
+    const [freeKeywords, setFreeKeywords] = useState([])
+    const [selectedKeywords, setSelectedKeywords] = useState([])
+
+    const handleChange = (e) => {
+        const {name , value} = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(formData,selectedKeywords)
+        onSearch(formData)
+    }
+
+    useEffect(() => {
+        if(formData.erc_area){
+            setErcPanelData(panel_data[formData.erc_area])
+        }
+    },[formData.erc_area])
+
+    useEffect(() => {
+        if(formData.erc_panel){
+            setErcKeyword(panel_data[formData.erc_panel])
+        }
+    },[formData.erc_panel])
+
+    useEffect(() => {
+        if(formData.university){
+            setDepartmentData(universities_data[formData.university])
+        }
+    }, [formData.university])
+
+    useEffect(() => {
+        setShowFaculty(false)
+        if(formData.department && faculties_data[formData.department]){
+            setFacultyData(faculties_data[formData.department])
+            setShowFaculty(true)
+        }
+    }, [formData.department])
+
+
+    useEffect(() => {
+        async function getFreeKeywords(){
+            try {
+            const response = await axios.get(`${base_url}research-info-surveys/search_keywords/`);
+            setFreeKeywords(response.data)
+            } catch (error) {
+            console.error("Error:",error)
+            }
+        }
+        getFreeKeywords();
+    }, [])
+
+    const handleSelectedKeyword = (value) => {
+        if(selectedKeywords.includes(value)) {
+            setSelectedKeywords((prevSelected) => prevSelected.filter((item) => item !== value ));
+        } else {
+            setSelectedKeywords((prevSelected) => [...prevSelected, value])
+        }
+    }
+
+    return (
+        <Container>
+            <Form onSubmit={handleSubmit}>
+                <Row className='mb-3'>
+                    <Col>
+                        <Form.Group controlId='formUni'>
+                            <Form.Label>University</Form.Label>
+                            <Form.Control as="select" name="university" value={formData.university} onChange={handleChange}>
+                                <option value="">Select the University</option>
+                                {universities_data.Universities.map((university, index) => (
+                                    <option key={index} value={university}>{university}</option>
+                                ))}
+                            </Form.Control>
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId='formUni'>
+                            <Form.Label>Select the first level structure (i.e. Department/Faculty)</Form.Label>
+                            <Form.Control as="select" name="department" value={formData.department} onChange={handleChange} disabled={!formData.university}>
+                                <option value="">Select the first level structure</option>
+                                {departmentData.map((dep, index) => (
+                                    <option key={index} value={dep}>{dep}</option>
+                                ))}
+                            </Form.Control>
+                        </Form.Group>
+                    </Col>
+                    {showFaculty && (
+                        <Col>
+                            <Form.Group controlId='formUni'>
+                                <Form.Label>Select the second level structure (i.e. Faculty/School)</Form.Label>
+                                <Form.Control as="select" name="faculty" value={formData.faculty} onChange={handleChange} disabled={!formData.department}>
+                                    <option value="">Select the second level structure</option>
+                                    {facultyData.map((fac, index) => (
+                                        <option key={index} value={fac}>{fac.split('_')[0]}</option>
+                                    ))}
+                                </Form.Control>
+                            </Form.Group>
+                        </Col>
+                    )}
+                </Row>
+                <Row className='mb-3'>
+                    <Col>
+                        <Form.Group controlId='formArea'>
+                            <Form.Label>ERC Area</Form.Label>
+                            <Form.Control as="select" name="erc_area" value={formData.erc_area} onChange={handleChange}>
+                                <option value=''>Select the ERC area </option>
+                                <option key={0} value={'Physical Sciences and Engineering (PE)'}>Physical Sciences and Engineering (PE)</option>
+                                <option key={1} value={'Life Sciences (LS)'}>Life Sciences (LS)</option>
+                                <option key={2} value={'Social Sciences and Humanities (SH)'}>Social Sciences and Humanities (SH)</option>
+                            </Form.Control>
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId='formArea'>
+                            <Form.Label>ERC Panel </Form.Label>
+                            <Form.Control as="select" name="erc_panel" value={formData.erc_panel} onChange={handleChange} disabled={!formData.erc_area}>
+                                <option value=''>Select the ERC panel</option>
+                                {ercPanelData.map((panel, index) => (
+                                    <option key={index} value={panel}>{panel}</option>
+                                ))}
+                            </Form.Control>
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId='formArea'>
+                            <Form.Label>ERC Keyword </Form.Label>
+                            <Form.Control as="select" name="erc_keyword" value={formData.erc_keyword} onChange={handleChange} disabled={!formData.erc_panel}>
+                                <option value=''>Select the ERC keyword</option>
+                                {ercPanelData.map((keyword, index) => (
+                                    <option key={index} value={keyword}>{keyword}</option>
+                                ))}
+                            </Form.Control>
+                        </Form.Group>
+                    </Col>
+                </Row>
+                <Row className='mb-3'>
+                    <Col>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="primary" id="dropdown-tags">
+                            Free keywords
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            {freeKeywords && freeKeywords.map((keyword, index) => (
+                              <Form.Check 
+                                key={index}
+                                className='free-keywords-check'
+                                label={`${keyword.matched_keyword} (x${keyword.occurrences})`}
+                                name='keywords'
+                                type='checkbox'
+                                id={index}
+                                onChange={() => handleSelectedKeyword(keyword.matched_keyword)}
+                                checked={selectedKeywords.includes(keyword.matched_keyword)}
+                              /> 
+                            ))}
+                        </Dropdown.Menu>
+                    </Dropdown>
+                    </Col>
+                </Row>
+                <Row className='mb-3'>
+                    <Col>
+                        <Form.Group controlId='formArea'>
+                            <Form.Label>Researcher name </Form.Label>
+                            <Form.Control as="textarea" rows={1} name="researcher_name" value={formData.researcher_name} onChange={handleChange}>
+                            </Form.Control>
+                        </Form.Group>
+                    </Col>
+                </Row>
+                <Button variant='primary' type='submit'>Search</Button>
+            </Form>
+        </Container>
+    )
+
+}
+
+export default SearchForm;

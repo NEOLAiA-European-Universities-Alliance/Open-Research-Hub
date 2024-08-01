@@ -26,7 +26,7 @@ function AuthenticatedForm(){
             }
         }
         check_if_compiled()
-    },[token])
+    })
 
     useEffect(() => {
         if (loading){

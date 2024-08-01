@@ -21,6 +21,7 @@ erc_panel_interest.pages[0].elements[0].title = 'Indicate at most 3 ERC Panel an
 //To solve question already answered from the research are panel, rename all key 
 erc_panel_interest.name = 'erc_panel_research_area_interested'
 erc_panel_interest.pages[0].name= 'interested_research_area'
+erc_panel_interest.pages[0].title= 'ERC panel (Research areas in which you are interested)'
 erc_panel_interest.pages[0].elements[0].name = 'ERC_panel_interested'
 erc_panel_interest.pages[0].elements[0].isRequired = false
 erc_panel_interest.pages[0].elements[0].templateElements[0].isRequired = false
@@ -190,7 +191,7 @@ function MappingResearchers({token, data}){
             xhr.onload = xhr.onerror = function () {
                 if (xhr.status === 200){
                     options.showSaveSuccess("Thank you.");
-                    research_survey.completedHtml = '<h3>Thank you, your information has been updated!</h3> <br> <a href="http://data.neolaiacampus.eu/surveysDashboard/"  style="color: white;">Go to the dashboard</a>'
+                    research_survey.completedHtml = '<h3>Thank you, your information has been updated!</h3> <br> <a href="./researchers-dashboard"  style="color: white;">Go to the dashboard</a>'
                 } else {
                     options.showSaveError("Error during updating, try again.")
                 }
