@@ -233,7 +233,7 @@ const SearchForm = ({onSearch}) => {
                 <Row className='mb-3'>
                     <Col>
                         <Form.Group controlId='formArea'>
-                            <Form.Label>ERC Area</Form.Label>
+                            <Form.Label>ERC Area (in which the research is conducted) </Form.Label>
                             <Form.Control as="select" name="erc_area" value={formData.erc_area} onChange={handleChange}>
                                 <option value=''>Select the ERC area </option>
                                 <option key={0} value={'Physical Sciences and Engineering (PE)'}>Physical Sciences and Engineering (PE)</option>
@@ -244,7 +244,7 @@ const SearchForm = ({onSearch}) => {
                     </Col>
                     <Col>
                         <Form.Group controlId='formArea'>
-                            <Form.Label>ERC Panel </Form.Label>
+                            <Form.Label>ERC Panel (in which the research is conducted) </Form.Label>
                             <Form.Control as="select" name="erc_panel" value={formData.erc_panel} onChange={handleChange} disabled={!formData.erc_area}>
                                 <option value=''>Select the ERC panel</option>
                                 {ercPanelData.map((panel, index) => (
@@ -255,7 +255,7 @@ const SearchForm = ({onSearch}) => {
                     </Col>
                     <Col>
                         <Form.Group controlId='formArea'>
-                            <Form.Label>ERC Keyword </Form.Label>
+                            <Form.Label>ERC Keyword (in which the research is conducted) </Form.Label>
                             <Form.Control as="select" name="erc_keyword" value={formData.erc_keyword} onChange={handleChange} disabled={!formData.erc_panel}>
                                 <option value=''>Select the ERC keyword</option>
                                 {ercKeyword.map((keyword, index) => (
@@ -268,7 +268,7 @@ const SearchForm = ({onSearch}) => {
                 <Row className='mb-3'>
                     <Col>
                         <Form.Group controlId='formArea'>
-                            <Form.Label>ERC Area (interested) </Form.Label>
+                            <Form.Label>ERC Area (research area of interest) </Form.Label>
                             <Form.Control as="select" name="erc_area_int" value={formData.erc_area_int} onChange={handleChange}>
                                 <option value=''>Select the ERC area (interested) </option>
                                 <option key={0} value={'Physical Sciences and Engineering (PE)'}>Physical Sciences and Engineering (PE)</option>
@@ -279,7 +279,7 @@ const SearchForm = ({onSearch}) => {
                     </Col>
                     <Col>
                         <Form.Group controlId='formArea'>
-                            <Form.Label>ERC Panel (interested) </Form.Label>
+                            <Form.Label>ERC Panel (research area of interest) </Form.Label>
                             <Form.Control as="select" name="erc_panel_int" value={formData.erc_panel_int} onChange={handleChange} disabled={!formData.erc_area_int}>
                                 <option value=''>Select the ERC panel</option>
                                 {ercPanelDataInt.map((panel, index) => (
@@ -290,7 +290,7 @@ const SearchForm = ({onSearch}) => {
                     </Col>
                     <Col>
                         <Form.Group controlId='formArea'>
-                            <Form.Label>ERC Keyword (interested)</Form.Label>
+                            <Form.Label>ERC Keyword (research area of interest)</Form.Label>
                             <Form.Control as="select" name="erc_keyword_int" value={formData.erc_keyword_int} onChange={handleChange} disabled={!formData.erc_panel_int}>
                                 <option value=''>Select the ERC keyword</option>
                                 {ercKeywordInt.map((keyword, index) => (
