@@ -17,6 +17,11 @@ function ResearcherCard({ card_data }) {
             card_data.research_group_link = `https://${card_data.research_group_link}`
     }
 
+    if(card_data.orcid_link){
+        if(!card_data.orcid_link.includes('http'))
+            card_data.orcid_link = `https://${card_data.orcid_link}`
+    }
+
     const handleSelect = (eventKey) => {
         setActiveTab(eventKey);
     };
