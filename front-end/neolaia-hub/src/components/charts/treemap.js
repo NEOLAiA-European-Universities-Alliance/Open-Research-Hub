@@ -120,8 +120,8 @@ function TreeMap({chart_title, series}){
             }
             for(let i = 0; i<research_area.length; i++){
                 const element = {
-                    id: research_area[i].research_units_tours,
-                    name : research_area[i].research_units_tours,
+                    id: research_area[i].research_units_tours.split('_')[0],
+                    name : research_area[i].research_units_tours.split('_')[0],
                     value : parseInt(research_area[i].occurrences),
                     parent : research_area[i].university_name
                 }
@@ -132,7 +132,7 @@ function TreeMap({chart_title, series}){
                     id: specific_research_units[i].specific_research_units_tours,
                     name : specific_research_units[i].specific_research_units_tours,
                     value : parseInt(specific_research_units[i].occurrences),
-                    parent : specific_research_units[i].research_units_tours
+                    parent : specific_research_units[i].research_units_tours.split('_')[0]
                 }
                 by_uni.push(element)
             }
