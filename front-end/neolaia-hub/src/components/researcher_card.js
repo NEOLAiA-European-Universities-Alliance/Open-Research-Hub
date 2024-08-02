@@ -43,8 +43,8 @@ function ResearcherCard({ card_data }) {
                         <Card.Text as={"h5"} style={{marginBottom: '20px'}}>
                             <span>{card_data.department}</span>
                             {card_data.faculty && <p>{card_data.faculty}</p>}
-                            {card_data.research_units_tours && <p>{card_data.research_units_tours}</p>}
-                            {card_data.specific_research_units_tours && <p>{card_data.specific_research_units_tours}</p>}
+                            {card_data.research_units_tours && <p><b>Research area:</b> {card_data.research_units_tours.split('_')[0]}</p>}
+                            {card_data.specific_research_units_tours && <p><b>Research unit:</b>{card_data.specific_research_units_tours}</p>}
                         </Card.Text>
                         {card_data.personal_page_link && <Button variant="primary" href={card_data.personal_page_link} target="_blank" rel="noopener noreferrer" id='personal-btn'>Go to the personal page</Button>}
                         {card_data.personal_page_link && <Button variant="primary" href={card_data.personal_page_link} target="_blank" rel="noopener noreferrer" style={{marginLeft: '10px'}} id='research-btn'>Go to the Research group link</Button>}
