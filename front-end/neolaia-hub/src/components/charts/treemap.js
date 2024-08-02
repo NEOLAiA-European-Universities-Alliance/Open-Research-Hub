@@ -107,7 +107,7 @@ function TreeMap({chart_title, series}){
                 by_uni.push(element)
             }
             for(let i = 0; i<response_data3.length; i++){
-                if (response_data3[i].faculty != ''){
+                if (response_data3[i].faculty !== ''){
                     const faculty = response_data3[i].faculty.split('_')[0]
                     const element = {
                         id: faculty,

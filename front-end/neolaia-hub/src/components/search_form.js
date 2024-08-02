@@ -39,11 +39,11 @@ const SearchForm = ({onSearch}) => {
 
     const handleChange = (e) => {
         const {name , value} = e.target;
-        if(name == 'erc_panel' && value == '')
+        if(name === 'erc_panel' && value === '')
             formData.erc_keyword = ''
-        if(name == 'erc_panel_int' && value == '')
+        if(name === 'erc_panel_int' && value === '')
             formData.erc_keyword_int = ''
-        if(name == 'university'){
+        if(name === 'university'){
             formData.faculty = ''
             formData.department = ''
             formData.research_unit_tours = ''
@@ -195,7 +195,7 @@ const SearchForm = ({onSearch}) => {
                     )}
                     <Row className='mb-3'>
                     {
-                        researchUnitData!= ''  && (
+                        researchUnitData!== ''  && (
                                 <Col>
                                     <Form.Group controlId='formUni'>
                                         <Form.Label>Select the research area</Form.Label>
@@ -210,7 +210,7 @@ const SearchForm = ({onSearch}) => {
                         )
                     }
                     {
-                        specificUnitData!= '' && (
+                        specificUnitData!== '' && (
                             <Col>
                                 <Form.Group controlId='formUni'>
                                     <Form.Label>Select the research unit</Form.Label>
