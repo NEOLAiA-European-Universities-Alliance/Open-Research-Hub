@@ -5,47 +5,61 @@
     "logoFit": "fill",
     "logoPosition": "right",
     "pages": [
-     {
-      "name": "personal_info",
-      "elements": [
-       {
-        "type": "text",
-        "name": "name",
-        "title": "Name",
-        "isRequired": true
-       },
-       {
-        "type": "text",
-        "name": "surname",
-        "title": "Surname",
-        "isRequired": true
-       },
-       {
-        "type": "text",
-        "name": "personal_page_link",
-        "title": "Insert your personal university page link",
-        "description": "please make sure that your email address is available there, as this is the way in which you can be contacted",
-        "validators": [
-         {
-          "type": "regex",
-          "text": "The page address must come from one of neolaia's partner university domains",
-          "regex": "\\b(?:[A-Za-z0-9.-]+\\.)?(osu\\.cz|usm\\.ro|unic\\.ac\\.cy|oru\\.se|osu\\.eu|svako\\.lt|ujaen\\.es|univ-tours\\.fr|uni-bielefeld\\.de|unisa\\.it|usv\\.ro)\\b"
-         }
+      {
+        "name": "personal_info",
+        "title": "Personal Information",
+        "elements": [
+          {
+            "type": "text",
+            "name": "name",
+            "title": "Name",
+            "isRequired": true
+          },
+          {
+            "type": "text",
+            "name": "surname",
+            "title": "Surname",
+            "isRequired": true
+          },
+          {
+            "type": "text",
+            "name": "personal_page_link",
+            "title": "Insert your personal university page link",
+            "description": "please make sure that your email address is available there, as this is the way in which you can be contacted",
+            "validators": [
+              {
+                "type": "regex",
+                "text": "The page address must come from one of neolaia's partner university domains",
+                "regex": "\\b(?:[A-Za-z0-9.-]+\\.)?(osu\\.cz|usm\\.ro|unic\\.ac\\.cy|oru\\.se|osu\\.eu|svako\\.lt|ujaen\\.es|univ-tours\\.fr|uni-bielefeld\\.de|unisa\\.it|usv\\.ro)\\b"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "name": "ORCID_link",
+            "title": "ORCID profile link",
+            "validators": [
+              {
+                "type": "regex",
+                "text": "It appears that you did not enter the link correctly, be sure to put the link in the form:  https://orcid.org/0000-0000-0000-0000",
+                "regex": "\\bhttps?:\\/\\/[^\\s/$.?#].[^\\s]*\\b"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "name": "research_group_link",
+            "title": "Link to the research group",
+            "validators": [
+              {
+                "type": "regex",
+                "text": "It looks like the value you entered is not a link, make sure it is in the form https://example.example",
+                "regex": "\\bhttps?:\\/\\/[^\\s/$.?#].[^\\s]*\\b"
+              }
+            ]
+          }
         ]
-       },
-       {
-        "type": "text",
-        "name": "ORCID_link",
-        "title": "ORCID profile link"
-       },
-       {
-        "type": "text",
-        "name": "research_group_link",
-        "title": "Link to the research group"
-       }
-      ],
-      "title": "Personal Information"
-     }
+      }
     ],
     "clearInvisibleValues": "onHidden"
-   }
+  }
