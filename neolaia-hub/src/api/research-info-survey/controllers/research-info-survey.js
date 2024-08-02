@@ -220,7 +220,7 @@ module.exports = createCoreController('api::research-info-survey.research-info-s
         const free_keywords = ctx.request.body.keywords
         const filters = { $and: [] };
 
-        console.log(ctx.request.body.searchParams)
+        //console.log(ctx.request.body.searchParams)
 
             // Filter for researcher name and surname
         if (researcher_name) {
@@ -318,7 +318,7 @@ module.exports = createCoreController('api::research-info-survey.research-info-s
             });
         }
 
-        console.log(filters);
+        //console.log(filters);
 
         const result = await strapi.db.query('api::research-info-survey.research-info-survey').findMany({
             where: filters
