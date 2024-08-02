@@ -13,20 +13,17 @@ function AuthenticatedForm(){
     const [form, setForm] = useState(null);
     const [token_validity, setTokenValidity] = useState(false)
 
-    useEffect(() => {
-        const check_if_compiled = async () => {
-            try{
-                //check if form is already compiled
-                const result = await check_if_alredy_compiled(token)
-                if(result === true){
-                    setForm(<ModifyDeleteForm token={token}/>)
-                }
-            }catch (error){
-                console.error('Error: ',error)
+    const check_if_compiled = async () => {
+        try{
+            //check if form is already compiled
+            const result = await check_if_alredy_compiled(token)
+            if(result === true){
+                setForm(<ModifyDeleteForm token={token}/>)
             }
-        }
-        check_if_compiled()
-    })
+        }catch (error){
+            console.error('Error: ',error)
+            }
+    }
 
     useEffect(() => {
         if (loading){
@@ -36,6 +33,7 @@ function AuthenticatedForm(){
         setTokenValidity(token_is_valid())
 
         if(token && token_validity){
+            check_if_compiled()
             //insert here the form component to render after login
             const form_component = (
                 <MappingResearchers token={token}/>
