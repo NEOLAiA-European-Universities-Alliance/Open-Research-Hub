@@ -12,9 +12,13 @@ module.exports = (config, { strapi }) => {
         const area_erc_int_1 = (erc_panel_int[0] && erc_panel_int[0]['Research-General-Area']) ?? ''
         const area_erc_int_2 = (erc_panel_int[1] && erc_panel_int[1]['Research-General-Area']) ?? ''
         const area_erc_int_3 = (erc_panel_int[2] && erc_panel_int[2]['Research-General-Area']) ?? ''
-        const free_keyword_1 = (survey_data.free_keywords[0] && survey_data.free_keywords[0].free_keyword.split('(')[0].trim()) ?? ''
-        const free_keyword_2 = (survey_data.free_keywords[1] && survey_data.free_keywords[1].free_keyword.split('(')[0].trim()) ?? ''
-        const free_keyword_3 = (survey_data.free_keywords[2] && survey_data.free_keywords[2].free_keyword.split('(')[0].trim()) ?? ''
+        let free_keyword_1 = (survey_data.free_keywords[0] && survey_data.free_keywords[0].free_keyword) ?? ''
+        let free_keyword_2 = (survey_data.free_keywords[1] && survey_data.free_keywords[1].free_keyword) ?? ''
+        let free_keyword_3 = (survey_data.free_keywords[2] && survey_data.free_keywords[2].free_keyword) ?? ''
+        free_keyword_1 = free_keyword_1.split('(')[0].trim()
+        free_keyword_2 = free_keyword_2.split('(')[0].trim()
+        free_keyword_3 = free_keyword_3.split('(')[0].trim()
+
         const data = {
             user_id : user_id,
             name: survey_data.name,

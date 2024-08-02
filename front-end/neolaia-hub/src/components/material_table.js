@@ -31,7 +31,6 @@ const MaterialTable = ({columns_value, data_table}) => {
 
   const handleRowClick = (row,event) => {
     //navigate('/researcher-page', { state: { researcher_id: row.original.id } });
-    console.log(event.target.innerHTML)
     if(!event.target.innerHTML.includes('.')){
         const url = `./researcher-page?researcher_id=${row.original.id}`;
         window.open(url, '_blank');
