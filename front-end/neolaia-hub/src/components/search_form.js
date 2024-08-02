@@ -193,7 +193,7 @@ const SearchForm = ({onSearch}) => {
                             </Form.Group>
                         </Col>
                     )}
-                    <Row className='mb-3'>
+                    <Row className='mb-3 mt-3'>
                     {
                         researchUnitData!== ''  && (
                                 <Col>
