@@ -414,7 +414,7 @@
             "text": "LS6 Immunity, Infection and Immunotherapy"
            },
            {
-            "value": "LS7 Prevention, Diagnosis and Treatment-of-Human-Diseases",
+            "value": "LS7-Prevention,-Diagnosis-and-Treatment-of-Human-Diseases",
             "text": "LS7 Prevention, Diagnosis and Treatment of Human Diseases"
            },
            {
@@ -550,7 +550,7 @@
          {
           "type": "radiogroup",
           "name": "LS7-Prevention,-Diagnosis-and-Treatment-of-Human-Diseases",
-          "visibleIf": "{panel.LS-Research area} = 'LS7 Prevention, Diagnosis and Treatment-of-Human-Diseases'",
+          "visibleIf": "{panel.LS-Research area} = 'LS7-Prevention,-Diagnosis-and-Treatment-of-Human-Diseases'",
           "title": "LS7 Prevention, Diagnosis and Treatment of Human Diseases",
           "description": "Medical technologies and tools for prevention, diagnosis and treatment of human diseases,\ntherapeutic approaches and interventions, pharmacology, preventative medicine, epidemiology and\npublic health, digital medicine",
           "isRequired": true,

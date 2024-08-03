@@ -122,6 +122,7 @@ function MappingResearchers({token, data}){
             [department] : second_level, 
             "research_units_tours" : `${data.research_units_tours}`,
             [`${data.research_units_tours}`] : `${data.specific_research_units_tours}`,
+            /*
             "free_keywords" : [
                 {"free_keyword" : data.free_keyword_1},
                 {"free_keyword" : data.free_keyword_2},
@@ -156,7 +157,79 @@ function MappingResearchers({token, data}){
                 [erc_area_3_int] : data.ERC_Panel_interested_3.replaceAll(' ','-'),
                 [data.ERC_Panel_interested_3.replaceAll(' ','-')] : data.ERC_Keyword_interested_3
             }]
+                */
         }
+
+        free_keywords = [];
+        if (data.free_keyword_1) {
+            free_keywords.push({ "free_keyword": data.free_keyword_1 });
+        }
+        
+        if (data.free_keyword_2) {
+            free_keywords.push({ "free_keyword": data.free_keyword_2 });
+        }
+        
+        if (data.free_keyword_3) {
+            free_keywords.push({ "free_keyword": data.free_keyword_3 });
+        }
+
+        research_survey.mergeData({'free_keywords' : free_keywords})
+
+
+        let ERC_Panel = []
+        if (erc_area_1 && data.ERC_Panel_1) {
+            let ercPanel1 = {};
+            ercPanel1["Research-General-Area"] = erc_area_1;
+            ercPanel1[erc_area_1] = data.ERC_Panel_1.replaceAll(' ','-');
+            ercPanel1[data.ERC_Panel_1.replaceAll(' ', '-')] = data.ERC_Keyword_1;
+            ERC_Panel.push(ercPanel1);
+        }
+        
+        if (erc_area_2 && data.ERC_Panel_2) {
+            let ercPanel2 = {};
+            ercPanel2["Research-General-Area"] = erc_area_2;
+            ercPanel2[erc_area_2] = data.ERC_Panel_2.replaceAll(' ','-');
+            ercPanel2[data.ERC_Panel_2.replaceAll(' ', '-')] = data.ERC_Keyword_2;
+            ERC_Panel.push(ercPanel2);
+        }
+        
+        if (erc_area_3 && data.ERC_Panel_3) {
+            let ercPanel3 = {};
+            ercPanel3["Research-General-Area"] = erc_area_3;
+            ercPanel3[erc_area_3] = data.ERC_Panel_3.replaceAll(' ','-');
+            ercPanel3[data.ERC_Panel_3.replaceAll(' ', '-')] = data.ERC_Keyword_3;
+            ERC_Panel.push(ercPanel3);
+        }
+        research_survey.mergeData({'ERC_Panel' : ERC_Panel})
+
+        let ERC_panel_interested = [];
+        console.log( data.ERC_Panel_interested_1)
+        if (erc_area_1_int && data.ERC_Panel_interested_1) {
+            let ercPanelInterested1 = {};
+            ercPanelInterested1["Research-General-Area"] = erc_area_1_int;
+            ercPanelInterested1[erc_area_1_int] = data.ERC_Panel_interested_1.replaceAll(' ','-');
+            ercPanelInterested1[data.ERC_Panel_interested_1.replaceAll(' ', '-')] = data.ERC_Keyword_interested_1;
+            ERC_panel_interested.push(ercPanelInterested1);
+            console.log(ercPanelInterested1)
+        }
+        
+        if (erc_area_2_int && data.ERC_Panel_interested_2) {
+            let ercPanelInterested2 = {};
+            ercPanelInterested2["Research-General-Area"] = erc_area_2_int;
+            ercPanelInterested2[erc_area_2_int] = data.ERC_Panel_interested_2.replaceAll(' ','-');
+            ercPanelInterested2[data.ERC_Panel_interested_2.replaceAll(' ', '-')] = data.ERC_Keyword_interested_2;
+            ERC_panel_interested.push(ercPanelInterested2);
+        }
+        
+        if (erc_area_3_int && data.ERC_Panel_interested_3) {
+            let ercPanelInterested3 = {};
+            ercPanelInterested3["Research-General-Area"] = erc_area_3_int;
+            ercPanelInterested3[erc_area_3_int] = data.ERC_Panel_interested_3.replaceAll(' ','-');
+            ercPanelInterested3[data.ERC_Panel_interested_3.replaceAll(' ', '-')] = data.ERC_Keyword_interested_3;
+            ERC_panel_interested.push(ercPanelInterested3);
+        }
+
+        research_survey.mergeData({'ERC_panel_interested' : ERC_panel_interested})
     }
 
 
