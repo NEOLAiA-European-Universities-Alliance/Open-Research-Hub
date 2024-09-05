@@ -52,10 +52,10 @@ const SearchForm = ({onSearch}) => {
             let second_level = queryParams.get('faculty')
             let one_level = queryParams.get('one_level')
             if(keyword){
-                if(keyword.charAt(0) === '-'){
+                if(keyword.charAt(0) === '_'){
                     keyword = keyword.replace('-','')
                 }
-                keyword = keyword.replace('-',' ')
+                keyword = keyword.replace('_',' ')
                 selectedKeywords.push(keyword)
             }
             if(university_name){

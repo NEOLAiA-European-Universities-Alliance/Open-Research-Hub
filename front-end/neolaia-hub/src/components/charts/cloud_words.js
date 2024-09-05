@@ -33,7 +33,7 @@ function create_options(chart_title,data){
                 point:{
                     events: {
                         click: function(){
-                            const url = `./search-researchers?keyword=${this.name}`;
+                            const url = `./search-researchers?keyword=${this.name.replace('_',' ')}`;
                             window.open(url, '_blank');
                         }
                     },
@@ -56,7 +56,7 @@ function CloudWords({chart_title, series}){
             const response_data = response.data
             let text = ''
             for(let i = 0; i<response_data.length; i++){
-                response_data[i] = response_data[i].replace(/ /g,'-')
+                response_data[i] = response_data[i].replace(/ /g,'_')
                 text += ` ${response_data[i]}`
 
             }
