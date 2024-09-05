@@ -27,7 +27,6 @@ const MaterialTable = ({columns_value, data_table}) => {
 
     const handleExportData = () => {
       data.map((row) => {
-        console.log(row)
         if(typeof(row.orcid_link) !== 'string')
           row.orcid_link = row.orcid_link.props.href
         if(typeof(row.personal_page_link) !== 'string')
