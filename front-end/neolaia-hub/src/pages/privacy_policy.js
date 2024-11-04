@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
     </header>
 
     <div class="container">
-        <h2>Reseacher Mapping - NEOLAiA</h2>
+        <h2>Open Research Hub - NEOLAiA</h2>
         <h3>Information on Data Processing</h3>
         <p>The legislation and the regulations on the protection of personal data require us to inform you about the
         processing of your data as a student or professor of the NEOLAiA Alliance of European Universities. </p>
@@ -24,13 +24,13 @@ const PrivacyPolicy = () => {
 
         <section>
             <h3>1. Name of the service</h3>
-            <p>Researcher mapping – NEOLAiA</p>
+            <p>Open Research Hub – NEOLAiA</p>
         </section>
 
         <section>
             <h3>2. Description of the service</h3>
             <p>
-            The Researcher Mapping Service is designed to gather data from researchers at the nine universities in the NEOLAiA alliance, making this information available for querying. 
+            The Open Research Hub Service is designed to gather data from researchers at the nine universities in the NEOLAiA alliance, making this information available for querying. 
             The goal is to enhance collaboration and synergy among these universities.
             </p>
         </section>
@@ -65,7 +65,7 @@ const PrivacyPolicy = () => {
             articles 9 and 10 of the General Data Protection Regulation EU 2016/679, “Privacy Regulation” (i.e.: data
             concerning health, data relating to criminal convictions and offences etc.) are processed. </p>
 
-            <p>The purposes of the processing are the organisational needs related to the use of the “Researcher mapping” service
+            <p>The purposes of the processing are the organisational needs related to the use of the “Open Research Hub” service
             of the NEOLAiA Project - Transforming Regions for an Inclusive Europe - funded under the ERASMUS-EDU-
             2023-EUR-UNIV - Partnerships for Excellence - European Universities Programme. </p>
 
@@ -153,10 +153,10 @@ const PrivacyPolicy = () => {
                     </li>
                 </ul>
                 <p>
-                    The Researcher Mapping service by default sets cookies that are essential the authentication in the platform. 
+                    The Open Research Hub service by default sets cookies that are essential the authentication in the platform. 
                 </p>
                 <p>
-                    By default, the Researcher Mapping service does not use analysis cookies, nor does it use cross-site cookies or ad targeting cookies.
+                    By default, the Open Research Hub service does not use analysis cookies, nor does it use cross-site cookies or ad targeting cookies.
                 </p>
                 <p>
                     This data will be processed exclusively within the scope of the purposes identified above.
