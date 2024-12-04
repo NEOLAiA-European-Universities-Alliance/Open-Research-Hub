@@ -1,1591 +1,1328 @@
 {
-"title": "Researchers mapping",
- "logo": "data:image/png;base64,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",
- "logoHeight": "50px",
- "logoFit": "fill",
- "logoPosition": "right",
- "pages": [
-  {
-   "name": "university_info",
-   "elements": [
-    {
-     "type": "dropdown",
-     "name": "university_name",
-     "title": "Select your University",
-     "isRequired": true,
-     "choices": [
-      "University of Salerno",
-      "University of Örebro",
-      "Šiauliai State University of Applied Sciences",
-      "University of Nicosia",
-      "Ştefan cel Mare University of Suceava",
-      "University of Tours",
-      "University of Bielefeld",
-      "University of Jaén",
-      "University of Ostrava"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "University of Salerno",
-     "visibleIf": "{university_name} = 'University of Salerno'",
-     "title": "Select you Department",
-     "isRequired": true,
-     "choices": [
-      "Department of Chemistry and Biology \"Adolfo Zambelli\"/DCB",
-      "Department of Pharmacy/DIFARMA",
-      "Department of Physics \"E.R.Caianiello\"/DF",
-      "Department of Computer Science/DI",
-      "Department of Civil Engineering/DICIV",
-      "Department of Information and Electrical Engineering and Applied Mathematics/DIEM",
-      "Department of Industrial Engineering/DIIN",
-      "Department of Mathematics/DIPMAT",
-      "Department of Medicine, Surgery and Dentistry \"Scuola Medica Salernitana\"/DIPMED",
-      "Department of Business Sciences   Management & Innovation Systems/DISA MIS",
-      "Department of Cultural Heritage Sciences/DISPAC",
-      "Department of Economics and Statistics/DISES",
-      "Department of Legal Sciences (School of Law)",
-      "Department of Political and Communication Sciences/DISPC",
-      "Department of Humanities, Philosophy and Education/DISUFF",
-      "Department of Political and Social Studies/DISPS",
-      "Department of Humanities/DISPSUM"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "University of Örebro",
-     "visibleIf": "{university_name} = 'University of Örebro'",
-     "title": "Select your Faculty",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "Faculty of Business, Science and Engineering_Orebro",
-       "text": "Faculty of Business, Science and Engineering"
-      },
-      {
-       "value": "Faculty of Humanities and Social Sciences_Orebro",
-       "text": "Faculty of Humanities and Social Sciences"
-      },
-      {
-       "value": "Faculty of Medicine and Health_Orebro",
-       "text": "Faculty of Medicine and Health"
-      }
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Business, Science and Engineering_Orebro",
-     "visibleIf": "{University of Örebro} = 'Faculty of Business, Science and Engineering_Orebro'",
-     "title": "Select your Schools",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "Örebro University School of Business_Orebro",
-       "text": "Örebro University School of Business"
-      },
-      {
-       "value": "Science and Technology_Orebro",
-       "text": "Science and Technology"
-      },
-      {
-       "value": "Hospitality, Culinary Arts and Meal Science_Orebro",
-       "text": "Hospitality, Culinary Arts and Meal Science"
-      }
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Humanities and Social Sciences_Orebro",
-     "visibleIf": "{University of Örebro} = 'Faculty of Humanities and Social Sciences_Orebro'",
-     "title": "Select your Schools",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "Humanities, Education and Social Sciences",
-       "text": "Humanities, Education and Social Sciences"
-      },
-      {
-       "value": "School of Behavioural, Social and Legal Sciences",
-       "text": "School of Behavioural, Social and Legal Sciences"
-      },
-      {
-       "value": "Music, Theatre and Art",
-       "text": "Music, Theatre and Art"
-      }
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Medicine and Health_Orebro",
-     "visibleIf": "{University of Örebro} = 'Faculty of Medicine and Health_Orebro'",
-     "title": "Select your Schools",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "Health Sciences_Orebro",
-       "text": "Health Sciences"
-      },
-      {
-       "value": "Medical Sciences_Orebro",
-       "text": "Medical Sciences"
-      }
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Šiauliai State University of Applied Sciences",
-     "visibleIf": "{university_name} = 'Šiauliai State University of Applied Sciences'",
-     "title": "Select your Faculty",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "Faculty of Health care_Siauliai",
-       "text": "Faculty of Health care"
-      },
-      {
-       "value": "Faculty of Business and Technologies_Siauliai",
-       "text": "Faculty of Business and Technologies"
-      }
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Health care_Siauliai",
-     "visibleIf": "{Šiauliai State University of Applied Sciences} = 'Faculty of Health care_Siauliai'",
-     "title": "Select your Department",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "Biomedical Sciences Department_Siauliai",
-       "text": "Biomedical Sciences Department"
-      },
-      {
-       "value": "Rehabilitation Department_Siauliai",
-       "text": "Rehabilitation Department"
-      },
-      {
-       "value": "Social Work Department_Siauliai",
-       "text": "Social Work Department"
-      }
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Business and Technologies_Siauliai",
-     "visibleIf": "{Šiauliai State University of Applied Sciences} = 'Faculty of Business and Technologies_Siauliai'",
-     "title": "Select your Department",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "Engineering Sciences Department_Siauliai",
-       "text": "Engineering Sciences Department"
-      },
-      {
-       "value": "Informatics Sciences Department_Siauliai",
-       "text": "Informatics Sciences Department"
-      },
-      {
-       "value": "Transport Engineering Department_Siauliai",
-       "text": "Transport Engineering Department"
-      },
-      {
-       "value": "Management and Communication Department_Siauliai",
-       "text": "Management and Communication Department"
-      },
-      {
-       "value": "Business and Accounting Department_Siauliai",
-       "text": "Business and Accounting Department"
-      }
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "University of Ostrava",
-     "visibleIf": "{university_name} = 'University of Ostrava'",
-     "title": "Select your Faculty/Centre",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "Faculty of Social Studies_Ostrava",
-       "text": "Faculty of Social Studies"
-      },
-      {
-       "value": "Faculty of Education_Ostrava",
-       "text": "Faculty of Education"
-      },
-      {
-       "value": "Faculty of Fine Arts & Music_Ostrava",
-       "text": "Faculty of Fine Arts & Music"
-      },
-      {
-       "value": "Faculty of Arts_Ostrava",
-       "text": "Faculty of Arts"
-      },
-      {
-       "value": "Faculty of Medicine_Ostrava",
-       "text": "Faculty of Medicine"
-      },
-      {
-       "value": "Faculty of Science_Ostrava",
-       "text": "Faculty of Science"
-      },
-      {
-       "value": "Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling_Ostrava",
-       "text": "Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling"
-      }
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Social Studies_Ostrava",
-     "visibleIf": "{University of Ostrava} = 'Faculty of Social Studies_Ostrava'",
-     "title": "Select your Department/Working group",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "Dept. of Health and Social Studies",
-       "text": "Dept. of Health and Social Studies"
-      },
-      "Dept. of Social Work"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Education_Ostrava",
-     "visibleIf": "{University of Ostrava} = 'Faculty of Education_Ostrava'",
-     "title": "Select your Department/Working group",
-     "isRequired": true,
-     "choices": [
-      "Dept. of Civic Education",
-      "Dept. of Czech Language and Literature with Didactics",
-      "Dept. of Education and Adult Education",
-      "Dept. of English Language Teaching",
-      "Dept. of Human Movement Studies",
-      "Dept. of Information and Communication Technologies",
-      "Dept. of Mathematics with Didactics",
-      "Dept. of Music Education",
-      "Dept. of Educational and School Psychology",
-      "Dept. of Primary and Preprimary Education",
-      "Dept. of School Education",
-      "Dept. of Technical and Vocational Education",
-      "Dept. of Visual Arts Education",
-      "Centre of Educational Research",
-      "Centre for Research into Culture and Identity of the Region",
-      "Centre for Visual Studies",
-      "Human Motion Diagnostic Centre",
-      "Institute for Adult"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Fine Arts & Music_Ostrava",
-     "visibleIf": "{University of Ostrava} = 'Faculty of Fine Arts & Music_Ostrava'",
-     "title": "Select your Department/Working group",
-     "isRequired": true,
-     "choices": [
-      "Dept. of Graphics and Drawing",
-      "Dept. of Intermedia Studies",
-      "Dept. of Painting",
-      "Dept. of Sculpture",
-      "Dept. of the Theory and History of Fine Arts",
-      "Dept. of Keyboard Instruments",
-      "Dept. of String Instruments",
-      "Dept. of Vocal Studies",
-      "Dept. of Wind Instruments"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Arts_Ostrava",
-     "visibleIf": "{University of Ostrava} = 'Faculty of Arts_Ostrava'",
-     "title": "Select your Department/Working group",
-     "isRequired": true,
-     "choices": [
-      "Dept. of Art History and Cultural Heritage",
-      "Dept. of Czech Language",
-      "Dept. of Czech Literature and Literary Criticism",
-      "Dept. of English and American Studies",
-      "Dept. of German Studies",
-      "Dept. of History",
-      "Dept. of Latin Language and Culture",
-      "Dept. of Psychology",
-      "Centre for Economical and Social History",
-      "Centre for the Research of Professional Language",
-      "Centre for Regional Studies",
-      "VIVARIUM - Centre for Research in Medieval Society and Culture"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Medicine_Ostrava",
-     "visibleIf": "{University of Ostrava} = 'Faculty of Medicine_Ostrava'",
-     "title": "Select your Department/Working group",
-     "isRequired": true,
-     "choices": [
-      "Dept. of Anaesthesiology, Resuscitation and Intensive Care Medicine",
-      "Dept. of Anatomy",
-      "Dept. of Clinic Subjects",
-      "Dept. of Clinical Neurosciences",
-      "Dept. of Craniofacial Surgery",
-      "Dept. of Dentistry",
-      "Dept. of Epidemiology and Public Health",
-      "Dept. of Forensic Medicine",
-      "Dept. of Gynaecology and Obstetrics",
-      "Dept. of Hematooncology",
-      "Dept. of Histology and Embryology",
-      "Dept. of Imaging Methods",
-      "Dept. of Nursing and Midwifery",
-      "Dept. of Oncology",
-      "Dept. of Pediatrics",
-      "Dept. of Rehabilitation and Sports Medicine",
-      "Dept. of Surgical Studies",
-      "Dept. of Clinical Pharmacology",
-      "Institute of Emergency Medicine",
-      "Institute of Molecular and Clinical Pathology and Medical Genetics",
-      "Institute of Laboratory Medicine",
-      "Institute of Physiology and Pathophysiology",
-      "Centre for Health Research",
-      "Centre for Hyperbaric Medicine of Faculty of Medicine University of Ostrava and Ostrava City Hospital",
-      "Simulation Centre / Training Hospital (SIMLEK)"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Science_Ostrava",
-     "visibleIf": "{University of Ostrava} = 'Faculty of Science_Ostrava'",
-     "title": "Select your Department/Working group",
-     "isRequired": true,
-     "choices": [
-      "Dept. of Biology and Ecology",
-      "Dept. of Chemistry",
-      "Dept. of Human Geography and Regional Development",
-      "Dept. of Informatics and Computers",
-      "Dept. of Mathematics",
-      "Dept. of Physical Geography and Geoecology",
-      "Dept. of Physics",
-      "Environmental Center"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling_Ostrava",
-     "visibleIf": "{University of Ostrava} = 'Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling_Ostrava'",
-     "title": "Select your Department/Working group",
-     "isRequired": true,
-     "choices": [
-      "Logic",
-      "Dynamical Systems",
-      "Neural Networks and Computer Vision",
-      "Fuzzy modeling"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "University of Nicosia",
-     "visibleIf": "{university_name} = 'University of Nicosia'",
-     "title": "Select your school",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "School of Business_Nicosia",
-       "text": "School of Business"
-      },
-      {
-       "value": "School of Education_Nicosia",
-       "text": "School of Education"
-      },
-      {
-       "value": "School of Humanities and Social Sciences_Nicosia",
-       "text": "School of Humanities and Social Sciences"
-      },
-      {
-       "value": "School of Law_Nicosia",
-       "text": "School of Law"
-      },
-      {
-       "value": "School of Life and Health Sciences_Nicosia",
-       "text": "School of Life and Health Sciences"
-      },
-      {
-       "value": "Medical School_Nicosia",
-       "text": "Medical School"
-      },
-      {
-       "value": "School of Sciences and Engineering_Nicosia",
-       "text": "School of Sciences and Engineering"
-      },
-      {
-       "value": "School of Veterinary Medicine_Nicosia",
-       "text": "School of Veterinary Medicine"
-      }
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "School of Business_Nicosia",
-     "visibleIf": "{University of Nicosia} = 'School of Business_Nicosia'",
-     "title": "Select your department",
-     "isRequired": true,
-     "choices": [
-      "Department of Accounting, Economics and Finance ",
-      "Department of Digital Innovation",
-      "Department of Management"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "School of Education_Nicosia",
-     "visibleIf": "{University of Nicosia} = 'School of Education_Nicosia'",
-     "title": "Select your department",
-     "isRequired": true,
-     "choices": [
-      "Department of Education",
-      "Department of Music and Dance"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "School of Humanities and Social Sciences_Nicosia",
-     "visibleIf": "{University of Nicosia} = 'School of Humanities and Social Sciences_Nicosia'",
-     "title": "Select your department",
-     "isRequired": true,
-     "choices": [
-      "Department of Architecture ",
-      "Department of Communications",
-      "Department of Design and Multimedia",
-      "Department of Languages and Literature",
-      "Department of Social Sciences",
-      "Department of Theology"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "School of Law_Nicosia",
-     "visibleIf": "{University of Nicosia} = 'School of Law_Nicosia'",
-     "title": "Select your department",
-     "isRequired": true,
-     "choices": [
-      "Department of Law",
-      "Department of Politics and Governance"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "School of Life and Health Sciences_Nicosia",
-     "visibleIf": "{University of Nicosia} = 'School of Life and Health Sciences_Nicosia'",
-     "title": "Select your department",
-     "isRequired": true,
-     "choices": [
-      "Department of Health Sciences",
-      "Department of Life Sciences"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Medical School_Nicosia",
-     "visibleIf": "{University of Nicosia} = 'Medical School_Nicosia'",
-     "title": "Select your department",
-     "isRequired": true,
-     "choices": [
-      "Department of Basic and Clinical Sciences",
-      "Department of Primary Care and Population Health"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "School of Sciences and Engineering_Nicosia",
-     "visibleIf": "{University of Nicosia} = 'School of Sciences and Engineering_Nicosia'",
-     "title": "Select your department",
-     "isRequired": true,
-     "choices": [
-      "Department of Computer Science",
-      "Department of Engineering"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "School of Veterinary Medicine_Nicosia",
-     "visibleIf": "{University of Nicosia} = 'School of Veterinary Medicine_Nicosia'",
-     "title": "School of Veterinary Medicine",
-     "isRequired": true,
-     "choices": [
-      "Department of Veterinary Medicine"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Ştefan cel Mare University of Suceava",
-     "visibleIf": "{university_name} = 'Ştefan cel Mare University of Suceava'",
-     "title": "Select your faculty",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "Faculty of Law and Administrative Sciences_Suceava",
-       "text": "Faculty of Law and Administrative Sciences"
-      },
-      {
-       "value": "Faculty of Physical Education and Sports_Suceava",
-       "text": "Faculty of Physical Education and Sports"
-      },
-      {
-       "value": "Faculty of Food Engineering_Suceava",
-       "text": "Faculty of Food Engineering"
-      },
-      {
-       "value": "Faculty of Electrical Engineering and Computer Science_Suceava",
-       "text": "Faculty of Electrical Engineering and Computer Science"
-      },
-      {
-       "value": "Faculty of Mechanical Engineering, Automotive, and Robotics_Suceava",
-       "text": "Faculty of Mechanical Engineering, Automotive, and Robotics"
-      },
-      {
-       "value": "Faculty of History and Geography_Suceava",
-       "text": "Faculty of History and Geography"
-      },
-      {
-       "value": "Faculty of Letters and Communication Sciences_Suceava",
-       "text": "Faculty of Letters and Communication Sciences"
-      },
-      {
-       "value": "Faculty of Forestry_Suceava",
-       "text": "Faculty of Forestry"
-      },
-      {
-       "value": "Faculty of Economics, Administration, and Business_Suceava",
-       "text": "Faculty of Faculty of Economics, Administration, and Business Education and Sports"
-      },
-      {
-       "value": "Faculty of Educational Sciences_Suceava",
-       "text": "Faculty of Educational Sciences"
-      },
-      {
-       "value": "Faculty of Medicine and Biological Sciences_Suceava",
-       "text": "Faculty of Medicine and Biological Sciences"
-      }
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Law and Administrative Sciences_Suceava",
-     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Law and Administrative Sciences_Suceava'",
-     "title": "Select your department/research center",
-     "isRequired": true,
-     "choices": [
-      "Department of Law and Administrative Sciences",
-      "Center for Training and Research in Public Administration",
-      "Research Center for Legal Research"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Physical Education and Sports_Suceava",
-     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Physical Education and Sports_Suceava'",
-     "title": "Select your department/research center",
-     "isRequired": true,
-     "choices": [
-      "Department of Physical Education and Sport",
-      "Interdisciplinary Research Center in Human Motricity and Health Sciences"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Food Engineering_Suceava",
-     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Food Engineering_Suceava'",
-     "title": "Select your department/research center",
-     "isRequired": true,
-     "choices": [
-      "Department of Food Technologies, Food Production and Environmental Safety",
-      "Research and Training Center for Food Science and Safety"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Electrical Engineering and Computer Science_Suceava",
-     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Electrical Engineering and Computer Science_Suceava'",
-     "title": "Select your department/research center",
-     "isRequired": true,
-     "choices": [
-      "Department of Computer Science, Electronics, and Automation",
-      "Department of Electrical Engineering",
-      "Department of Computer Science",
-      "Research Center for Electrical Machines, Devices, and Drives",
-      "Research Center for Process Control Systems",
-      "Computer Science Research Center"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Mechanical Engineering, Automotive, and Robotics_Suceava",
-     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Mechanical Engineering, Automotive, and Robotics_Suceava'",
-     "title": "Select your department/research center",
-     "isRequired": true,
-     "choices": [
-      "Department of Mechanics and Technologies",
-      "Research Center for Mechanical, Industrial, Mechatronic Engineering, Environment, and Management",
-      "Training Center in Mechanical Engineering and Road Vehicles"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of History and Geography_Suceava",
-     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of History and Geography_Suceava'",
-     "title": "Select your department/research center",
-     "isRequired": true,
-     "choices": [
-      "Department of Human and Social-Political Sciences",
-      "Department of Geography",
-      "Research Center for Applied Geography ",
-      "The Carpathica University Centre of Interdisciplinary Studies",
-      "Research Center in Ethics, Philosophy, Engineering, and Society",
-      "Cross-Border Cooperation Center"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Letters and Communication Sciences_Suceava",
-     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Letters and Communication Sciences_Suceava'",
-     "title": "Select your department/research center",
-     "isRequired": true,
-     "choices": [
-      "Department of Romanian Language and Literature and Communication Sciences",
-      "Department of Foreign Languages and Literatures",
-      "Inter Litteras Research Center",
-      "Research Center for Discourse Analysis ",
-      "Research Center for Communication and Advertising Creation",
-      "Center for Foreign Languages and Cultures Synergia ",
-      "Center for Academic and Creative Writing",
-      "University Success Center"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Forestry_Suceava",
-     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Forestry_Suceava'",
-     "title": "Select your department/research center",
-     "isRequired": true,
-     "choices": [
-      "Department of Forestry and Environmental ",
-      "Research Center for Environmental Policies",
-      "Technology Transfer Center",
-      "Hunting Center"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Economics, Administration, and Business_Suceava",
-     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Economics, Administration, and Business_Suceava'",
-     "title": "Select your department/research center",
-     "isRequired": true,
-     "choices": [
-      "Department of Accounting, Audit, and Finance",
-      "Department of Economics, Economic Informatics, and Business Management",
-      "Department of Management, Business Administration, and Tourism",
-      "Research Center in Management and Business Administration",
-      "Research Center in Accounting and Management Informatics",
-      "Tourism Resource Center"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Educational Sciences_Suceava",
-     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Educational Sciences_Suceava'",
-     "title": "Select your department/research center",
-     "isRequired": true,
-     "choices": [
-      "Department of Education Sciences",
-      "Psychopedagogical Department ",
-      "Research Center in Psychology and Educational Sciences",
-      "Early Education Resource Center (EERC)",
-      "Resilience and Mental Health Center in School and Community (CRESMIN)"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Medicine and Biological Sciences_Suceava",
-     "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Medicine and Biological Sciences_Suceava'",
-     "title": "Select your department/research center",
-     "isRequired": true,
-     "choices": [
-      "Department of Biomedical Sciences",
-      "Interdisciplinary Research Center in Biomedical Sciences"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "University of Jaén",
-     "visibleIf": "{university_name} = 'University of Jaén'",
-     "title": "Select your research resources/activity",
-     "isRequired": true,
-     "choices": [
-      "Agrifood",
-      "Biology and biotechnology",
-      "Health sciences and technologies",
-      "Physics, chemistry and mathematics",
-      "Humanities",
-      "Natural resources and environment",
-      "Social, economic and legal sciences",
-      "Production technologies",
-      "Information and communication technologies"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "University of Bielefeld",
-     "visibleIf": "{university_name} = 'University of Bielefeld'",
-     "title": "Select your faculty",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "Biology_Bielefeld",
-       "text": "Biology"
-      },
-      {
-       "value": "Business Administration and Economics_Bielefeld",
-       "text": "Business Administration and Economics"
-      },
-      {
-       "value": "Chemistry_Bielefeld",
-       "text": "Chemistry"
-      },
-      {
-       "value": "Educational Science_Bielefeld",
-       "text": "Educational Science"
-      },
-      {
-       "value": "History and Philosophy and Theology_Bielefeld",
-       "text": "History and Philosophy and Theology"
-      },
-      {
-       "value": "Law_Bielefeld",
-       "text": "Law"
-      },
-      {
-       "value": "Linguistics and Literary Studies_Bielefeld",
-       "text": "Linguistics and Literary Studies"
-      },
-      {
-       "value": "Mathematics_Bielefeld",
-       "text": "Mathematics"
-      },
-      {
-       "value": "Medical School OWL_Bielefeld",
-       "text": "Medical School OWL"
-      },
-      {
-       "value": "Physics_Bielefeld",
-       "text": "Physics"
-      },
-      {
-       "value": "Psychology and Sports Science_Bielefeld",
-       "text": "Psychology and Sports Science"
-      },
-      {
-       "value": "Public Health_Bielefeld",
-       "text": "Public Health"
-      },
-      {
-       "value": "Sociology_Bielefeld",
-       "text": "Sociology"
-      },
-      {
-       "value": "Technology_Bielefeld",
-       "text": "Technology"
-      }
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Biology_Bielefeld",
-     "visibleIf": "{University of Bielefeld} = 'Biology_Bielefeld'",
-     "title": "Select your research unit",
-     "isRequired": true,
-     "choices": [
-      "Molecular Biology",
-      "Neurobiology",
-      "Ecology and Behavioural Biology",
-      "Didactics"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Business Administration and Economics_Bielefeld",
-     "visibleIf": "{University of Bielefeld} = 'Business Administration and Economics_Bielefeld'",
-     "title": "Select your research unit",
-     "isRequired": true,
-     "choices": [
-      "Business Administration",
-      "Economics",
-      "Empirical Methods",
-      "Center for Mathematical Economics - Economics"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Chemistry_Bielefeld",
-     "visibleIf": "{University of Bielefeld} = 'Chemistry_Bielefeld'",
-     "title": "Select your research unit",
-     "isRequired": true,
-     "choices": [
-      "Chemistry",
-      "Biochemistry"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "History and Philosophy and Theology_Bielefeld",
-     "visibleIf": "{University of Bielefeld} = 'History and Philosophy and Theology_Bielefeld'",
-     "title": "Select your research unit",
-     "isRequired": true,
-     "choices": [
-      "History",
-      "Philosophy",
-      "Theology"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Law_Bielefeld",
-     "visibleIf": "{University of Bielefeld} = 'Law_Bielefeld'",
-     "title": "Select your research unit",
-     "isRequired": true,
-     "choices": [
-      "Civil Law",
-      "Public Law",
-      "Criminal Law",
-      "Subject-specific Foreign Languages Unit"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Linguistics and Literary Studies_Bielefeld",
-     "visibleIf": "{University of Bielefeld} = 'Linguistics and Literary Studies_Bielefeld'",
-     "title": "Select your research unit",
-     "isRequired": true,
-     "choices": [
-      "English/American Studies",
-      "German as Foreign Language",
-      "German Studies",
-      "Linguistics, Clinical Linguistics, Text Technology, Computer Linguistics",
-      "Literary Studies, Romance Studies, Latin",
-      "Art and Music Education"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Mathematics_Bielefeld",
-     "visibleIf": "{University of Bielefeld} = 'Mathematics_Bielefeld'",
-     "title": "Select your research unit",
-     "isRequired": true,
-     "choices": [
-      "Mathematics",
-      "Didactics of Mathematics"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Medical School OWL_Bielefeld",
-     "visibleIf": "{University of Bielefeld} = 'Medical School OWL_Bielefeld'",
-     "title": "Select your research unit",
-     "isRequired": true,
-     "choices": [
-      "Campus ",
-      "Clinical"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Physics_Bielefeld",
-     "visibleIf": "{University of Bielefeld} = 'Physics_Bielefeld'",
-     "title": "Select your research unit",
-     "isRequired": true,
-     "choices": [
-      "Experimental Physics",
-      "Theoretical Physics",
-      "Astrophysics ",
-      "Physics and its Didactics"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Technology_Bielefeld",
-     "visibleIf": "{University of Bielefeld} = 'Technology_Bielefeld'",
-     "title": "Select your research unit",
-     "isRequired": true,
-     "choices": [
-      "Biotechnology",
-      "Informatics"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "University of Tours",
-     "visibleIf": "{university_name} = 'University of Tours'",
-     "title": "Select your faculties",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "Faculty of Literature and Languages_Tours",
-       "text": "Faculty of Literature and Languages"
-      },
-      {
-       "value": "Faculty of Arts and Humanities_Tours",
-       "text": "Faculty of Arts and Humanities"
-      },
-      {
-       "value": "Faculty of Law, Economics and Social Sciences_Tours",
-       "text": "Faculty of Law, Economics and Social Sciences"
-      },
-      {
-       "value": "Faculty of Sciences and Technology_Tours",
-       "text": "Faculty of Sciences and Technology"
-      },
-      {
-       "value": "Faculty of Pharmaceutical Sciences_Tours",
-       "text": "Faculty of Pharmaceutical Sciences"
-      },
-      {
-       "value": "Faculty of Medecine_Tours",
-       "text": "Faculty of Medecine"
-      },
-      {
-       "value": "Faculty of Odontology_Tours",
-       "text": "Faculty of Odontology"
-      },
-      {
-       "value": "University School of management (IAE Tours)_Tours",
-       "text": "University School of management (IAE Tours)"
-      },
-      {
-       "value": "Tours Institute of Technology_Tours",
-       "text": "Tours Institute of Technology"
-      },
-      {
-       "value": "Blois Institute of Technology_Tours",
-       "text": "Blois Institute of Technology"
-      },
-      {
-       "value": "Polytechnic School of Tours_Tours",
-       "text": "Polytechnic School of Tours"
-      }
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Literature and Languages_Tours",
-     "visibleIf": "{University of Tours} = 'Faculty of Literature and Languages_Tours'",
-     "title": "Select your institutes/French schools",
-     "isRequired": true,
-     "choices": [
-      "German Studies",
-      "Italian Studies",
-      "Spanish and Portuguese Studies",
-      "English Studies",
-      "Language Sciences",
-      "Sociolinguistics and Language Didactics",
-      "Law and Languages",
-      "Applied Foreign Languages / Modern Languages for International Business",
-      "French studies",
-      "Classical Literature - Latin studies",
-      "Classical Literature - Greek studies",
-      "Comparative Literature Studies",
-      "Performing Arts",
-      "Tours Public School of Journalism - EPJT",
-      "other affiliation"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Arts and Humanities_Tours",
-     "visibleIf": "{University of Tours} = 'Faculty of Arts and Humanities_Tours'",
-     "title": "Select your institutes/French schools",
-     "isRequired": true,
-     "choices": [
-      "CFMI - Training centre for musicians",
-      "History and archeology",
-      "Art history",
-      "Music and musicology",
-      "Philosophy",
-      "Psychology",
-      "Educational Studies",
-      "Sociology",
-      "Other affiliation"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Law, Economics and Social Sciences_Tours",
-     "visibleIf": "{University of Tours} = 'Faculty of Law, Economics and Social Sciences_Tours'",
-     "title": "Select your institutes/French schools",
-     "isRequired": true,
-     "choices": [
-      "Law",
-      "Economics",
-      "Geography",
-      "Other affiliation"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Sciences and Technology_Tours",
-     "visibleIf": "{University of Tours} = 'Faculty of Sciences and Technology_Tours'",
-     "title": "Select your institutes/French schools",
-     "isRequired": true,
-     "choices": [
-      "Computer sciences - Tours",
-      "Computer sciences - Blois",
-      "Mathematics",
-      "Physics",
-      "Chemistry",
-      "Geosciences",
-      "Animal biology and genetics",
-      "Animal physiology",
-      "Biology and plan physiology",
-      "Biochemistry",
-      "Microbiology",
-      "Neurosciences",
-      "Agrosciences - animal production",
-      "Agrosciences - sensory analysis and innovation",
-      "Other affiliation"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Pharmaceutical Sciences_Tours",
-     "visibleIf": "{University of Tours} = 'Faculty of Pharmaceutical Sciences_Tours'",
-     "title": "Select your institutes/French schools",
-     "isRequired": true,
-     "choices": [
-      "Biochemistry",
-      "Cell biology and plant biochemistry",
-      "Biophysics and bioinformatics",
-      "Analytical chemistry and hydrology",
-      "Organic chemistry",
-      "Physical chemistry",
-      "Therapeutic chemistry",
-      "Hematology",
-      "Immunology",
-      "Parasite immunology",
-      "microbiology - virology",
-      "Clinical pharmacy",
-      "Pharmaceutical formulation",
-      "Pharmacognosis",
-      "Pharmacology and toxicology",
-      "Physiology",
-      "Public Health, Biostatistics, Epidemiology",
-      "Other affiliation"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Medecine_Tours",
-     "visibleIf": "{University of Tours} = 'Faculty of Medecine_Tours'",
-     "title": "Select your institutes/French schools",
-     "isRequired": true,
-     "choices": [
-      "Medical Studies (including pedagogical/research/continuing training departments)",
-      "Humanities",
-      "Public Health",
-      "School of surgery",
-      "School of orthoptics",
-      "School of Speech-Language pathology",
-      "Regional centre for health simulation - MEDISIM",
-      "Other affiliation"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Faculty of Odontology_Tours",
-     "visibleIf": "{University of Tours} = 'Faculty of Odontology_Tours'",
-     "title": "Select your institutes/French schools",
-     "isRequired": true,
-     "choices": [
-      "Development, growth and prevention",
-      "Oral surgery, periodontology, oral biology",
-      "Oral rehabilitation"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "University School of management (IAE Tours)_Tours",
-     "visibleIf": "{University of Tours} = 'University School of management (IAE Tours)_Tours'",
-     "title": "Select your institutes/French schools",
-     "isRequired": true,
-     "choices": [
-      "Strategy, entrepreneurship, project management, information systems",
-      "Accounting, management control, audit, finance",
-      "Marketing",
-      "Human Resources Management",
-      "Other affiliation"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Tours Institute of Technology_Tours",
-     "visibleIf": "{University of Tours} = 'Tours Institute of Technology_Tours'",
-     "title": "Select your institutes/French schools",
-     "isRequired": true,
-     "choices": [
-      "Social Careers",
-      "Biological engineering",
-      "Electrical Engineering and Industrial Computer Sciences",
-      "Business and Administrations Management",
-      "Information and Communication",
-      "Marketing techniques",
-      "Other affiliation"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Blois Institute of Technology_Tours",
-     "visibleIf": "{University of Tours} = 'Blois Institute of Technology_Tours'",
-     "title": "Select your institutes/French schools",
-     "isRequired": true,
-     "choices": [
-      "Multimedia, networks and telecommunication",
-      "Engineering and material sciences",
-      "Other affiliation"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "Polytechnic School of Tours_Tours",
-     "visibleIf": "{University of Tours} = 'Polytechnic School of Tours_Tours'",
-     "title": "Select your institutes/French schools",
-     "isRequired": true,
-     "choices": [
-      "Planning and environmental engineering",
-      "Electronics and electrical engineering",
-      "Computer sciences",
-      "Mecanics and system design",
-      "Other affiliation (preparatory cycle/apprenticeship/…)"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "research_units_tours",
-     "visibleIf": "{university_name} = 'University of Tours'",
-     "title": "Select you research units",
-     "isRequired": true,
-     "choices": [
-      {
-       "value": "BBV - Plant Biocompounds and Biotechnology - RU 2106_Tours",
-       "text": "BBV - Plant Biocompounds and Biotechnology - RU 2106"
-      },
-      {
-       "value": "IRBI - Institute of Research on Insect Biology - UMR 7261_Tours",
-       "text": "IRBI - Institute of Research on Insect Biology - UMR 7261"
-      },
-      {
-       "value": "BOA - Bird Biology and Poultry - UMR INRAE 0083_Tours",
-       "text": "BOA - Bird Biology and Poultry - UMR INRAE 0083"
-      },
-      {
-       "value": "PRC - Physiology of Reproduction and Behaviour - UMR CNRS 7247 - INRAE 0085_Tours",
-       "text": "PRC - Physiology of Reproduction and Behaviour - UMR CNRS 7247 - INRAE 0085"
-      },
-      {
-       "value": "CBM-NMNS - Nanomedecines and Nanoprobes - UPR 6295_Tours",
-       "text": "CBM-NMNS - Nanomedecines and Nanoprobes - UPR 6295"
-      },
-      {
-       "value": "CEPR - Research Centre for Respiratory Diseases - Inserm U 1100_Tours",
-       "text": "CEPR - Research Centre for Respiratory Diseases - Inserm U 1100"
-      },
-      {
-       "value": "CeRCA - Research Centre on Cognition and Learning - UMR CNRS 7295_Tours",
-       "text": "CeRCA - Research Centre on Cognition and Learning - UMR CNRS 7295"
-      },
-      {
-       "value": "IBraiN - Imaging, Brain and Neurphychiatry - Inserm U 1253_Tours",
-       "text": "IBraiN - Imaging, Brain and Neurphychiatry - Inserm U 1253"
-      },
-      {
-       "value": "ISCHEMIA - Membrane Signalling and Inflamation in reperfusion injuries - Inserm UMR 1327_Tours",
-       "text": "ISCHEMIA - Membrane Signalling and Inflamation in reperfusion injuries - Inserm UMR 1327"
-      },
-      {
-       "value": "ISP - Infectious Diseases and Public Health - UMR INRAE 1282_Tours",
-       "text": "ISP - Infectious Diseases and Public Health - UMR INRAE 1282"
-      },
-      {
-       "value": "N2Cox - Niche, Nutrition, Cancer and Oxidative metabolism - Inserm U 1069_Tours",
-       "text": "N2Cox - Niche, Nutrition, Cancer and Oxidative metabolism - Inserm U 1069"
-      },
-      {
-       "value": "MAVIVHe - Morphogenesis and Antigenicity of HIV, Hepatitis and Emerging Viruses - Inserm U 1259_Tours",
-       "text": "MAVIVHe - Morphogenesis and Antigenicity of HIV, Hepatitis and Emerging Viruses - Inserm U 1259"
-      },
-      {
-       "value": "SIMBA - Synthesis and Isolation of Bio-Active Molecules - RU 7502_Tours",
-       "text": "SIMBA - Synthesis and Isolation of Bio-Active Molecules - RU 7502"
-      },
-      {
-       "value": "EES - Education Ethics Health - RU 7505_Tours",
-       "text": "EES - Education Ethics Health - RU 7505"
-      },
-      {
-       "value": "SPHERE - methodS in Patient-centeres outcomes and Health ResEarch - Inserm U 1246_Tours",
-       "text": "SPHERE - methodS in Patient-centeres outcomes and Health ResEarch - Inserm U 1246"
-      },
-      {
-       "value": "PAVeA - Psychology of the Various Stages of Life and Adaptation - RU 2114_Tours",
-       "text": "PAVeA - Psychology of the Various Stages of Life and Adaptation - RU 2114"
-      },
-      {
-       "value": "QualiPsy - Quality of life and psychological health - RU 1901_Tours",
-       "text": "QualiPsy - Quality of life and psychological health - RU 1901"
-      },
-      {
-       "value": "GREMAN - Materials Microelectronics Acoustics Nanotechnology - UMR 7347_Tours",
-       "text": "GREMAN - Materials Microelectronics Acoustics Nanotechnology - UMR 7347"
-      },
-      {
-       "value": "LaMé - Laboratory of Mechanics Gabriel Lamé - RU 7494_Tours",
-       "text": "LaMé - Laboratory of Mechanics Gabriel Lamé - RU 7494"
-      },
-      {
-       "value": "PCM2E - Laboratory of Physical Chemistry of Materials and Electrolytes for Energy - RU 6299_Tours",
-       "text": "PCM2E - Laboratory of Physical Chemistry of Materials and Electrolytes for Energy - RU 6299"
-      },
-      {
-       "value": "GeHCO - Continental Geo-Hydrosystems - RU 6293_Tours",
-       "text": "GeHCO - Continental Geo-Hydrosystems - RU 6293"
-      },
-      {
-       "value": "IDP - Denis Poisson Institute - UMR 7013_Tours",
-       "text": "IDP - Denis Poisson Institute - UMR 7013"
-      },
-      {
-       "value": "LIFAT - Tours Research Laboratory in Fundamental and Applied Computer Science - RU 6300_Tours",
-       "text": "LIFAT - Tours Research Laboratory in Fundamental and Applied Computer Science - RU 6300"
-      },
-      {
-       "value": "IRJI - Institute for Interdisciplinary Legal Research - RU 7496_Tours",
-       "text": "IRJI - Institute for Interdisciplinary Legal Research - RU 7496"
-      },
-      {
-       "value": "CITERES - Centre for Cities, Territories, Environment and Societies - UMR CNRS 7324_Tours",
-       "text": "CITERES - Centre for Cities, Territories, Environment and Societies - UMR CNRS 7324"
-      },
-      {
-       "value": "PRIM - Information and mediation practices and resources - RU 7503_Tours",
-       "text": "PRIM - Information and mediation practices and resources - RU 7503"
-      },
-      {
-       "value": "LEO - Laboratory of Economics Orelan-Tours Team - RU 2014_Tours",
-       "text": "LEO - Laboratory of Economics Orelan-Tours Team - RU 2014"
-      },
-      {
-       "value": "VALLOREM - Val de Loire Management Research - RU 6296_Tours",
-       "text": "VALLOREM - Val de Loire Management Research - RU 6296"
-      },
-      {
-       "value": "LLL - Loire Linguistics Laboratory Tours Team - UMR CNRS 7270_Tours",
-       "text": "LLL - Loire Linguistics Laboratory Tours Team - UMR CNRS 7270"
-      },
-      {
-       "value": "InTRu - Artistic and Cultural Interactions, Transfers and Breaks - RU 6301_Tours",
-       "text": "InTRu - Artistic and Cultural Interactions, Transfers and Breaks - RU 6301"
-      },
-      {
-       "value": "Dynadiv - Linguistic and Cultural Diversity in Sociolinguistics and Language Didactics - RU 4428_Tours",
-       "text": "Dynadiv - Linguistic and Cultural Diversity in Sociolinguistics and Language Didactics - RU 4428"
-      },
-      {
-       "value": "CeTHIS - Tourangeau Centre for the History and Study of Sources - UR 6298_Tours",
-       "text": "CeTHIS - Tourangeau Centre for the History and Study of Sources - UR 6298"
-      },
-      {
-       "value": "ICD - Cultural and Discursive Interactions - RU 6297_Tours",
-       "text": "ICD - Cultural and Discursive Interactions - RU 6297"
-      },
-      {
-       "value": "CESR - Center for Advanced Renaissance Studies - UMR CNRS 7323_Tours",
-       "text": "CESR - Center for Advanced Renaissance Studies - UMR CNRS 7323"
-      }
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "IRBI - Institute of Research on Insect Biology - UMR 7261_Tours",
-     "visibleIf": "{research_units_tours} = 'IRBI - Institute of Research on Insect Biology - UMR 7261_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "IMIP - Biodiversity and interactions between Micro-organisms/Insects/Plants",
-      "ESORE - Social evolution and responses to the environment",
-      "INOV - Interactions organisms-environment: mechanisms and responses to global changes",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "BOA - Bird Biology and Poultry - UMR INRAE 0083_Tours",
-     "visibleIf": "{research_units_tours} = 'BOA - Bird Biology and Poultry - UMR INRAE 0083_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "BOPP - Biology of the egg and physiology of the hen",
-      "GENUTS - Genetics, Nutrition, Systems",
-      "MOQA - Bird Metabolism, Quality and Adaptation",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "PRC - Physiology of Reproduction and Behaviour - UMR CNRS 7247 - INRAE 0085_Tours",
-     "visibleIf": "{research_units_tours} = 'PRC - Physiology of Reproduction and Behaviour - UMR CNRS 7247 - INRAE 0085_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "Cognition, Ethology and Animal Welfare - CEB",
-      "Neuroethology and Social cognition - NECOS",
-      "Neuroendocrine Integration of Reproduction and Behavior - INERC",
-      "Molecular Neuroendocrinology of Reproduction - NMR",
-      "Biology of GPCR signaling systems",
-      "Energy sensors and reproductive signalisation - SENSOR",
-      "Integrative Gonad Biology - BINGO",
-      "Cellular interactions and fertility -ICF",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "CEPR - Research Centre for Respiratory Diseases - Inserm U 1100_Tours",
-     "visibleIf": "{research_units_tours} = 'CEPR - Research Centre for Respiratory Diseases - Inserm U 1100_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "Pathophysiology of lung infections",
-      "Proteolytic enzymes and their pharmacological targeting in lung diseases",
-      "Pharmacology of inhaled pharmaceuticals",
-      "Biology of innate T cells & Lung immunity (Infection and autoimmunity)",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "CeRCA - Research Centre on Cognition and Learning - UMR CNRS 7295_Tours",
-     "visibleIf": "{research_units_tours} = 'CeRCA - Research Centre on Cognition and Learning - UMR CNRS 7295_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-       "Aging and Psychopathology of Memory - VIPsyM",
-       "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "ISP - Infectious Diseases and Public Health - UMR INRAE 1282_Tours",
-     "visibleIf": "{research_units_tours} = 'ISP - Infectious Diseases and Public Health - UMR INRAE 1282_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "Bacteria and maternal/fœtal risk",
-      "Bacterial Infections and Immunity in Ruminants",
-      "Genomic Plasticity, Biodiversity, and Antimicrobial Resistance",
-      "Microbiota, Monogastric and Salmonella",
-      "Apicomplexa and Mucosal Immunity",
-      "BioPharmaceuticals and Microorganisms Against Pathologies",
-      "Control and Resistance of Macro-parasites",
-      "Biology of Polyomavirus Infections",
-      "Biology of Avian Viruses",
-      "Infection and Innate Immunity in Monogastric livestock",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "IBraiN - Imaging, Brain and Neurphychiatry - Inserm U 1253_Tours",
-     "visibleIf": "{research_units_tours} = 'IBraiN - Imaging, Brain and Neurphychiatry - Inserm U 1253_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "Neruo-functional Psychiatry",
-      "Neurogenomics and Neuronal Physiopathology",
-      "Morphofunctional Imaging and Therapeutic Ultrasound",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "N2Cox - Niche, Nutrition, Cancer and Oxidative metabolism - Inserm U 1069_Tours",
-     "visibleIf": "{research_units_tours} = 'N2Cox - Niche, Nutrition, Cancer and Oxidative metabolism - Inserm U 1069_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "Cluster Randomized Trials and Complex Interventions",
-      "Definition, selection, validation, and assessment of outcomes",
-      "Methods for the measurement and interpretation of Self-Reported Outcomes",
-      "Prediction and Causality",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "SPHERE - methodS in Patient-centeres outcomes and Health ResEarch - Inserm U 1246_Tours",
-     "visibleIf": "{research_units_tours} = 'SPHERE - methodS in Patient-centeres outcomes and Health ResEarch - Inserm U 1246_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "Cluster Randomized Trials and Complex Interventions",
-      "Definition, selection, validation, and assessment of outcomes",
-      "Methods for the measurement and interpretation of Self-Reported Outcomes",
-      "Prediction and Causality",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "GREMAN - Materials Microelectronics Acoustics Nanotechnology - UMR 7347_Tours",
-     "visibleIf": "{research_units_tours} = 'GREMAN - Materials Microelectronics Acoustics Nanotechnology - UMR 7347_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "OXYDES - Functional oxides for energy efficiency : nanostructuration and combinatorial synthesis",
-      "DISCUS - Ultrasonic devices and characterizationOXYDES - Functional oxides for energy efficiency : nanostructuration and combinatorial synthesis",
-      "ECOSYM - Energy, COmponents, SYstems, Microelectronic",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "LaMé - Laboratory of Mechanics Gabriel Lamé - RU 7494_Tours",
-     "visibleIf": "{research_units_tours} = 'LaMé - Laboratory of Mechanics Gabriel Lamé - RU 7494_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "C2MP - Mechanical Beha-viour of Materials and Processes",
-      "DVS - Dynamics and Vibrations of Structures",
-      "C3M - Multi-scale, Multi-physics Characterisation and Modelling",
-      "DFV - Degradation, Fa-tigue and Vulnerability",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "PCM2E - Laboratory of Physical Chemistry of Materials and Electrolytes for Energy - RU 6299_Tours",
-     "visibleIf": "{research_units_tours} = 'PCM2E - Laboratory of Physical Chemistry of Materials and Electrolytes for Energy - RU 6299_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "Electrochemistry, interfaces and devices for energy storage",
-      "Innovative electrolytes and advanced ionic media",
-      "Pi-conjugated materials and polymers",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "IDP - Denis Poisson Institute - UMR 7013_Tours",
-     "visibleIf": "{research_units_tours} = 'IDP - Denis Poisson Institute - UMR 7013_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "Theoretical Physics",
-      "PDE, Modeling, Simulation",
-      "Probability, Algebra, Combinatorics, Ergodic Theory, Statistics",
-      "Analysis and Geometry",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "LIFAT - Tours Research Laboratory in Fundamental and Applied Computer Science - RU 6300_Tours",
-     "visibleIf": "{research_units_tours} = 'LIFAT - Tours Research Laboratory in Fundamental and Applied Computer Science - RU 6300_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "BdTin - Databases and Natural Language Processing",
-      "RFAI - Pattern Recognition and Image Analysis",
-      "ROOT - Operations research, scheduling, and transportation",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "CITERES - Centre for Cities, Territories, Environment and Societies - UMR CNRS 7324_Tours",
-     "visibleIf": "{research_units_tours} = 'CITERES - Centre for Cities, Territories, Environment and Societies - UMR CNRS 7324_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "COST - The social and political construction of spaces, norms and trajectories",
-      "EMAM - The Arab world and the Mediterranean region",
-      "DATE - Territorial and Environmental Dynamics and Action",
-      "LAT - Archeology and Territory",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "VALLOREM - Val de Loire Management Research - RU 6296_Tours",
-     "visibleIf": "{research_units_tours} = 'VALLOREM - Val de Loire Management Research - RU 6296_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "Strategic management of people and projects",
-      "understanding consumer behavior",
-      "organizational and management control systems / Organisational creativity,management and performance of innovation",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "LLL - Loire Linguistics Laboratory Tours Team - UMR CNRS 7270",
-     "visibleIf": "{research_units_tours} = 'LLL - Loire Linguistics Laboratory Tours Team - UMR CNRS 7270_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "CADO - Language practices, construction of knowledge and literacy, oral data",
-      "MP - Morphophonology",
-      "VETD-DO - Construction of meaning and formal grammars, oral data",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "CeTHIS - Tourangeau Centre for the History and Study of Sources - UR 6298_Tours",
-     "visibleIf": "{research_units_tours} = 'CeTHIS - Tourangeau Centre for the History and Study of Sources - UR 6298_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "Urban dynamics and spaces",
-      "Historical practices and the construction of historical objets",
-      "Sources and corpus - tools and data",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "ICD - Cultural and Discursive Interactions - RU 6297_Tours",
-     "visibleIf": "{research_units_tours} = 'ICD - Cultural and Discursive Interactions - RU 6297_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "The individual in the political/public arena",
-      "Individual practices and literary, artistic and scientific traditions",
-      "Minorities and the Collective; Man and Nature",
-      "Other or several"
-     ]
-    },
-    {
-     "type": "dropdown",
-     "name": "CESR - Center for Advanced Renaissance Studies - UMR CNRS 7323_Tours",
-     "visibleIf": "{research_units_tours} = 'CESR - Center for Advanced Renaissance Studies - UMR CNRS 7323_Tours'",
-     "title": "Select your specific research units",
-     "isRequired": true,
-     "choices": [
-      "Humanism",
-      "Making and knowing in the Renaissance",
-      "European scene: performance arts, performance of the arts",
-      "Cultures of religious and political pluralism: conflicts and concords",
-      "Arts in the Renaissance: corpora, methods and influences",
-      "Other or several"
-     ]
+  "title": "Researchers mapping",
+  "logo": "data:image/png;base64,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",
+  "logoHeight": "50px",
+  "logoFit": "fill",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "university_info",
+      "title": "\nSelect your University",
+      "elements": [
+        {
+          "type": "dropdown",
+          "name": "university_name",
+          "title": "Select your University",
+          "isRequired": true,
+          "choices": [
+            "University of Salerno",
+            "University of Örebro",
+            "Šiauliai State University of Applied Sciences",
+            "University of Nicosia",
+            "Ştefan cel Mare University of Suceava",
+            "University of Tours",
+            "University of Bielefeld",
+            "University of Jaén",
+            "University of Ostrava"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "University of Salerno",
+          "visibleIf": "{university_name} = 'University of Salerno'",
+          "title": "Select you Department",
+          "isRequired": true,
+          "choices": [
+            "Department of Chemistry and Biology \"Adolfo Zambelli\"/DCB",
+            "Department of Pharmacy/DIFARMA",
+            "Department of Physics \"E.R.Caianiello\"/DF",
+            "Department of Computer Science/DI",
+            "Department of Civil Engineering/DICIV",
+            "Department of Information and Electrical Engineering and Applied Mathematics/DIEM",
+            "Department of Industrial Engineering/DIIN",
+            "Department of Mathematics/DIPMAT",
+            "Department of Medicine, Surgery and Dentistry \"Scuola Medica Salernitana\"/DIPMED",
+            "Department of Business Sciences   Management & Innovation Systems/DISA MIS",
+            "Department of Cultural Heritage Sciences/DISPAC",
+            "Department of Economics and Statistics/DISES",
+            "Department of Legal Sciences (School of Law)",
+            "Department of Political and Communication Sciences/DISPC",
+            "Department of Humanities, Philosophy and Education/DISUFF",
+            "Department of Political and Social Studies/DISPS",
+            "Department of Humanities/DISPSUM"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "University of Örebro",
+          "visibleIf": "{university_name} = 'University of Örebro'",
+          "title": "Select your Faculty",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Faculty of Business, Science and Engineering_Orebro",
+              "text": "Faculty of Business, Science and Engineering"
+            },
+            {
+              "value": "Faculty of Humanities and Social Sciences_Orebro",
+              "text": "Faculty of Humanities and Social Sciences"
+            },
+            {
+              "value": "Faculty of Medicine and Health_Orebro",
+              "text": "Faculty of Medicine and Health"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Business, Science and Engineering_Orebro",
+          "visibleIf": "{University of Örebro} = 'Faculty of Business, Science and Engineering_Orebro'",
+          "title": "Select your Schools",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Örebro University School of Business_Orebro",
+              "text": "Örebro University School of Business"
+            },
+            {
+              "value": "Science and Technology_Orebro",
+              "text": "Science and Technology"
+            },
+            {
+              "value": "Hospitality, Culinary Arts and Meal Science_Orebro",
+              "text": "Hospitality, Culinary Arts and Meal Science"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Humanities and Social Sciences_Orebro",
+          "visibleIf": "{University of Örebro} = 'Faculty of Humanities and Social Sciences_Orebro'",
+          "title": "Select your Schools",
+          "isRequired": true,
+          "choices": [
+            "Humanities, Education and Social Sciences",
+            "School of Behavioural, Social and Legal Sciences",
+            "Music, Theatre and Art"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Medicine and Health_Orebro",
+          "visibleIf": "{University of Örebro} = 'Faculty of Medicine and Health_Orebro'",
+          "title": "Select your Schools",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Health Sciences_Orebro",
+              "text": "Health Sciences"
+            },
+            {
+              "value": "Medical Sciences_Orebro",
+              "text": "Medical Sciences"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Šiauliai State University of Applied Sciences",
+          "visibleIf": "{university_name} = 'Šiauliai State University of Applied Sciences'",
+          "title": "Select your Faculty",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Faculty of Health care_Siauliai",
+              "text": "Faculty of Health care"
+            },
+            {
+              "value": "Faculty of Business and Technologies_Siauliai",
+              "text": "Faculty of Business and Technologies"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Health care_Siauliai",
+          "visibleIf": "{Šiauliai State University of Applied Sciences} = 'Faculty of Health care_Siauliai'",
+          "title": "Select your Department",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Biomedical Sciences Department_Siauliai",
+              "text": "Biomedical Sciences Department"
+            },
+            {
+              "value": "Rehabilitation Department_Siauliai",
+              "text": "Rehabilitation Department"
+            },
+            {
+              "value": "Social Work Department_Siauliai",
+              "text": "Social Work Department"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Business and Technologies_Siauliai",
+          "visibleIf": "{Šiauliai State University of Applied Sciences} = 'Faculty of Business and Technologies_Siauliai'",
+          "title": "Select your Department",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Engineering Sciences Department_Siauliai",
+              "text": "Engineering Sciences Department"
+            },
+            {
+              "value": "Informatics Sciences Department_Siauliai",
+              "text": "Informatics Sciences Department"
+            },
+            {
+              "value": "Transport Engineering Department_Siauliai",
+              "text": "Transport Engineering Department"
+            },
+            {
+              "value": "Management and Communication Department_Siauliai",
+              "text": "Management and Communication Department"
+            },
+            {
+              "value": "Business and Accounting Department_Siauliai",
+              "text": "Business and Accounting Department"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "University of Ostrava",
+          "visibleIf": "{university_name} = 'University of Ostrava'",
+          "title": "Select your Faculty/Centre",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Faculty of Social Studies_Ostrava",
+              "text": "Faculty of Social Studies"
+            },
+            {
+              "value": "Faculty of Education_Ostrava",
+              "text": "Faculty of Education"
+            },
+            {
+              "value": "Faculty of Fine Arts & Music_Ostrava",
+              "text": "Faculty of Fine Arts & Music"
+            },
+            {
+              "value": "Faculty of Arts_Ostrava",
+              "text": "Faculty of Arts"
+            },
+            {
+              "value": "Faculty of Medicine_Ostrava",
+              "text": "Faculty of Medicine"
+            },
+            {
+              "value": "Faculty of Science_Ostrava",
+              "text": "Faculty of Science"
+            },
+            {
+              "value": "Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling_Ostrava",
+              "text": "Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Social Studies_Ostrava",
+          "visibleIf": "{University of Ostrava} = 'Faculty of Social Studies_Ostrava'",
+          "title": "Select your Department/Working group",
+          "isRequired": true,
+          "choices": [
+            "Dept. of Health and Social Studies",
+            "Dept. of Social Work"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Education_Ostrava",
+          "visibleIf": "{University of Ostrava} = 'Faculty of Education_Ostrava'",
+          "title": "Select your Department/Working group",
+          "isRequired": true,
+          "choices": [
+            "Dept. of Civic Education",
+            "Dept. of Czech Language and Literature with Didactics",
+            "Dept. of Education and Adult Education",
+            "Dept. of English Language Teaching",
+            "Dept. of Human Movement Studies",
+            "Dept. of Information and Communication Technologies",
+            "Dept. of Mathematics with Didactics",
+            "Dept. of Music Education",
+            "Dept. of Educational and School Psychology",
+            "Dept. of Primary and Preprimary Education",
+            "Dept. of School Education",
+            "Dept. of Technical and Vocational Education",
+            "Dept. of Visual Arts Education",
+            "Centre of Educational Research",
+            "Centre for Research into Culture and Identity of the Region",
+            "Centre for Visual Studies",
+            "Human Motion Diagnostic Centre",
+            "Institute for Adult"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Fine Arts & Music_Ostrava",
+          "visibleIf": "{University of Ostrava} = 'Faculty of Fine Arts & Music_Ostrava'",
+          "title": "Select your Department/Working group",
+          "isRequired": true,
+          "choices": [
+            "Dept. of Graphics and Drawing",
+            "Dept. of Intermedia Studies",
+            "Dept. of Painting",
+            "Dept. of Sculpture",
+            "Dept. of the Theory and History of Fine Arts",
+            "Dept. of Keyboard Instruments",
+            "Dept. of String Instruments",
+            "Dept. of Vocal Studies",
+            "Dept. of Wind Instruments"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Arts_Ostrava",
+          "visibleIf": "{University of Ostrava} = 'Faculty of Arts_Ostrava'",
+          "title": "Select your Department/Working group",
+          "isRequired": true,
+          "choices": [
+            "Dept. of Art History and Cultural Heritage",
+            "Dept. of Czech Language",
+            "Dept. of Czech Literature and Literary Criticism",
+            "Dept. of English and American Studies",
+            "Dept. of German Studies",
+            "Dept. of History",
+            "Dept. of Latin Language and Culture",
+            "Dept. of Psychology",
+            "Centre for Economical and Social History",
+            "Centre for the Research of Professional Language",
+            "Centre for Regional Studies",
+            "VIVARIUM - Centre for Research in Medieval Society and Culture"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Medicine_Ostrava",
+          "visibleIf": "{University of Ostrava} = 'Faculty of Medicine_Ostrava'",
+          "title": "Select your Department/Working group",
+          "isRequired": true,
+          "choices": [
+            "Dept. of Anaesthesiology, Resuscitation and Intensive Care Medicine",
+            "Dept. of Anatomy",
+            "Dept. of Clinic Subjects",
+            "Dept. of Clinical Neurosciences",
+            "Dept. of Craniofacial Surgery",
+            "Dept. of Dentistry",
+            "Dept. of Epidemiology and Public Health",
+            "Dept. of Forensic Medicine",
+            "Dept. of Gynaecology and Obstetrics",
+            "Dept. of Hematooncology",
+            "Dept. of Histology and Embryology",
+            "Dept. of Imaging Methods",
+            "Dept. of Nursing and Midwifery",
+            "Dept. of Oncology",
+            "Dept. of Pediatrics",
+            "Dept. of Rehabilitation and Sports Medicine",
+            "Dept. of Surgical Studies",
+            "Dept. of Clinical Pharmacology",
+            "Institute of Emergency Medicine",
+            "Institute of Molecular and Clinical Pathology and Medical Genetics",
+            "Institute of Laboratory Medicine",
+            "Institute of Physiology and Pathophysiology",
+            "Centre for Health Research",
+            "Centre for Hyperbaric Medicine of Faculty of Medicine University of Ostrava and Ostrava City Hospital",
+            "Simulation Centre / Training Hospital (SIMLEK)"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Science_Ostrava",
+          "visibleIf": "{University of Ostrava} = 'Faculty of Science_Ostrava'",
+          "title": "Select your Department/Working group",
+          "isRequired": true,
+          "choices": [
+            "Dept. of Biology and Ecology",
+            "Dept. of Chemistry",
+            "Dept. of Human Geography and Regional Development",
+            "Dept. of Informatics and Computers",
+            "Dept. of Mathematics",
+            "Dept. of Physical Geography and Geoecology",
+            "Dept. of Physics",
+            "Environmental Center"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling_Ostrava",
+          "visibleIf": "{University of Ostrava} = 'Centre of Excellence IT4Innovations - Institute for Research and Applications of Fuzzy Modeling_Ostrava'",
+          "title": "Select your Department/Working group",
+          "isRequired": true,
+          "choices": [
+            "Logic",
+            "Dynamical Systems",
+            "Neural Networks and Computer Vision",
+            "Fuzzy modeling"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "University of Nicosia",
+          "visibleIf": "{university_name} = 'University of Nicosia'",
+          "title": "Select your school",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "School of Business_Nicosia",
+              "text": "School of Business"
+            },
+            {
+              "value": "School of Education_Nicosia",
+              "text": "School of Education"
+            },
+            {
+              "value": "School of Humanities and Social Sciences_Nicosia",
+              "text": "School of Humanities and Social Sciences"
+            },
+            {
+              "value": "School of Law_Nicosia",
+              "text": "School of Law"
+            },
+            {
+              "value": "School of Life and Health Sciences_Nicosia",
+              "text": "School of Life and Health Sciences"
+            },
+            {
+              "value": "Medical School_Nicosia",
+              "text": "Medical School"
+            },
+            {
+              "value": "School of Sciences and Engineering_Nicosia",
+              "text": "School of Sciences and Engineering"
+            },
+            {
+              "value": "School of Veterinary Medicine_Nicosia",
+              "text": "School of Veterinary Medicine"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "School of Business_Nicosia",
+          "visibleIf": "{University of Nicosia} = 'School of Business_Nicosia'",
+          "title": "Select your department",
+          "isRequired": true,
+          "choices": [
+            "Department of Accounting, Economics and Finance ",
+            "Department of Digital Innovation",
+            "Department of Management"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "School of Education_Nicosia",
+          "visibleIf": "{University of Nicosia} = 'School of Education_Nicosia'",
+          "title": "Select your department",
+          "isRequired": true,
+          "choices": [
+            "Department of Education",
+            "Department of Music and Dance"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "School of Humanities and Social Sciences_Nicosia",
+          "visibleIf": "{University of Nicosia} = 'School of Humanities and Social Sciences_Nicosia'",
+          "title": "Select your department",
+          "isRequired": true,
+          "choices": [
+            "Department of Architecture ",
+            "Department of Communications",
+            "Department of Design and Multimedia",
+            "Department of Languages and Literature",
+            "Department of Social Sciences",
+            "Department of Theology"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "School of Law_Nicosia",
+          "visibleIf": "{University of Nicosia} = 'School of Law_Nicosia'",
+          "title": "Select your department",
+          "isRequired": true,
+          "choices": [
+            "Department of Law",
+            "Department of Politics and Governance"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "School of Life and Health Sciences_Nicosia",
+          "visibleIf": "{University of Nicosia} = 'School of Life and Health Sciences_Nicosia'",
+          "title": "Select your department",
+          "isRequired": true,
+          "choices": [
+            "Department of Health Sciences",
+            "Department of Life Sciences"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Medical School_Nicosia",
+          "visibleIf": "{University of Nicosia} = 'Medical School_Nicosia'",
+          "title": "Select your department",
+          "isRequired": true,
+          "choices": [
+            "Department of Basic and Clinical Sciences",
+            "Department of Primary Care and Population Health"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "School of Sciences and Engineering_Nicosia",
+          "visibleIf": "{University of Nicosia} = 'School of Sciences and Engineering_Nicosia'",
+          "title": "Select your department",
+          "isRequired": true,
+          "choices": [
+            "Department of Computer Science",
+            "Department of Engineering"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "School of Veterinary Medicine_Nicosia",
+          "visibleIf": "{University of Nicosia} = 'School of Veterinary Medicine_Nicosia'",
+          "title": "School of Veterinary Medicine",
+          "isRequired": true,
+          "choices": [
+            "Department of Veterinary Medicine"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Ştefan cel Mare University of Suceava",
+          "visibleIf": "{university_name} = 'Ştefan cel Mare University of Suceava'",
+          "title": "Select your faculty",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Faculty of Law and Administrative Sciences_Suceava",
+              "text": "Faculty of Law and Administrative Sciences"
+            },
+            {
+              "value": "Faculty of Physical Education and Sports_Suceava",
+              "text": "Faculty of Physical Education and Sports"
+            },
+            {
+              "value": "Faculty of Food Engineering_Suceava",
+              "text": "Faculty of Food Engineering"
+            },
+            {
+              "value": "Faculty of Electrical Engineering and Computer Science_Suceava",
+              "text": "Faculty of Electrical Engineering and Computer Science"
+            },
+            {
+              "value": "Faculty of Mechanical Engineering, Automotive, and Robotics_Suceava",
+              "text": "Faculty of Mechanical Engineering, Automotive, and Robotics"
+            },
+            {
+              "value": "Faculty of History and Geography_Suceava",
+              "text": "Faculty of History and Geography"
+            },
+            {
+              "value": "Faculty of Letters and Communication Sciences_Suceava",
+              "text": "Faculty of Letters and Communication Sciences"
+            },
+            {
+              "value": "Faculty of Forestry_Suceava",
+              "text": "Faculty of Forestry"
+            },
+            {
+              "value": "Faculty of Economics, Administration, and Business_Suceava",
+              "text": "Faculty of Faculty of Economics, Administration, and Business Education and Sports"
+            },
+            {
+              "value": "Faculty of Educational Sciences_Suceava",
+              "text": "Faculty of Educational Sciences"
+            },
+            {
+              "value": "Faculty of Medicine and Biological Sciences_Suceava",
+              "text": "Faculty of Medicine and Biological Sciences"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Law and Administrative Sciences_Suceava",
+          "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Law and Administrative Sciences_Suceava'",
+          "title": "Select your department/research center",
+          "isRequired": true,
+          "choices": [
+            "Department of Law and Administrative Sciences",
+            "Center for Training and Research in Public Administration",
+            "Research Center for Legal Research"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Physical Education and Sports_Suceava",
+          "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Physical Education and Sports_Suceava'",
+          "title": "Select your department/research center",
+          "isRequired": true,
+          "choices": [
+            "Department of Physical Education and Sport",
+            "Interdisciplinary Research Center in Human Motricity and Health Sciences"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Food Engineering_Suceava",
+          "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Food Engineering_Suceava'",
+          "title": "Select your department/research center",
+          "isRequired": true,
+          "choices": [
+            "Department of Food Technologies, Food Production and Environmental Safety",
+            "Research and Training Center for Food Science and Safety"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Electrical Engineering and Computer Science_Suceava",
+          "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Electrical Engineering and Computer Science_Suceava'",
+          "title": "Select your department/research center",
+          "isRequired": true,
+          "choices": [
+            "Department of Computer Science, Electronics, and Automation",
+            "Department of Electrical Engineering",
+            "Department of Computer Science",
+            "Research Center for Electrical Machines, Devices, and Drives",
+            "Research Center for Process Control Systems",
+            "Computer Science Research Center"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Mechanical Engineering, Automotive, and Robotics_Suceava",
+          "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Mechanical Engineering, Automotive, and Robotics_Suceava'",
+          "title": "Select your department/research center",
+          "isRequired": true,
+          "choices": [
+            "Department of Mechanics and Technologies",
+            "Research Center for Mechanical, Industrial, Mechatronic Engineering, Environment, and Management",
+            "Training Center in Mechanical Engineering and Road Vehicles"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of History and Geography_Suceava",
+          "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of History and Geography_Suceava'",
+          "title": "Select your department/research center",
+          "isRequired": true,
+          "choices": [
+            "Department of Human and Social-Political Sciences",
+            "Department of Geography",
+            "Research Center for Applied Geography ",
+            "The Carpathica University Centre of Interdisciplinary Studies",
+            "Research Center in Ethics, Philosophy, Engineering, and Society",
+            "Cross-Border Cooperation Center"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Letters and Communication Sciences_Suceava",
+          "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Letters and Communication Sciences_Suceava'",
+          "title": "Select your department/research center",
+          "isRequired": true,
+          "choices": [
+            "Department of Romanian Language and Literature and Communication Sciences",
+            "Department of Foreign Languages and Literatures",
+            "Inter Litteras Research Center",
+            "Research Center for Discourse Analysis ",
+            "Research Center for Communication and Advertising Creation",
+            "Center for Foreign Languages and Cultures Synergia ",
+            "Center for Academic and Creative Writing",
+            "University Success Center"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Forestry_Suceava",
+          "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Forestry_Suceava'",
+          "title": "Select your department/research center",
+          "isRequired": true,
+          "choices": [
+            "Department of Forestry and Environmental ",
+            "Research Center for Environmental Policies",
+            "Technology Transfer Center",
+            "Hunting Center"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Economics, Administration, and Business_Suceava",
+          "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Economics, Administration, and Business_Suceava'",
+          "title": "Select your department/research center",
+          "isRequired": true,
+          "choices": [
+            "Department of Accounting, Audit, and Finance",
+            "Department of Economics, Economic Informatics, and Business Management",
+            "Department of Management, Business Administration, and Tourism",
+            "Research Center in Management and Business Administration",
+            "Research Center in Accounting and Management Informatics",
+            "Tourism Resource Center"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Educational Sciences_Suceava",
+          "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Educational Sciences_Suceava'",
+          "title": "Select your department/research center",
+          "isRequired": true,
+          "choices": [
+            "Department of Education Sciences",
+            "Psychopedagogical Department ",
+            "Research Center in Psychology and Educational Sciences",
+            "Early Education Resource Center (EERC)",
+            "Resilience and Mental Health Center in School and Community (CRESMIN)"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Faculty of Medicine and Biological Sciences_Suceava",
+          "visibleIf": "{Ştefan cel Mare University of Suceava} = 'Faculty of Medicine and Biological Sciences_Suceava'",
+          "title": "Select your department/research center",
+          "isRequired": true,
+          "choices": [
+            "Department of Biomedical Sciences",
+            "Interdisciplinary Research Center in Biomedical Sciences"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "University of Jaén",
+          "visibleIf": "{university_name} = 'University of Jaén'",
+          "title": "Select your research resources/activity",
+          "isRequired": true,
+          "choices": [
+            "Agrifood",
+            "Biology and biotechnology",
+            "Health sciences and technologies",
+            "Physics, chemistry and mathematics",
+            "Humanities",
+            "Natural resources and environment",
+            "Social, economic and legal sciences",
+            "Production technologies",
+            "Information and communication technologies"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "University of Bielefeld",
+          "visibleIf": "{university_name} = 'University of Bielefeld'",
+          "title": "Select your faculty",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Biology_Bielefeld",
+              "text": "Biology"
+            },
+            {
+              "value": "Business Administration and Economics_Bielefeld",
+              "text": "Business Administration and Economics"
+            },
+            {
+              "value": "Chemistry_Bielefeld",
+              "text": "Chemistry"
+            },
+            {
+              "value": "Educational Science_Bielefeld",
+              "text": "Educational Science"
+            },
+            {
+              "value": "History and Philosophy and Theology_Bielefeld",
+              "text": "History and Philosophy and Theology"
+            },
+            {
+              "value": "Law_Bielefeld",
+              "text": "Law"
+            },
+            {
+              "value": "Linguistics and Literary Studies_Bielefeld",
+              "text": "Linguistics and Literary Studies"
+            },
+            {
+              "value": "Mathematics_Bielefeld",
+              "text": "Mathematics"
+            },
+            {
+              "value": "Medical School OWL_Bielefeld",
+              "text": "Medical School OWL"
+            },
+            {
+              "value": "Physics_Bielefeld",
+              "text": "Physics"
+            },
+            {
+              "value": "Psychology and Sports Science_Bielefeld",
+              "text": "Psychology and Sports Science"
+            },
+            {
+              "value": "Public Health_Bielefeld",
+              "text": "Public Health"
+            },
+            {
+              "value": "Sociology_Bielefeld",
+              "text": "Sociology"
+            },
+            {
+              "value": "Technology_Bielefeld",
+              "text": "Technology"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Biology_Bielefeld",
+          "visibleIf": "{University of Bielefeld} = 'Biology_Bielefeld'",
+          "title": "Select your research unit",
+          "isRequired": true,
+          "choices": [
+            "Molecular Biology",
+            "Neurobiology",
+            "Ecology and Behavioural Biology",
+            "Didactics"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Business Administration and Economics_Bielefeld",
+          "visibleIf": "{University of Bielefeld} = 'Business Administration and Economics_Bielefeld'",
+          "title": "Select your research unit",
+          "isRequired": true,
+          "choices": [
+            "Business Administration",
+            "Economics",
+            "Empirical Methods",
+            "Center for Mathematical Economics - Economics"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Chemistry_Bielefeld",
+          "visibleIf": "{University of Bielefeld} = 'Chemistry_Bielefeld'",
+          "title": "Select your research unit",
+          "isRequired": true,
+          "choices": [
+            "Chemistry",
+            "Biochemistry"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "History and Philosophy and Theology_Bielefeld",
+          "visibleIf": "{University of Bielefeld} = 'History and Philosophy and Theology_Bielefeld'",
+          "title": "Select your research unit",
+          "isRequired": true,
+          "choices": [
+            "History",
+            "Philosophy",
+            "Theology"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Law_Bielefeld",
+          "visibleIf": "{University of Bielefeld} = 'Law_Bielefeld'",
+          "title": "Select your research unit",
+          "isRequired": true,
+          "choices": [
+            "Civil Law",
+            "Public Law",
+            "Criminal Law",
+            "Subject-specific Foreign Languages Unit"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Linguistics and Literary Studies_Bielefeld",
+          "visibleIf": "{University of Bielefeld} = 'Linguistics and Literary Studies_Bielefeld'",
+          "title": "Select your research unit",
+          "isRequired": true,
+          "choices": [
+            "English/American Studies",
+            "German as Foreign Language",
+            "German Studies",
+            "Linguistics, Clinical Linguistics, Text Technology, Computer Linguistics",
+            "Literary Studies, Romance Studies, Latin",
+            "Art and Music Education"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Mathematics_Bielefeld",
+          "visibleIf": "{University of Bielefeld} = 'Mathematics_Bielefeld'",
+          "title": "Select your research unit",
+          "isRequired": true,
+          "choices": [
+            "Mathematics",
+            "Didactics of Mathematics"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Medical School OWL_Bielefeld",
+          "visibleIf": "{University of Bielefeld} = 'Medical School OWL_Bielefeld'",
+          "title": "Select your research unit",
+          "isRequired": true,
+          "choices": [
+            "Campus ",
+            "Clinical"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Physics_Bielefeld",
+          "visibleIf": "{University of Bielefeld} = 'Physics_Bielefeld'",
+          "title": "Select your research unit",
+          "isRequired": true,
+          "choices": [
+            "Experimental Physics",
+            "Theoretical Physics",
+            "Astrophysics ",
+            "Physics and its Didactics"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "Technology_Bielefeld",
+          "visibleIf": "{University of Bielefeld} = 'Technology_Bielefeld'",
+          "title": "Select your research unit",
+          "isRequired": true,
+          "choices": [
+            "Biotechnology",
+            "Informatics"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "University of Tours",
+          "visibleIf": "{university_name} = 'University of Tours'",
+          "title": "Select your  Faculty, institute and school - UFR Unités de formation et de recherche ",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Faculty of Literature and Languages_Tours",
+              "text": "Faculty of Literature and Languages"
+            },
+            {
+              "value": "Faculty of Arts and Humanities_Tours",
+              "text": "Faculty of Arts and Humanities"
+            },
+            {
+              "value": "Faculty of Law, Economics and Social Sciences_Tours",
+              "text": "Faculty of Law, Economics and Social Sciences"
+            },
+            {
+              "value": "Faculty of Sciences and Technology_Tours",
+              "text": "Faculty of Sciences and Technology"
+            },
+            {
+              "value": "Faculty of Pharmaceutical Sciences_Tours",
+              "text": "Faculty of Pharmaceutical Sciences"
+            },
+            {
+              "value": "Faculty of Medecine_Tours",
+              "text": "Faculty of Medecine"
+            },
+            {
+              "value": "Faculty of Odontology_Tours",
+              "text": "Faculty of Odontology"
+            },
+            {
+              "value": "CESR - Center for Advanced Renaissance Studies_Tours",
+              "text": "CESR - Center for Advanced Renaissance Studies"
+            },
+            {
+              "value": "University School of management (IAE Tours)_Tours",
+              "text": "University School of management (IAE Tours)"
+            },
+            {
+              "value": "Tours Institute of Technology_Tours",
+              "text": "Tours Institute of Technology"
+            },
+            {
+              "value": "Blois Institute of Technology_Tours",
+              "text": "Blois Institute of Technology"
+            },
+            {
+              "value": "Polytech Tours - graduate school of engineering of the university of Tours_Tours",
+              "text": "Polytech Tours - graduate school of engineering of the university of Tours"
+            },
+            "None"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "research_units_tours",
+          "visibleIf": "{university_name} = 'University of Tours'",
+          "title": "Select your research units",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "BBV - Plant Biocompounds and Biotechnology - RU 2106_Tours",
+              "text": "BBV - Plant Biocompounds and Biotechnology - RU 2106"
+            },
+            {
+              "value": "IRBI - Institute of Research on Insect Biology - UMR 7261_Tours",
+              "text": "IRBI - Institute of Research on Insect Biology - UMR 7261"
+            },
+            {
+              "value": "BOA - Bird Biology and Poultry - UMR INRAE 0083_Tours",
+              "text": "BOA - Bird Biology and Poultry - UMR INRAE 0083"
+            },
+            {
+              "value": "PRC - Physiology of Reproduction and Behaviour - UMR CNRS 7247 - INRAE 0085_Tours",
+              "text": "PRC - Physiology of Reproduction and Behaviour - UMR CNRS 7247 - INRAE 0085"
+            },
+            {
+              "value": "CBM-NMNS - Nanomedecines and Nanoprobes - UPR 6295_Tours",
+              "text": "CBM-NMNS - Nanomedecines and Nanoprobes - UPR 6295"
+            },
+            {
+              "value": "CEPR - Research Centre for Respiratory Diseases - Inserm U 1100_Tours",
+              "text": "CEPR - Research Centre for Respiratory Diseases - Inserm U 1100"
+            },
+            {
+              "value": "CeRCA - Research Centre on Cognition and Learning - UMR CNRS 7295_Tours",
+              "text": "CeRCA - Research Centre on Cognition and Learning - UMR CNRS 7295"
+            },
+            {
+              "value": "IBraiN - Imaging, Brain and Neurphychiatry - Inserm U 1253_Tours",
+              "text": "IBraiN - Imaging, Brain and Neurphychiatry - Inserm U 1253"
+            },
+            {
+              "value": "ISCHEMIA - Membrane Signalling and Inflamation in reperfusion injuries - Inserm UMR 1327_Tours",
+              "text": "ISCHEMIA - Membrane Signalling and Inflamation in reperfusion injuries - Inserm UMR 1327"
+            },
+            {
+              "value": "ISP - Infectious Diseases and Public Health - UMR INRAE 1282_Tours",
+              "text": "ISP - Infectious Diseases and Public Health - UMR INRAE 1282"
+            },
+            {
+              "value": "N2Cox - Niche, Nutrition, Cancer and Oxidative metabolism - Inserm U 1069_Tours",
+              "text": "N2Cox - Niche, Nutrition, Cancer and Oxidative metabolism - Inserm U 1069"
+            },
+            {
+              "value": "MAVIVHe - Morphogenesis and Antigenicity of HIV, Hepatitis and Emerging Viruses - Inserm U 1259_Tours",
+              "text": "MAVIVHe - Morphogenesis and Antigenicity of HIV, Hepatitis and Emerging Viruses - Inserm U 1259"
+            },
+            {
+              "value": "SIMBA - Synthesis and Isolation of Bio-Active Molecules - RU 7502_Tours",
+              "text": "SIMBA - Synthesis and Isolation of Bio-Active Molecules - RU 7502"
+            },
+            {
+              "value": "EES - Education Ethics Health - RU 7505_Tours",
+              "text": "EES - Education Ethics Health - RU 7505"
+            },
+            {
+              "value": "SPHERE - methodS in Patient-centeres outcomes and Health ResEarch - Inserm U 1246_Tours",
+              "text": "SPHERE - methodS in Patient-centeres outcomes and Health ResEarch - Inserm U 1246"
+            },
+            {
+              "value": "PAVeA - Psychology of the Various Stages of Life and Adaptation - RU 2114_Tours",
+              "text": "PAVeA - Psychology of the Various Stages of Life and Adaptation - RU 2114"
+            },
+            {
+              "value": "QualiPsy - Quality of life and psychological health - RU 1901_Tours",
+              "text": "QualiPsy - Quality of life and psychological health - RU 1901"
+            },
+            {
+              "value": "GREMAN - Materials Microelectronics Acoustics Nanotechnology - UMR 7347_Tours",
+              "text": "GREMAN - Materials Microelectronics Acoustics Nanotechnology - UMR 7347"
+            },
+            {
+              "value": "LaMé - Laboratory of Mechanics Gabriel Lamé - RU 7494_Tours",
+              "text": "LaMé - Laboratory of Mechanics Gabriel Lamé - RU 7494"
+            },
+            {
+              "value": "PCM2E - Laboratory of Physical Chemistry of Materials and Electrolytes for Energy - RU 6299_Tours",
+              "text": "PCM2E - Laboratory of Physical Chemistry of Materials and Electrolytes for Energy - RU 6299"
+            },
+            {
+              "value": "GeHCO - Continental Geo-Hydrosystems - RU 6293_Tours",
+              "text": "GeHCO - Continental Geo-Hydrosystems - RU 6293"
+            },
+            {
+              "value": "IDP - Denis Poisson Institute - UMR 7013_Tours",
+              "text": "IDP - Denis Poisson Institute - UMR 7013"
+            },
+            {
+              "value": "LIFAT - Tours Research Laboratory in Fundamental and Applied Computer Science - RU 6300_Tours",
+              "text": "LIFAT - Tours Research Laboratory in Fundamental and Applied Computer Science - RU 6300"
+            },
+            {
+              "value": "IRJI - Institute for Interdisciplinary Legal Research - RU 7496_Tours",
+              "text": "IRJI - Institute for Interdisciplinary Legal Research - RU 7496"
+            },
+            {
+              "value": "CITERES - Centre for Cities, Territories, Environment and Societies - UMR CNRS 7324_Tours",
+              "text": "CITERES - Centre for Cities, Territories, Environment and Societies - UMR CNRS 7324"
+            },
+            {
+              "value": "PRIM - Information and mediation practices and resources - RU 7503_Tours",
+              "text": "PRIM - Information and mediation practices and resources - RU 7503"
+            },
+            {
+              "value": "LEO - Laboratory of Economics Orelan-Tours Team - RU 2014_Tours",
+              "text": "LEO - Laboratory of Economics Orelan-Tours Team - RU 2014"
+            },
+            {
+              "value": "VALLOREM - Val de Loire Management Research - RU 6296_Tours",
+              "text": "VALLOREM - Val de Loire Management Research - RU 6296"
+            },
+            {
+              "value": "LLL - Loire Linguistics Laboratory Tours Team - UMR CNRS 7270_Tours",
+              "text": "LLL - Loire Linguistics Laboratory Tours Team - UMR CNRS 7270"
+            },
+            {
+              "value": "InTRu - Artistic and Cultural Interactions, Transfers and Breaks - RU 6301_Tours",
+              "text": "InTRu - Artistic and Cultural Interactions, Transfers and Breaks - RU 6301"
+            },
+            {
+              "value": "Dynadiv - Linguistic and Cultural Diversity in Sociolinguistics and Language Didactics - RU 4428_Tours",
+              "text": "Dynadiv - Linguistic and Cultural Diversity in Sociolinguistics and Language Didactics - RU 4428"
+            },
+            {
+              "value": "CeTHIS - Tourangeau Centre for the History and Study of Sources - UR 6298_Tours",
+              "text": "CeTHIS - Tourangeau Centre for the History and Study of Sources - UR 6298"
+            },
+            {
+              "value": "ICD - Cultural and Discursive Interactions - RU 6297_Tours",
+              "text": "ICD - Cultural and Discursive Interactions - RU 6297"
+            },
+            {
+              "value": "CESR - Center for Advanced Renaissance Studies - UMR CNRS 7323_Tours",
+              "text": "CESR - Center for Advanced Renaissance Studies - UMR CNRS 7323"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "IRBI - Institute of Research on Insect Biology - UMR 7261_Tours",
+          "visibleIf": "{research_units_tours} = 'IRBI - Institute of Research on Insect Biology - UMR 7261_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "IMIP - Biodiversity and interactions between Micro-organisms/Insects/Plants",
+            "ESORE - Social evolution and responses to the environment",
+            "INOV - Interactions organisms-environment: mechanisms and responses to global changes",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "BOA - Bird Biology and Poultry - UMR INRAE 0083_Tours",
+          "visibleIf": "{research_units_tours} = 'BOA - Bird Biology and Poultry - UMR INRAE 0083_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "BOPP - Biology of the egg and physiology of the hen",
+            "GENUTS - Genetics, Nutrition, Systems",
+            "MOQA - Bird Metabolism, Quality and Adaptation",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "PRC - Physiology of Reproduction and Behaviour - UMR CNRS 7247 - INRAE 0085_Tours",
+          "visibleIf": "{research_units_tours} = 'PRC - Physiology of Reproduction and Behaviour - UMR CNRS 7247 - INRAE 0085_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "Cognition, Ethology and Animal Welfare - CEB",
+            "Neuroethology and Social cognition - NECOS",
+            "Neuroendocrine Integration of Reproduction and Behavior - INERC",
+            "Molecular Neuroendocrinology of Reproduction - NMR",
+            "Biology of GPCR signaling systems",
+            "Energy sensors and reproductive signalisation - SENSOR",
+            "Integrative Gonad Biology - BINGO",
+            "Cellular interactions and fertility -ICF",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "CEPR - Research Centre for Respiratory Diseases - Inserm U 1100_Tours",
+          "visibleIf": "{research_units_tours} = 'CEPR - Research Centre for Respiratory Diseases - Inserm U 1100_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "Pathophysiology of lung infections",
+            "Proteolytic enzymes and their pharmacological targeting in lung diseases",
+            "Pharmacology of inhaled pharmaceuticals",
+            "Biology of innate T cells & Lung immunity (Infection and autoimmunity)",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "CeRCA - Research Centre on Cognition and Learning - UMR CNRS 7295_Tours",
+          "visibleIf": "{research_units_tours} = 'CeRCA - Research Centre on Cognition and Learning - UMR CNRS 7295_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "Aging and Psychopathology of Memory - VIPsyM",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "ISP - Infectious Diseases and Public Health - UMR INRAE 1282_Tours",
+          "visibleIf": "{research_units_tours} = 'ISP - Infectious Diseases and Public Health - UMR INRAE 1282_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "Bacteria and maternal/fœtal risk",
+            "Bacterial Infections and Immunity in Ruminants",
+            "Genomic Plasticity, Biodiversity, and Antimicrobial Resistance",
+            "Microbiota, Monogastric and Salmonella",
+            "Apicomplexa and Mucosal Immunity",
+            "BioPharmaceuticals and Microorganisms Against Pathologies",
+            "Control and Resistance of Macro-parasites",
+            "Biology of Polyomavirus Infections",
+            "Biology of Avian Viruses",
+            "Infection and Innate Immunity in Monogastric livestock",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "IBraiN - Imaging, Brain and Neurphychiatry - Inserm U 1253_Tours",
+          "visibleIf": "{research_units_tours} = 'IBraiN - Imaging, Brain and Neurphychiatry - Inserm U 1253_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "AutisM - Autism and neurodevelopement",
+            "ExTraPsy - Experimental and translational psychiatry",
+            "IDeALS - Genomics and physiopathology of neruodevelopmental and motor neuron disorders",
+            "METU - Morpho-functional imaging and ultrasound therapies",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "N2Cox - Niche, Nutrition, Cancer and Oxidative metabolism - Inserm U 1069_Tours",
+          "visibleIf": "{research_units_tours} = 'N2Cox - Niche, Nutrition, Cancer and Oxidative metabolism - Inserm U 1069_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "Cluster Randomized Trials and Complex Interventions",
+            "Definition, selection, validation, and assessment of outcomes",
+            "Methods for the measurement and interpretation of Self-Reported Outcomes",
+            "Prediction and Causality",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "GREMAN - Materials Microelectronics Acoustics Nanotechnology - UMR 7347_Tours",
+          "visibleIf": "{research_units_tours} = 'GREMAN - Materials Microelectronics Acoustics Nanotechnology - UMR 7347_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "OXYDES - Functional oxides for energy efficiency : nanostructuration and combinatorial synthesis",
+            "DISCUS - Ultrasonic devices and characterizationOXYDES - Functional oxides for energy efficiency : nanostructuration and combinatorial synthesis",
+            "MAGNETic & OPTICal properties of ferroic and strongly correlated materialS",
+            "ECOSYM - Energy, COmponents, SYstems, Microelectronic",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "LaMé - Laboratory of Mechanics Gabriel Lamé - RU 7494_Tours",
+          "visibleIf": "{research_units_tours} = 'LaMé - Laboratory of Mechanics Gabriel Lamé - RU 7494_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "C2MP - Mechanical Beha-viour of Materials and Processes",
+            "DVS - Dynamics and Vibrations of Structures",
+            "C3M - Multi-scale, Multi-physics Characterisation and Modelling",
+            "DFV - Degradation, Fa-tigue and Vulnerability",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "PCM2E - Laboratory of Physical Chemistry of Materials and Electrolytes for Energy - RU 6299_Tours",
+          "visibleIf": "{research_units_tours} = 'PCM2E - Laboratory of Physical Chemistry of Materials and Electrolytes for Energy - RU 6299_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "Electrochemistry, interfaces and devices for energy storage",
+            "Innovative electrolytes and advanced ionic media",
+            "Pi-conjugated materials and polymers",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "IDP - Denis Poisson Institute - UMR 7013_Tours",
+          "visibleIf": "{research_units_tours} = 'IDP - Denis Poisson Institute - UMR 7013_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "Theoretical Physics",
+            "PDE, Modeling, Simulation",
+            "Probability, Algebra, Combinatorics, Ergodic Theory, Statistics",
+            "Analysis and Geometry",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "LIFAT - Tours Research Laboratory in Fundamental and Applied Computer Science - RU 6300_Tours",
+          "visibleIf": "{research_units_tours} = 'LIFAT - Tours Research Laboratory in Fundamental and Applied Computer Science - RU 6300_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "BdTin - Databases and Natural Language Processing",
+            "RFAI - Pattern Recognition and Image Analysis",
+            "ROOT - Operations research, scheduling, and transportation",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "CITERES - Centre for Cities, Territories, Environment and Societies - UMR CNRS 7324_Tours",
+          "visibleIf": "{research_units_tours} = 'CITERES - Centre for Cities, Territories, Environment and Societies - UMR CNRS 7324_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "COST - The social and political construction of spaces, norms and trajectories",
+            "EMAM - The Arab world and the Mediterranean region",
+            "DATE - Territorial and Environmental Dynamics and Action",
+            "LAT - Archeology and Territory",
+            "Other or several"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "sphere",
+          "visibleIf": "{research_units_tours} = 'SPHERE - methodS in Patient-centeres outcomes and Health ResEarch - Inserm U 1246_Tours'",
+          "title": "Select your research team",
+          "isRequired": true,
+          "choices": [
+            "Cluster Randomized Trials and Complex Interventions",
+            "Definition, selection, validation, and assessment of outcomes",
+            "Methods for the measurement and interpretation of Self-Reported Outcomes",
+            "Prediction and Causality",
+            "Other or several"
+          ]
+        }
+      ]
     }
-   ],
-   "title": "\nSelect your University"
-  }
- ]
+  ]
 }
