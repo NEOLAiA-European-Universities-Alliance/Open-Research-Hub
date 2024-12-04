@@ -12,7 +12,7 @@ const OTPForm = ({ onAuthenticate }) => {
 
     return(
         <form onSubmit={handleSubmit} id='otp-form'>
-            <input type="text" value={otp} onChange={(e) => setOTP(e.target.value)} id='input-otp'/>
+            <input type="text" value={otp} placeholder='Insert the OTP' onChange={(e) => setOTP(e.target.value)} id='input-otp'/>
             <br></br>
             <button type="submit" id='login-btn'>Login</button>
       </form>
