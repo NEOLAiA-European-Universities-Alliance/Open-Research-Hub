@@ -860,6 +860,7 @@
           ]
          }
         ],
+        "templateTitle": "ERC Panel and keyword ({visiblePanelIndex})",
         "panelCount": 1,
         "minPanelCount": 1,
         "maxPanelCount": 3,
