@@ -49,16 +49,16 @@ function CloudWords({chart_title, series}){
     const [data, setData] = useState(0);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
     const fetchData = async () => {
         try {
             const response = await axios.get(`${base_url}research-info-surveys/get_free_keywords/`)
             const response_data = response.data
             let text = ''
             for(let i = 0; i<response_data.length; i++){
-                response_data[i] = response_data[i].replace(/ /g,'_')
-                text += ` ${response_data[i]}`
-
+                if(response_data[i]){
+                    response_data[i] = response_data[i].replace(/ /g,'_')
+                    text += ` ${response_data[i]}`
+                }
             }
             let lines = text.replace(/[():'?0-9]+/g, '').split(/[\. ]+/g),
             data = lines.reduce((arr, word) => {
