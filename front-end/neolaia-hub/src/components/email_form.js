@@ -37,9 +37,6 @@ const EmailForm = ( {onNext, privacy_policy, accept_policy_message, policy_mess
 
     return (
         <form onSubmit={handle_submit} id='email-form'>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Insert your email' id='input-mail'/>
-            <br/><br/>
-            {!isValid && <><span style={{color:"red"}}>Invalid e-mail</span><br></br></>}
             {privacy_policy}
             <label style={{marginLeft : "10px"}}>
                 <input 
@@ -60,7 +57,10 @@ const EmailForm = ( {onNext, privacy_policy, accept_policy_message, policy_mess
                 {policy_message}
                 <br/>
                 {secondPolicyMessage && secondPolicyMessage}
-            </label> <br/>
+            </label> <br/> <br/>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Insert your email' id='input-mail'/>
+            <br/><br/>
+            {!isValid && <><span style={{color:"red"}}>Invalid e-mail</span><br></br></>}
             <button type="submit" id='send-otp-btn'>Send me the OTP</button>
       </form>
     )
