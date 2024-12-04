@@ -125,16 +125,11 @@ function MappingResearchers({token, data}){
         }
 
         let free_keywords_tofill = [];
-        if (data.free_keyword_1) {
-            free_keywords_tofill.push({ "free_keyword": data.free_keyword_1 });
-        }
-        
-        if (data.free_keyword_2) {
-            free_keywords_tofill.push({ "free_keyword": data.free_keyword_2 });
-        }
-        
-        if (data.free_keyword_3) {
-            free_keywords_tofill.push({ "free_keyword": data.free_keyword_3 });
+        for (let i = 1; i <= 10; i++) {
+            const keyword = data[`free_keyword_${i}`];
+            if (keyword) {
+                free_keywords_tofill.push({ "free_keyword": keyword });
+            }
         }
 
         research_survey.mergeData({'free_keywords' : free_keywords_tofill})
