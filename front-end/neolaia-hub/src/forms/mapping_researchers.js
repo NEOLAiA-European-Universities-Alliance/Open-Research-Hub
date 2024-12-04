@@ -206,7 +206,7 @@ function MappingResearchers({token, data}){
             xhr.onload = xhr.onerror = function () {
                 if (xhr.status === 200){
                     options.showSaveSuccess("Thank you.");
-                    research_survey.completedHtml = '<h3> Thank you for completing the survey </h3> <br> <a href="./researchersfeedback"  style="color: white;">Share your feedback with a very short 1 minute form <b>(the form will be anonymous)</b></a>'
+                    research_survey.completedHtml = '<h3> Thank you for completing the survey </h3> <br> <a href="./"  style="color: white;">Go to the dashboard</a>'
                 } else {
                     options.showSaveError("Error during survey submission, try again.")
                 }
