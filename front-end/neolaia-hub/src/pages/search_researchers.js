@@ -85,15 +85,43 @@ const SearchResearchers = () => {
           },
           {
             accessorKey: 'free_keyword_1',
-            header: 'Free keyword (first choice)'
+            header: 'Free keyword (First Choice)'
           },
           {
             accessorKey: 'free_keyword_2',
-            header: 'Free keyword (second choice)'
+            header: 'Free keyword (Second Choice)'
           },
           {
             accessorKey: 'free_keyword_3',
-            header: 'Free keyword (third choice)'
+            header: 'Free keyword (Third Choice)'
+          },
+          {
+            accessorKey: 'free_keyword_4',
+            header: 'Free keyword (Fourth Choice)'
+          },
+          {
+            accessorKey: 'free_keyword_5',
+            header: 'Free keyword (Fifth Choice)'
+          },
+          {
+            accessorKey: 'free_keyword_6',
+            header: 'Free keyword (Sixth Choice)'
+          },
+          {
+            accessorKey: 'free_keyword_7',
+            header: 'Free keyword (Seventh Choice)'
+          },
+          {
+            accessorKey: 'free_keyword_8',
+            header: 'Free keyword (Eighth Choice)'
+          },
+          {
+            accessorKey: 'free_keyword_9',
+            header: 'Free keyword (Ninth Choice)'
+          },
+          {
+            accessorKey: 'free_keyword_10',
+            header: 'Free keyword (Tenth Choice)'
           }
         ]
         response.data.map((item) => {
