@@ -37,6 +37,35 @@ function MappingResearchers({token, data}){
     const research_survey = new Model(personal_info)
     research_survey.applyTheme(survey_theme)
 
+    const pageColors = [
+        "#e83181", 
+        "#fdc200", 
+        "#00b3e4", 
+        "#99c44a", 
+        "#e4736e",  
+        "#c3ba20",
+        "#bc9ac8"
+
+    ];
+
+    research_survey.onCurrentPageChanged.add(function (sender) {
+        if(sender.state != "completed"){
+            const currentIndex = sender.currentPageNo;
+            survey_theme.cssVariables['--sjs-general-backcolor-dim'] = pageColors[currentIndex % pageColors.length];
+            research_survey.applyTheme(survey_theme)
+        }
+    });
+
+    research_survey.onShowingPreview.add(function (sender) {
+        survey_theme.cssVariables['--sjs-general-backcolor-dim'] = pageColors[5];
+        research_survey.applyTheme(survey_theme)
+    })
+
+    research_survey.onCompleting.add(function (sender) {
+        survey_theme.cssVariables['--sjs-general-backcolor-dim'] = pageColors[6];
+        research_survey.applyTheme(survey_theme)
+    })
+
     //data is not undefined when researcher want to edit the data already submitted
     //pre-fill the form with all the old data submitted
     if(data){
@@ -163,7 +192,6 @@ function MappingResearchers({token, data}){
         research_survey.mergeData({'ERC_Panel' : ERC_Panel})
 
         let ERC_panel_interested = [];
-        console.log( data.ERC_Panel_interested_1)
         if (erc_area_1_int && data.ERC_Panel_interested_1) {
             let ercPanelInterested1 = {};
             ercPanelInterested1["Research-General-Area"] = erc_area_1_int;
@@ -207,8 +235,18 @@ function MappingResearchers({token, data}){
             xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8")
             xhr.onload = xhr.onerror = function () {
                 if (xhr.status === 200){
-                    options.showSaveSuccess("Thank you.");
-                    research_survey.completedHtml = '<h3> Thank you for completing the survey </h3> <br> <a href="./"  style="color: white;">Go to the dashboard</a>'
+                    options.showSaveSuccess("Data successfully saved");
+                    research_survey.completedHtml = '\
+                    <h3> Grazie! </h3> <br> \
+                    <h3> Danke! </h3> <br> \
+                    <h3> ¡Gracias! </h3> <br> \
+                    <h3> Ευχαριστώ! </h3> <br> \
+                    <h3> Tack! </hr> <br> \
+                    <h3> Děkuji! </hr> <br> \
+                    <h3> Mulțumesc! </hr> <br> \
+                    <h3> Merci! </hr> <br> \
+                    <h3> Ačiū! </hr> <br> \
+                    <a href="./"  style="color: white;">Go to the dashboard</a>'
                 } else {
                     options.showSaveError("Error during survey submission, try again.")
                 }
@@ -224,8 +262,18 @@ function MappingResearchers({token, data}){
             xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8")
             xhr.onload = xhr.onerror = function () {
                 if (xhr.status === 200){
-                    options.showSaveSuccess("Thank you.");
-                    research_survey.completedHtml = '<h3>Thank you, your information has been updated!</h3> <br> <a href="./"  style="color: white;">Go to the dashboard</a>'
+                    options.showSaveSuccess("Data successfully updated");
+                    research_survey.completedHtml = '\
+                        <h3> Grazie! </h3>\
+                        <h3> Danke! </h3> \
+                        <h3> ¡Gracias! </h3>\
+                        <h3> Ευχαριστώ! </h3> \
+                        <h3> Tack! </h3> \
+                        <h3> Děkuji! </h3> \
+                        <h3> Mulțumesc! </h3> \
+                        <h3> Merci! </h3> \
+                        <h3> Ačiū! </h3> <br> \
+                        <a href="./"  style="color: white;">Go to the dashboard</a>'
                 } else {
                     options.showSaveError("Error during updating, try again.")
                 }
