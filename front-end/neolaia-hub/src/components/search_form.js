@@ -370,7 +370,7 @@ const SearchForm = ({onSearch}) => {
                         <Dropdown.Toggle variant="primary" id="dropdown-tags">
                             Free keywords
                         </Dropdown.Toggle>
-                        <Dropdown.Menu>
+                        <Dropdown.Menu style={{ maxHeight: '300px', overflowY: 'auto' }}>
                             {freeKeywords && freeKeywords.map((keyword, index) => (
                               <Form.Check 
                                 key={index}
