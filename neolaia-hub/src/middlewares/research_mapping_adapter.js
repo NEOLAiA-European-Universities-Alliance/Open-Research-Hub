@@ -15,23 +15,23 @@ module.exports = (config, { strapi }) => {
         let free_keyword_1 = (survey_data.free_keywords[0] && survey_data.free_keywords[0].free_keyword) ?? ''
         let free_keyword_2 = (survey_data.free_keywords[1] && survey_data.free_keywords[1].free_keyword) ?? ''
         let free_keyword_3 = (survey_data.free_keywords[2] && survey_data.free_keywords[2].free_keyword) ?? ''
-        free_keyword_1 = free_keyword_1.split('(')[0].trim()
-        free_keyword_2 = free_keyword_2.split('(')[0].trim()
-        free_keyword_3 = free_keyword_3.split('(')[0].trim()
+        free_keyword_1 = free_keyword_1.split('(')[0].trim().toLowerCase();
+        free_keyword_2 = free_keyword_2.split('(')[0].trim().toLowerCase();
+        free_keyword_3 = free_keyword_3.split('(')[0].trim().toLowerCase();
         let free_keyword_4 = (survey_data.free_keywords[3] && survey_data.free_keywords[3].free_keyword) ?? ''
         let free_keyword_5 = (survey_data.free_keywords[4] && survey_data.free_keywords[4].free_keyword) ?? ''
         let free_keyword_6 = (survey_data.free_keywords[5] && survey_data.free_keywords[5].free_keyword) ?? ''
-        free_keyword_4 = free_keyword_4.split('(')[0].trim()
-        free_keyword_5 = free_keyword_5.split('(')[0].trim()
-        free_keyword_6 = free_keyword_6.split('(')[0].trim()
+        free_keyword_4 = free_keyword_4.split('(')[0].trim().toLowerCase();
+        free_keyword_5 = free_keyword_5.split('(')[0].trim().toLowerCase();
+        free_keyword_6 = free_keyword_6.split('(')[0].trim().toLowerCase();
         let free_keyword_7 = (survey_data.free_keywords[6] && survey_data.free_keywords[6].free_keyword) ?? ''
         let free_keyword_8 = (survey_data.free_keywords[7] && survey_data.free_keywords[7].free_keyword) ?? ''
         let free_keyword_9 = (survey_data.free_keywords[8] && survey_data.free_keywords[8].free_keyword) ?? ''
-        free_keyword_7 = free_keyword_7.split('(')[0].trim()
-        free_keyword_8 = free_keyword_8.split('(')[0].trim()
-        free_keyword_9 = free_keyword_9.split('(')[0].trim()
+        free_keyword_7 = free_keyword_7.split('(')[0].trim().toLowerCase();
+        free_keyword_8 = free_keyword_8.split('(')[0].trim().toLowerCase();
+        free_keyword_9 = free_keyword_9.split('(')[0].trim().toLowerCase();
         let free_keyword_10 = (survey_data.free_keywords[9] && survey_data.free_keywords[9].free_keyword) ?? ''
-        free_keyword_10 = free_keyword_10.split('(')[0].trim()
+        free_keyword_10 = free_keyword_10.split('(')[0].trim().toLowerCase();
         const data = {
             user_id : user_id,
             name: survey_data.name,
