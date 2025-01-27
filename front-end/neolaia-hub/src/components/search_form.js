@@ -7,6 +7,7 @@ import axios from 'axios';
 import { base_url } from '../api';
 import { useLocation } from 'react-router-dom';
 import { return_erc_area } from '../utils';
+import Badge from 'react-bootstrap/Badge';
 
 
 const SearchForm = ({onSearch}) => {
@@ -38,6 +39,8 @@ const SearchForm = ({onSearch}) => {
     const [selectedKeywords, setSelectedKeywords] = useState([])
     const [researchUnitData, setResearchUnit] = useState([])
     const [specificUnitData, setSpecificUnit] = useState([])
+    const [inputKeywordValue, setInputKeywordValue] = useState('');
+    const [filteredKeywords, setFilteredKeywords] = useState([]);
 
     const submit_button_ref = useRef(null)
     const location = useLocation();
@@ -221,6 +224,31 @@ const SearchForm = ({onSearch}) => {
         setSelectedKeywords([])
     }
 
+    const handleInputKeyword = (e) => {
+        const value = e.target.value;
+        setInputKeywordValue(value);
+
+        if (value.trim() !== '') {
+            const suggestions = freeKeywords.filter((keyword) =>
+                keyword.matched_keyword.toLowerCase().includes(value.toLowerCase())
+            );
+            setFilteredKeywords(suggestions);
+        } else {
+            setFilteredKeywords([]);
+        }
+    }
+
+    const handleSuggestionClick = (keyword) => {
+        handleSelectedKeyword(keyword)
+        setInputKeywordValue('')
+        setFilteredKeywords([])
+    }
+
+    const handleDeleteKeyword = (keyword) => {
+        setSelectedKeywords(selectedKeywords.filter((k) => k !== keyword));
+    };
+
+
     return (
         <Container >
             <p><h2>Find Researchers</h2></p>
@@ -366,25 +394,44 @@ const SearchForm = ({onSearch}) => {
                 </Row>
                 <Row className='mb-3'>
                     <Col>
-                    <Dropdown>
-                        <Dropdown.Toggle variant="primary" id="dropdown-tags">
-                            Free keywords
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu style={{ maxHeight: '300px', overflowY: 'auto' }}>
-                            {freeKeywords && freeKeywords.map((keyword, index) => (
-                              <Form.Check 
-                                key={index}
-                                className='free-keywords-check'
-                                label={`${keyword.matched_keyword} (x${keyword.occurrences})`}
-                                name='keywords'
-                                type='checkbox'
-                                id={index}
-                                onChange={() => handleSelectedKeyword(keyword.matched_keyword)}
-                                checked={selectedKeywords.includes(keyword.matched_keyword)}
-                              /> 
-                            ))}
-                        </Dropdown.Menu>
-                    </Dropdown>
+                        <Form.Group controlId='formKeywords'>
+                            <Form.Label>Search Keywords</Form.Label>
+                            <Form.Control
+                                type="text"
+                                placeholder="Type a free keyword..."
+                                value={inputKeywordValue}
+                                onChange={handleInputKeyword}
+                            />
+                            {filteredKeywords.length > 0 && (
+                                <Dropdown.Menu
+                                    show
+                                    style={{
+                                        maxHeight: '300px',
+                                        overflowY: 'auto',
+                                    }}
+                                >
+                                    {filteredKeywords.map((keyword, index) => (
+                                        <Dropdown.Item
+                                            key={index}
+                                            onClick={() => handleSuggestionClick(keyword.matched_keyword)}
+                                        >
+                                            {`${keyword.matched_keyword} (x${keyword.occurrences})`}
+                                        </Dropdown.Item>
+                                    ))}
+                                </Dropdown.Menu>
+                            )}
+                    </Form.Group>
+                    </Col>
+                </Row>
+                <Row className='mb-3'>
+                    <Col>
+                    {selectedKeywords.map((keyword, index) => (
+                        <span key={index} className="keyword-chip"> 
+                                <Badge pill bg="info" onClick={() => handleDeleteKeyword(keyword)} style={{ cursor: 'pointer', marginLeft: '2px'}}>
+                                    {keyword} X
+                                </Badge>
+                        </span>
+                    ))}
                     </Col>
                 </Row>
                 <Row className='mb-3'>
