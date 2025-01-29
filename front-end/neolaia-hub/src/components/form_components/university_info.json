@@ -21,7 +21,7 @@
             "University of Nicosia",
             "Ştefan cel Mare University of Suceava",
             "University of Tours",
-            "University of Bielefeld",
+            "Bielefeld University",
             "University of Jaén",
             "University of Ostrava"
           ]
@@ -725,7 +725,7 @@
         {
           "type": "dropdown",
           "name": "University of Bielefeld",
-          "visibleIf": "{university_name} = 'University of Bielefeld'",
+          "visibleIf": "{university_name} = 'Bielefeld University'",
           "title": "Select your faculty",
           "isRequired": true,
           "choices": [
