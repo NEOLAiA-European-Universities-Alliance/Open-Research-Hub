@@ -73,13 +73,13 @@
       "type": "text"
     },
     "ERC_Keyword_interested_1": {
-      "type": "string"
+      "type": "text"
     },
     "ERC_Keyword_interested_2": {
-      "type": "string"
+      "type": "text"
     },
     "ERC_Keyword_interested_3": {
-      "type": "string"
+      "type": "text"
     },
     "orcid_link": {
       "type": "string"

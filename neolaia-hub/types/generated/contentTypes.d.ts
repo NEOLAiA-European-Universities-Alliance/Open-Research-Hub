@@ -876,9 +876,9 @@ export interface ApiResearchInfoSurveyResearchInfoSurvey
     ERC_Panel_interested_1: Attribute.Text;
     ERC_Panel_interested_2: Attribute.Text;
     ERC_Panel_interested_3: Attribute.Text;
-    ERC_Keyword_interested_1: Attribute.String;
-    ERC_Keyword_interested_2: Attribute.String;
-    ERC_Keyword_interested_3: Attribute.String;
+    ERC_Keyword_interested_1: Attribute.Text;
+    ERC_Keyword_interested_2: Attribute.Text;
+    ERC_Keyword_interested_3: Attribute.Text;
     orcid_link: Attribute.String;
     research_group_link: Attribute.String;
     personal_page_link: Attribute.String;
