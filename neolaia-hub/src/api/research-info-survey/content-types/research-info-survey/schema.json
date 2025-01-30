@@ -29,48 +29,48 @@
       "type": "string"
     },
     "free_keyword_3": {
-      "type": "string"
+      "type": "text"
     },
     "university_name": {
       "type": "string",
       "required": true
     },
     "department": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "faculty": {
-      "type": "string",
+      "type": "text",
       "required": false
     },
     "ERC_Panel_1": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "ERC_Panel_2": {
-      "type": "string"
+      "type": "text"
     },
     "ERC_Panel_3": {
-      "type": "string"
+      "type": "text"
     },
     "ERC_Keyword_1": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "ERC_Keyword_2": {
-      "type": "string"
+      "type": "text"
     },
     "ERC_Keyword_3": {
-      "type": "string"
+      "type": "text"
     },
     "ERC_Panel_interested_1": {
-      "type": "string"
+      "type": "text"
     },
     "ERC_Panel_interested_2": {
-      "type": "string"
+      "type": "text"
     },
     "ERC_Panel_interested_3": {
-      "type": "string"
+      "type": "text"
     },
     "ERC_Keyword_interested_1": {
       "type": "string"
@@ -91,13 +91,13 @@
       "type": "string"
     },
     "research_units_tours": {
-      "type": "string"
+      "type": "text"
     },
     "specific_research_units_tours": {
       "type": "text"
     },
     "free_keyword_4": {
-      "type": "string"
+      "type": "text"
     },
     "free_keyword_5": {
       "type": "string"
