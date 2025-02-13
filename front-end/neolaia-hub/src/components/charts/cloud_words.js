@@ -82,7 +82,7 @@ function CloudWords({chart_title, series}){
                     arr.push(obj);
                 }
                 return arr;
-            }, []);
+            }, []).filter(obj => obj.weight > 4);
             setData(data)
             setLoading(false)
         } catch (error){
