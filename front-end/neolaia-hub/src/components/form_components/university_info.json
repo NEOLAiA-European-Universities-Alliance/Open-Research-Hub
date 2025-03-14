@@ -546,7 +546,7 @@
             },
             {
               "value": "Faculty of Economics, Administration, and Business_Suceava",
-              "text": "Faculty of Faculty of Economics, Administration, and Business Education and Sports"
+              "text": "Faculty of Economics, Administration, and Business"
             },
             {
               "value": "Faculty of Educational Sciences_Suceava",
@@ -557,7 +557,8 @@
               "text": "Faculty of Medicine and Biological Sciences"
             }
           ]
-        },
+        },     
+
         {
           "type": "dropdown",
           "name": "Faculty of Law and Administrative Sciences_Suceava",
