@@ -25,7 +25,7 @@
             "University of Jaén",
             "University of Ostrava",
             "Sumy State University",
-            "Borys Grinchenko Kyiv University"
+            "Borys Grinchenko Kyiv Metropolitan University"
           ]
         },
         {
@@ -1464,8 +1464,8 @@
         },
         {
           "type": "dropdown",
-          "name": "Borys Grinchenko Kyiv University",
-          "visibleIf": "{university_name} = 'Borys Grinchenko Kyiv University'",
+          "name": "Borys Grinchenko Kyiv Metropolitan University",
+          "visibleIf": "{university_name} = 'Borys Grinchenko Kyiv Metropolitan University'",
           "title": "Select the first level structure (i.e. Faculty)",
           "choices": [
             "Faculty of Journalism",
@@ -1488,7 +1488,7 @@
         {
           "type": "dropdown",
           "name": "Faculty of Journalism",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Faculty of Journalism'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Faculty of Journalism'",
           "title": "Select your department",
           "choices": [
             "Department of Journalism and New Media",
@@ -1500,7 +1500,7 @@
         {
           "type": "dropdown",
           "name": "Faculty of Economics and Management",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Faculty of Economics and Management'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Faculty of Economics and Management'",
           "title": "Select your department",
           "choices": [
             {
@@ -1520,7 +1520,7 @@
         {
           "type": "dropdown",
           "name": "Faculty of Health, Physical Education and Sports",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Faculty of Health, Physical Education and Sports'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Faculty of Health, Physical Education and Sports'",
           "title": "Select your department",
           "choices": [
             "Department of Physical Education and Basic Military Training",
@@ -1532,7 +1532,7 @@
         {
           "type": "dropdown",
           "name": "Faculty of Information Technologies and Mathematics",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Faculty of Information Technologies and Mathematics'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Faculty of Information Technologies and Mathematics'",
           "title": "Select your department",
           "choices": [
             "Department of Information and Cyber Security named after Professor Volodymyr Buriachok",
@@ -1543,7 +1543,7 @@
         {
           "type": "dropdown",
           "name": "Faculty of Music Arts and Choreography",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Faculty of Music Arts and Choreography'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Faculty of Music Arts and Choreography'",
           "title": "Select your department",
           "choices": [
             "Department of Academic and Pop Vocal",
@@ -1556,7 +1556,7 @@
         {
           "type": "dropdown",
           "name": "Faculty of Fine Arts and Design",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Faculty of Fine Arts and Design'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Faculty of Fine Arts and Design'",
           "title": "Select your department",
           "choices": [
             {
@@ -1576,7 +1576,7 @@
         {
           "type": "dropdown",
           "name": "Faculty of Pedagogical Education",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Faculty of Pedagogical Education'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Faculty of Pedagogical Education'",
           "title": "Select your department",
           "choices": [
             "Department of Preschool Education",
@@ -1588,7 +1588,7 @@
         {
           "type": "dropdown",
           "name": "Faculty of Psychology, Social Work  and Special Education",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Faculty of Psychology, Social Work  and Special Education'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Faculty of Psychology, Social Work  and Special Education'",
           "title": "Select your department",
           "choices": [
             "Department of Personality Psychology and Social Practices",
@@ -1600,7 +1600,7 @@
         {
           "type": "dropdown",
           "name": "Faculty of Law and International Relations",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Faculty of Law and International Relations'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Faculty of Law and International Relations'",
           "title": "Select your department\n",
           "choices": [
             "Department of Foreign Languages",
@@ -1613,7 +1613,7 @@
         {
           "type": "dropdown",
           "name": "Faculty of Romance and Germanic Philology",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Faculty of Romance and Germanic Philology'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Faculty of Romance and Germanic Philology'",
           "title": "Select your department",
           "choices": [
             "Department of English Language and Communication",
@@ -1625,7 +1625,7 @@
         {
           "type": "dropdown",
           "name": "Faculty of Social Sciences and Humanities",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Faculty of Social Sciences and Humanities'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Faculty of Social Sciences and Humanities'",
           "title": "Select your department",
           "choices": [
             "Department of World History",
@@ -1637,7 +1637,7 @@
         {
           "type": "dropdown",
           "name": "Faculty of Oriental Languages",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Faculty of Oriental Languages'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Faculty of Oriental Languages'",
           "title": "Select your department",
           "choices": [
             "Department of Japanese Language and Translation",
@@ -1648,7 +1648,7 @@
         {
           "type": "dropdown",
           "name": "Faculty of Ukrainian Philology, Culture and Arts",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Faculty of Ukrainian Philology, Culture and Arts'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Faculty of Ukrainian Philology, Culture and Arts'",
           "title": "Select your department",
           "choices": [
             "Department of Ukrainian Language",
@@ -1660,7 +1660,7 @@
         {
           "type": "dropdown",
           "name": "Applied College Universum",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Applied College Universum'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Applied College Universum'",
           "title": "Select your department",
           "choices": [
             "Cyclic Commission on Publishing, Culture and Ukrainian Philology",
@@ -1677,7 +1677,7 @@
         {
           "type": "dropdown",
           "name": "Institute of In-Service Training",
-          "visibleIf": "{Borys Grinchenko Kyiv University} = 'Institute of In-Service Training'",
+          "visibleIf": "{Borys Grinchenko Kyiv Metropolitan University} = 'Institute of In-Service Training'",
           "title": "Select your department",
           "choices": [
             "Department of Preschool and Primary Education",
