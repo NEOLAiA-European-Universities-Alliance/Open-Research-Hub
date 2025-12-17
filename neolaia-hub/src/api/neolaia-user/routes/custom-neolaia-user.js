@@ -16,6 +16,14 @@ module.exports = {
                 auth: false,
             }
         },
+         {
+            method: 'GET',
+            path: '/neolaia-usr/',
+            handler: 'custom-neolaia-user.find',
+            config: {
+                auth: false,
+            }
+        } 
 
     ]
 }

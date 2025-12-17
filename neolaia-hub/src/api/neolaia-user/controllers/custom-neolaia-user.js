@@ -74,5 +74,44 @@ module.exports = {
         } catch (error){
             ctx.response.internalServerError(error)
         }
+    },
+    async find(ctx, next){
+        try{
+            const { email } = ctx.query;
+            
+            const entries = await strapi.entityService.findMany("api::neolaia-user.neolaia-user", {
+                fields: ['id', 'email'],
+                filters: {
+                    email: email
+                },
+                limit: 1
+            });
+
+            if (entries && entries.length > 0){
+                const user = entries[0]; 
+                
+                const submissions = await strapi.entityService.findMany("api::research-info-survey.research-info-survey", {
+                    fields: ['user_id', 'name', 'surname'],
+                    filters: {
+                        user_id: user.id
+                    },
+                    limit: 1
+                });
+                
+                if (submissions && submissions.length > 0){
+                    return ctx.send({ 
+                        user_name: submissions[0].name, 
+                        user_surname: submissions[0].surname 
+                    });
+                } else {
+                    return ctx.notFound('No submission info found for this user');
+                }
+            } else {
+                return ctx.notFound('No user found with this email');
+            }
+        } catch (error){
+            console.log(error);
+            return ctx.internalServerError(error.message);
+        }
     }
 }
