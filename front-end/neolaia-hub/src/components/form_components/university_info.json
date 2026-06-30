@@ -1101,6 +1101,10 @@
               "value": "Polytech Tours - graduate school of engineering of the university of Tours_Tours",
               "text": "Polytech Tours - graduate school of engineering of the university of Tours"
             },
+            {
+              "value": "MSH VdL - Maison des Sciences de l'Homme Val de Loire - UAR CNRS 3501_Tours",
+              "text": "MSH VdL - Maison des Sciences de l'Homme Val de Loire - UAR CNRS 3501"
+            },
             "None"
           ]
         },
@@ -1246,6 +1250,10 @@
             {
               "value": "CESR - Center for Advanced Renaissance Studies - UMR CNRS 7323_Tours",
               "text": "CESR - Center for Advanced Renaissance Studies - UMR CNRS 7323"
+            },
+            {
+              "value": "MSH VdL - Maison des Sciences de l'Homme Val de Loire - UAR CNRS 3501_Tours",
+              "text": "MSH VdL - Maison des Sciences de l'Homme Val de Loire - UAR CNRS 3501"
             }
           ]
         },
