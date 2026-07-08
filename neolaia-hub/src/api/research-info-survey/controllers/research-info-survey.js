@@ -222,20 +222,21 @@ module.exports = createCoreController('api::research-info-survey.research-info-s
     },
 
     async find_researchers(ctx,next){
-        const university = ctx.request.body.searchParams.university
-        const first_level_str = ctx.request.body.searchParams.department
-        const second_level_str = ctx.request.body.searchParams.faculty
-        const research_unit_tours = ctx.request.body.searchParams.research_unit_tours
-        const specific_unit_tours = ctx.request.body.searchParams.specific_unit_tours
-        const erc_area = ctx.request.body.searchParams.erc_area
-        const erc_panel = ctx.request.body.searchParams.erc_panel
-        const erc_keyword = ctx.request.body.searchParams.erc_keyword
-        const erc_area_int = ctx.request.body.searchParams.erc_area_int
-        const erc_panel_int = ctx.request.body.searchParams.erc_panel_int
-        const erc_keyword_int = ctx.request.body.searchParams.erc_keyword_int
-        const researcher_name = ctx.request.body.searchParams.researcher_name ? ctx.request.body.searchParams.researcher_name.trim() : '';
-        const researcher_surname = ctx.request.body.searchParams.researcher_surname ? ctx.request.body.searchParams.researcher_surname.trim() : '';
-        const free_keywords = ctx.request.body.keywords
+        const searchParams = ctx.request.body.searchParams || {};
+        const university = searchParams.university
+        const first_level_str = searchParams.department
+        const second_level_str = searchParams.faculty
+        const research_unit_tours = searchParams.research_unit_tours
+        const specific_unit_tours = searchParams.specific_unit_tours
+        const erc_area = searchParams.erc_area
+        const erc_panel = searchParams.erc_panel
+        const erc_keyword = searchParams.erc_keyword
+        const erc_area_int = searchParams.erc_area_int
+        const erc_panel_int = searchParams.erc_panel_int
+        const erc_keyword_int = searchParams.erc_keyword_int
+        const researcher_name = searchParams.researcher_name ? searchParams.researcher_name.trim() : '';
+        const researcher_surname = searchParams.researcher_surname ? searchParams.researcher_surname.trim() : '';
+        const free_keywords = Array.isArray(ctx.request.body.keywords) ? ctx.request.body.keywords : [];
         const filters = { $and: [] };
 
         //console.log(ctx.request.body.searchParams)
@@ -348,6 +349,16 @@ module.exports = createCoreController('api::research-info-survey.research-info-s
         const result = await strapi.db.query('api::research-info-survey.research-info-survey').findMany({
             where: filters
         });
+
+        try {
+            await strapi.service('api::researcher-search-stat.researcher-search-stat').recordSearch({
+                searchParams,
+                keywords: free_keywords,
+                resultCount: result.length,
+            });
+        } catch (error) {
+            strapi.log.warn(`Could not log researcher search analytics: ${error.message}`);
+        }
 
         return result
 
