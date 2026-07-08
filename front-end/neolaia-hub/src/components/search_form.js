@@ -129,7 +129,15 @@ const SearchForm = ({onSearch}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSearch(formData,selectedKeywords)
+        const typedKeyword = inputKeywordValue.trim();
+        const submittedKeywords = typedKeyword && !selectedKeywords.includes(typedKeyword)
+            ? [...selectedKeywords, typedKeyword]
+            : selectedKeywords;
+
+        setSelectedKeywords(submittedKeywords);
+        setInputKeywordValue('');
+        setFilteredKeywords([]);
+        onSearch({ ...formData }, submittedKeywords)
     }
 
     useEffect(() => {

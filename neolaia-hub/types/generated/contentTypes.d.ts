@@ -909,6 +909,94 @@ export interface ApiResearchInfoSurveyResearchInfoSurvey
   };
 }
 
+export interface ApiResearcherSearchLogResearcherSearchLog
+  extends Schema.CollectionType {
+  collectionName: 'researcher_search_logs';
+  info: {
+    singularName: 'researcher-search-log';
+    pluralName: 'researcher-search-logs';
+    displayName: 'Researcher search log';
+    description: 'Every submitted researcher search form.';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    submitted_at: Attribute.DateTime;
+    university: Attribute.String;
+    department: Attribute.Text;
+    faculty: Attribute.Text;
+    research_unit_tours: Attribute.Text;
+    specific_unit_tours: Attribute.Text;
+    erc_area: Attribute.String;
+    erc_panel: Attribute.String;
+    erc_keyword: Attribute.Text;
+    erc_area_int: Attribute.String;
+    erc_panel_int: Attribute.String;
+    erc_keyword_int: Attribute.Text;
+    researcher_name: Attribute.String;
+    researcher_surname: Attribute.String;
+    keywords: Attribute.JSON;
+    search_params: Attribute.JSON;
+    normalized_query: Attribute.JSON;
+    result_count: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::researcher-search-log.researcher-search-log',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::researcher-search-log.researcher-search-log',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiResearcherSearchStatResearcherSearchStat
+  extends Schema.CollectionType {
+  collectionName: 'researcher_search_stats';
+  info: {
+    singularName: 'researcher-search-stat';
+    pluralName: 'researcher-search-stats';
+    displayName: 'Researcher search stat';
+    description: 'Aggregated researcher search terms and combinations.';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    unique_key: Attribute.String & Attribute.Required & Attribute.Unique;
+    kind: Attribute.Enumeration<['term', 'query_combination']> &
+      Attribute.Required;
+    field: Attribute.String;
+    value: Attribute.Text;
+    label: Attribute.Text & Attribute.Required;
+    components: Attribute.JSON;
+    count: Attribute.Integer & Attribute.DefaultTo<0>;
+    last_result_count: Attribute.Integer;
+    last_searched_at: Attribute.DateTime;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::researcher-search-stat.researcher-search-stat',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::researcher-search-stat.researcher-search-stat',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiResearchersSurveyFeedbackResearchersSurveyFeedback
   extends Schema.CollectionType {
   collectionName: 'researchers_survey_feedbacks';
@@ -964,6 +1052,8 @@ declare module '@strapi/types' {
       'api::form.form': ApiFormForm;
       'api::neolaia-user.neolaia-user': ApiNeolaiaUserNeolaiaUser;
       'api::research-info-survey.research-info-survey': ApiResearchInfoSurveyResearchInfoSurvey;
+      'api::researcher-search-log.researcher-search-log': ApiResearcherSearchLogResearcherSearchLog;
+      'api::researcher-search-stat.researcher-search-stat': ApiResearcherSearchStatResearcherSearchStat;
       'api::researchers-survey-feedback.researchers-survey-feedback': ApiResearchersSurveyFeedbackResearchersSurveyFeedback;
     }
   }

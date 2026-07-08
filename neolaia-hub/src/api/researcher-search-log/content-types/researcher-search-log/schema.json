@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "researcher_search_logs",
+  "info": {
+    "singularName": "researcher-search-log",
+    "pluralName": "researcher-search-logs",
+    "displayName": "Researcher search log",
+    "description": "Every submitted researcher search form."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "submitted_at": {
+      "type": "datetime"
+    },
+    "university": {
+      "type": "string"
+    },
+    "department": {
+      "type": "text"
+    },
+    "faculty": {
+      "type": "text"
+    },
+    "research_unit_tours": {
+      "type": "text"
+    },
+    "specific_unit_tours": {
+      "type": "text"
+    },
+    "erc_area": {
+      "type": "string"
+    },
+    "erc_panel": {
+      "type": "string"
+    },
+    "erc_keyword": {
+      "type": "text"
+    },
+    "erc_area_int": {
+      "type": "string"
+    },
+    "erc_panel_int": {
+      "type": "string"
+    },
+    "erc_keyword_int": {
+      "type": "text"
+    },
+    "researcher_name": {
+      "type": "string"
+    },
+    "researcher_surname": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "json"
+    },
+    "search_params": {
+      "type": "json"
+    },
+    "normalized_query": {
+      "type": "json"
+    },
+    "result_count": {
+      "type": "integer"
+    }
+  }
+}

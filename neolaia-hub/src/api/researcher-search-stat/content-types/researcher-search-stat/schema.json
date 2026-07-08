@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "researcher_search_stats",
+  "info": {
+    "singularName": "researcher-search-stat",
+    "pluralName": "researcher-search-stats",
+    "displayName": "Researcher search stat",
+    "description": "Aggregated researcher search terms and combinations."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "unique_key": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "term",
+        "query_combination"
+      ],
+      "required": true
+    },
+    "field": {
+      "type": "string"
+    },
+    "value": {
+      "type": "text"
+    },
+    "label": {
+      "type": "text",
+      "required": true
+    },
+    "components": {
+      "type": "json"
+    },
+    "count": {
+      "type": "integer",
+      "default": 0
+    },
+    "last_result_count": {
+      "type": "integer"
+    },
+    "last_searched_at": {
+      "type": "datetime"
+    }
+  }
+}
